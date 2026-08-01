@@ -1,0 +1,46 @@
+{
+  "Formation Energy (eV/atom)": {
+    "arch_type": "direct_multi_operator",
+    "train_r2": 0.7237458018545959,
+    "train_cls_acc": 1.0,
+    "train_theo_pct": 111.34550797763015,
+    "test_r2": 0.6333989051642961,
+    "test_cls_acc": 1.0,
+    "test_mse": 0.10906492569011451,
+    "test_mae": 0.20635352518834998,
+    "test_theo_pct": 97.4459854098917
+  },
+  "Total Magnetization (uB)": {
+    "arch_type": "hard_margin_hurdle",
+    "train_r2": 0.6286381420673918,
+    "train_cls_acc": 0.929375,
+    "train_theo_pct": 104.77302367789862,
+    "test_r2": 0.27583924947178307,
+    "test_cls_acc": 0.815,
+    "test_mse": 55.4320468062084,
+    "test_mae": 3.819608528089176,
+    "test_theo_pct": 45.97320824529718
+  },
+  "Band Gap (eV)": {
+    "arch_type": "soft_gated_regressor",
+    "train_r2": 0.49822184700698346,
+    "train_cls_acc": 0.891875,
+    "train_theo_pct": 99.64436940139669,
+    "test_r2": 0.29514104155339316,
+    "test_cls_acc": 0.7575,
+    "test_mse": 1.1089465259217832,
+    "test_mae": 0.8357708192106731,
+    "test_theo_pct": 59.02820831067863
+  },
+  "Energy Above Hull (eV)": {
+    "arch_type": "hard_margin_hurdle",
+    "train_r2": 0.17242413205305152,
+    "train_cls_acc": 0.9425,
+    "train_theo_pct": 68.9696528212206,
+    "test_r2": 0.08041410247474634,
+    "test_cls_acc": 0.84,
+    "test_mse": 0.06824079543180303,
+    "test_mae": 0.08679292303524472,
+    "test_theo_pct": 32.165640989898534
+  }
+}

@@ -1,0 +1,103 @@
+======================================================================
+EXPERIMENT 8: Dual Symbolic Regression Hurdle Architecture Pipeline
+Includes 'pow' operator in BOTH Stage 1 Classifier & Stage 2 Regressor
+Clean Physical Descriptors (No Leakage: E_GNN, M_net, M_abs removed)
+Operators: add, sub, mul, div, neg, abs, log, pow
+======================================================================
+Dataset Size       : 2000 materials
+Input Features N   : 33
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV) (Threshold = 0.01)
+================================================================================
+Zero-Inflation Rate: 37.5% (750 zeros, 1250 non-zeros)
+Running Stage 1 Symbolic Boundary Classifier S_cls(x) > 0 (with 'pow')...
+--> STAGE 1 DISCOVERED SYMBOLIC DECISION BOUNDARY S_cls(x):
+    S_cls(x) = sub(abs(abs(sub(div(neg(Val_Aprime), log(Volume_A3)), mul(mul(EN_Bprime, Total_HS_FM), pow(EN_A, EN_Bprime))))), abs(neg(mul(sub(mul(Shannon_Bprime, Total_HS_FiM), neg(Tolerance_Factor)), sub(div(HS_moment_B, Shannon_Aprime), mul(Total_HS_FiM, HS_moment_Bprime))))))
+--> Stage 1 Symbolic Classifier Metrics:
+    - Classification Accuracy : 64.15%
+    - F1-Score               : 0.7583
+    - Precision              : 0.6552
+    - Recall                 : 0.9000
+
+Running Stage 2 Symbolic Non-Zero Regressor S_reg(x) (with 'pow') on 1250 active samples...
+--> STAGE 2 DISCOVERED SYMBOLIC NON-ZERO REGRESSION FORMULA S_reg(x):
+    S_reg(x) = sub(log(div(div(log(div(-0.102, abs(EN_B))), -0.102), abs(EN_B))), sub(log(add(log(Density_g_cm3), Total_A_Charge)), pow(log(div(pow(log(-0.102), neg(abs(Total_HS_FiM))), abs(EN_B))), neg(abs(Total_HS_FiM)))))
+--> Stage 2 Non-Zero Subset Regression Metrics:
+    - Subset R2  : 15.14%
+    - Subset MSE : 1.007657
+    - Subset MAE : 0.823308
+
+>>> COMBINED DUAL SYMBOLIC REGRESSION PIPELINE RESULT:
+    - Final Pipeline R2  : -13.18% (-0.131791)
+    - Final Pipeline MSE : 1.763539e+00
+    - Final Pipeline MAE : 1.083815
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB) (Threshold = 0.05)
+================================================================================
+Zero-Inflation Rate: 43.7% (874 zeros, 1126 non-zeros)
+Running Stage 1 Symbolic Boundary Classifier S_cls(x) > 0 (with 'pow')...
+--> STAGE 1 DISCOVERED SYMBOLIC DECISION BOUNDARY S_cls(x):
+    S_cls(x) = log(pow(add(HS_moment_B, Total_HS_FiM), mul(Val_A, Group_Bprime)))
+--> Stage 1 Symbolic Classifier Metrics:
+    - Classification Accuracy : 63.90%
+    - F1-Score               : 0.7255
+    - Precision              : 0.6343
+    - Recall                 : 0.8472
+
+Running Stage 2 Symbolic Non-Zero Regressor S_reg(x) (with 'pow') on 1126 active samples...
+--> STAGE 2 DISCOVERED SYMBOLIC NON-ZERO REGRESSION FORMULA S_reg(x):
+    S_reg(x) = pow(log(pow(div(div(div(div(pow(Volume_A3, EN_Aprime), log(add(neg(sub(Density_g_cm3, EN_Aprime)), EN_B))), log(add(neg(sub(Density_g_cm3, EN_Aprime)), EN_B))), log(add(neg(neg(div(neg(sub(Shannon_A, Total_HS_FM)), sub(pow(d_electrons_B, Shannon_Aprime), log(Total_HS_FiM))))), EN_B))), log(add(neg(sub(sub(Density_g_cm3, EN_Aprime), EN_Aprime)), EN_B))), EN_Aprime)), log(Val_A))
+--> Stage 2 Non-Zero Subset Regression Metrics:
+    - Subset R2  : 6.89%
+    - Subset MSE : 126.606737
+    - Subset MAE : 5.812416
+
+>>> COMBINED DUAL SYMBOLIC REGRESSION PIPELINE RESULT:
+    - Final Pipeline R2  : 4.83% (0.048346)
+    - Final Pipeline MSE : 9.017278e+01
+    - Final Pipeline MAE : 4.805239
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV) (Threshold = 0.01)
+================================================================================
+Zero-Inflation Rate: 30.2% (604 zeros, 1396 non-zeros)
+Running Stage 1 Symbolic Boundary Classifier S_cls(x) > 0 (with 'pow')...
+--> STAGE 1 DISCOVERED SYMBOLIC DECISION BOUNDARY S_cls(x):
+    S_cls(x) = log(add(pow(sub(add(d_BprimeO, Shannon_Bprime), abs(Total_HS_FM)), log(log(Total_d_electrons))), add(neg(abs(Shannon_Aprime)), log(mul(EN_Aprime, Val_B)))))
+--> Stage 1 Symbolic Classifier Metrics:
+    - Classification Accuracy : 71.45%
+    - F1-Score               : 0.8167
+    - Precision              : 0.7400
+    - Recall                 : 0.9112
+
+Running Stage 2 Symbolic Non-Zero Regressor S_reg(x) (with 'pow') on 1396 active samples...
+--> STAGE 2 DISCOVERED SYMBOLIC NON-ZERO REGRESSION FORMULA S_reg(x):
+    S_reg(x) = 0.100
+--> Stage 2 Non-Zero Subset Regression Metrics:
+    - Subset R2  : -1.37%
+    - Subset MSE : 0.101077
+    - Subset MAE : 0.098349
+
+>>> COMBINED DUAL SYMBOLIC REGRESSION PIPELINE RESULT:
+    - Final Pipeline R2  : 0.09% (0.000930)
+    - Final Pipeline MSE : 7.342863e-02
+    - Final Pipeline MAE : 0.092674
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom) (Threshold = None)
+================================================================================
+
+Running Stage 2 Symbolic Non-Zero Regressor S_reg(x) (with 'pow') on 2000 active samples...
+--> STAGE 2 DISCOVERED SYMBOLIC NON-ZERO REGRESSION FORMULA S_reg(x):
+    S_reg(x) = neg(log(sub(sub(sub(sub(sub(div(Total_A_Charge, EN_Bprime), div(neg(Shannon_B), div(0.167, d_BO))), neg(sub(Total_A_Charge, d_electrons_B))), neg(abs(div(sub(Total_A_Charge, EN_Bprime), EN_Bprime)))), neg(div(0.948, d_electrons_B))), neg(neg(Shannon_B)))))
+--> Stage 2 Non-Zero Subset Regression Metrics:
+    - Subset R2  : 16.55%
+    - Subset MSE : 0.291136
+    - Subset MAE : 0.352224
+
+>>> COMBINED DUAL SYMBOLIC REGRESSION PIPELINE RESULT:
+    - Final Pipeline R2  : 16.55% (0.165499)
+    - Final Pipeline MSE : 2.911362e-01
+    - Final Pipeline MAE : 0.352224

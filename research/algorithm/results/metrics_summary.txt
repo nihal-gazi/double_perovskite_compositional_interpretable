@@ -1,0 +1,51 @@
+======================================================================
+MASTER ALGORITHM: CAPSTONE DOUBLE PEROVSKITE MACHINE LEARNING
+Clean Physical Descriptors (No Leakage: E_GNN, M_net, M_abs removed)
+Integrates Tie-Line Engine, Hard-Margin Boundary, Soft-Sigmoidal Gating & Harrison Quantum Gap
+Master Features N = 98
+======================================================================
+Dataset Size       : 2000 materials
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom)
+================================================================================
+--> MASTER ALGORITHM RESULTS (DIRECT_MULTI_OPERATOR):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000, Tau* = 0.5000)
+    - Stage 2 Sub R2            : 71.26% (109.62% of Lit Ceiling)
+    - Final Pipeline R2         : 71.26% (0.712558)
+    - Pipeline MSE               : 0.100281
+    - Pipeline MAE               : 0.186972
+    - Relative Theoretical Limit : 109.62% of Lit Ceiling (65.0%)
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB)
+================================================================================
+--> MASTER ALGORITHM RESULTS (HARD_MARGIN_HURDLE):
+    - Stage 1 Classification Acc : 92.80% (F1 = 0.9363, Tau* = 0.3600)
+    - Stage 2 Sub R2            : 61.75% (102.92% of Lit Ceiling)
+    - Final Pipeline R2         : 62.23% (0.622300)
+    - Pipeline MSE               : 35.788531
+    - Pipeline MAE               : 3.001105
+    - Relative Theoretical Limit : 103.72% of Lit Ceiling (60.0%)
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV)
+================================================================================
+--> MASTER ALGORITHM RESULTS (SOFT_GATED_REGRESSOR):
+    - Stage 1 Classification Acc : 88.20% (F1 = 0.9094, Tau* = 0.4300)
+    - Stage 2 Sub R2            : 41.04% (82.09% of Lit Ceiling)
+    - Final Pipeline R2         : 50.71% (0.507086)
+    - Pipeline MSE               : 0.768051
+    - Pipeline MAE               : 0.706157
+    - Relative Theoretical Limit : 101.42% of Lit Ceiling (50.0%)
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV)
+================================================================================
+--> MASTER ALGORITHM RESULTS (HARD_MARGIN_HURDLE):
+    - Stage 1 Classification Acc : 93.70% (F1 = 0.9552, Tau* = 0.4400)
+    - Stage 2 Sub R2            : 12.39% (49.55% of Lit Ceiling)
+    - Final Pipeline R2         : 16.67% (0.166658)
+    - Pipeline MSE               : 0.061248
+    - Pipeline MAE               : 0.076963
+    - Relative Theoretical Limit : 66.66% of Lit Ceiling (25.0%)

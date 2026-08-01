@@ -1,0 +1,87 @@
+======================================================================
+EXPERIMENT 11: Standard Linear Regression Baseline Pipeline
+Clean Physical Descriptors (No Leakage: E_GNN, M_net, M_abs removed)
+Evaluates Direct OLS Linear Regression & Two-Stage Linear Hurdle System
+======================================================================
+Dataset Size       : 2000 materials
+Input Features N   : 33
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV) (Threshold = 0.01)
+================================================================================
+--> 1. DIRECT SINGLE-STAGE OLS LINEAR REGRESSION RESULT:
+    - Direct R2  : 16.33% (0.163268)
+    - Direct MSE : 1.303783
+    - Direct MAE : 0.973208
+Zero-Inflation Rate: 37.5% (750 zeros, 1250 non-zeros)
+--> STAGE 1 LINEAR LOGISTIC CLASSIFIER METRICS:
+    - Classification Accuracy : 65.40%
+    - F1-Score               : 0.7615
+--> STAGE 2 LINEAR REGRESSOR (NON-ZERO SUBSET) METRICS:
+    - Subset R2  : 23.07%
+    - Subset MSE : 0.913516
+    - Subset MAE : 0.795326
+
+>>> COMBINED HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : -8.27% (-0.082657)
+    - Hurdle Pipeline MSE       : 1.686980
+    - Hurdle Pipeline MAE       : 1.046851
+    - Relative Theoretical Limit: 0.00% of Lit Ceiling (50.0%)
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB) (Threshold = 0.05)
+================================================================================
+--> 1. DIRECT SINGLE-STAGE OLS LINEAR REGRESSION RESULT:
+    - Direct R2  : 26.63% (0.266276)
+    - Direct MSE : 69.523105
+    - Direct MAE : 5.113312
+Zero-Inflation Rate: 43.7% (874 zeros, 1126 non-zeros)
+--> STAGE 1 LINEAR LOGISTIC CLASSIFIER METRICS:
+    - Classification Accuracy : 69.70%
+    - F1-Score               : 0.7483
+--> STAGE 2 LINEAR REGRESSOR (NON-ZERO SUBSET) METRICS:
+    - Subset R2  : 46.85%
+    - Subset MSE : 72.268605
+    - Subset MAE : 5.466589
+
+>>> COMBINED HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : 15.50% (0.155048)
+    - Hurdle Pipeline MSE       : 80.062394
+    - Hurdle Pipeline MAE       : 5.036552
+    - Relative Theoretical Limit: 25.84% of Lit Ceiling (60.0%)
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV) (Threshold = 0.01)
+================================================================================
+--> 1. DIRECT SINGLE-STAGE OLS LINEAR REGRESSION RESULT:
+    - Direct R2  : 6.57% (0.065688)
+    - Direct MSE : 0.068669
+    - Direct MAE : 0.090877
+Zero-Inflation Rate: 30.2% (604 zeros, 1396 non-zeros)
+--> STAGE 1 LINEAR LOGISTIC CLASSIFIER METRICS:
+    - Classification Accuracy : 76.35%
+    - F1-Score               : 0.8422
+--> STAGE 2 LINEAR REGRESSOR (NON-ZERO SUBSET) METRICS:
+    - Subset R2  : 5.04%
+    - Subset MSE : 0.094685
+    - Subset MAE : 0.108823
+
+>>> COMBINED HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : 5.41% (0.054060)
+    - Hurdle Pipeline MSE       : 0.069524
+    - Hurdle Pipeline MAE       : 0.096829
+    - Relative Theoretical Limit: 21.62% of Lit Ceiling (25.0%)
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom) (Threshold = None)
+================================================================================
+--> 1. DIRECT SINGLE-STAGE OLS LINEAR REGRESSION RESULT:
+    - Direct R2  : 61.41% (0.614124)
+    - Direct MSE : 0.134622
+    - Direct MAE : 0.220177
+
+>>> COMBINED HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : 61.41% (0.614124)
+    - Hurdle Pipeline MSE       : 0.134622
+    - Hurdle Pipeline MAE       : 0.220177
+    - Relative Theoretical Limit: 94.48% of Lit Ceiling (65.0%)

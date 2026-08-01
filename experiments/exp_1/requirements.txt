@@ -1,0 +1,5 @@
+# exp_v2/experiments/exp_1/requirements.txt
+torch>=2.0.0
+numpy>=1.22.0
+scipy>=1.8.0
+matplotlib>=3.5.0

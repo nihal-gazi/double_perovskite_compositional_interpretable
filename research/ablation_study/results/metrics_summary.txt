@@ -1,0 +1,52 @@
+======================================================================
+SYSTEMATIC ABLATION STUDY: MASTER DOUBLE PEROVSKITE ALGORITHM
+Evaluates 8 Rigorous Conditions (C0 to C7) Across 4 Target Properties
+======================================================================
+
+================================================================================
+ABLATION STUDY TARGET: Formation Energy (eV/atom)
+================================================================================
+[C0] Baseline_Classical         | Pipeline R2:  67.93% | Theo Limit: 104.50% | Stage 1 Acc: 100.00%
+[C1] +Harrison_Quantum_Gap      | Pipeline R2:  67.93% | Theo Limit: 104.50% | Stage 1 Acc: 100.00%
+[C2] +Birch_Murnaghan_Strain    | Pipeline R2:  68.01% | Theo Limit: 104.63% | Stage 1 Acc: 100.00%
+[C3] +Octahedral_d0_d10         | Pipeline R2:  68.49% | Theo Limit: 105.37% | Stage 1 Acc: 100.00%
+[C4] +Single_Perov_TieLines     | Pipeline R2:  68.52% | Theo Limit: 105.41% | Stage 1 Acc: 100.00%
+[C5] Direct_Linear_No_Hurdle    | Pipeline R2:  68.52% | Theo Limit: 105.41% | Stage 1 Acc: 100.00%
+[C6] Hard_Step_Hurdle           | Pipeline R2:  68.52% | Theo Limit: 105.41% | Stage 1 Acc: 100.00%
+[C7] Master_Capstone_Full       | Pipeline R2:  71.26% | Theo Limit: 109.62% | Stage 1 Acc: 100.00%
+
+================================================================================
+ABLATION STUDY TARGET: Total Magnetization (uB)
+================================================================================
+[C0] Baseline_Classical         | Pipeline R2:  56.14% | Theo Limit:  93.57% | Stage 1 Acc:  90.10%
+[C1] +Harrison_Quantum_Gap      | Pipeline R2:  56.14% | Theo Limit:  93.57% | Stage 1 Acc:  90.10%
+[C2] +Birch_Murnaghan_Strain    | Pipeline R2:  57.94% | Theo Limit:  96.57% | Stage 1 Acc:  90.20%
+[C3] +Octahedral_d0_d10         | Pipeline R2:  58.22% | Theo Limit:  97.03% | Stage 1 Acc:  89.85%
+[C4] +Single_Perov_TieLines     | Pipeline R2:  57.94% | Theo Limit:  96.56% | Stage 1 Acc:  89.55%
+[C5] Direct_Linear_No_Hurdle    | Pipeline R2:  36.53% | Theo Limit:  60.88% | Stage 1 Acc: 100.00%
+[C6] Hard_Step_Hurdle           | Pipeline R2:  57.94% | Theo Limit:  96.56% | Stage 1 Acc:  89.55%
+[C7] Master_Capstone_Full       | Pipeline R2:  62.23% | Theo Limit: 103.72% | Stage 1 Acc:  92.80%
+
+================================================================================
+ABLATION STUDY TARGET: Band Gap (eV)
+================================================================================
+[C0] Baseline_Classical         | Pipeline R2:  47.09% | Theo Limit:  94.19% | Stage 1 Acc:  88.90%
+[C1] +Harrison_Quantum_Gap      | Pipeline R2:  47.09% | Theo Limit:  94.19% | Stage 1 Acc:  88.90%
+[C2] +Birch_Murnaghan_Strain    | Pipeline R2:  46.44% | Theo Limit:  92.87% | Stage 1 Acc:  88.60%
+[C3] +Octahedral_d0_d10         | Pipeline R2:  47.60% | Theo Limit:  95.20% | Stage 1 Acc:  88.10%
+[C4] +Single_Perov_TieLines     | Pipeline R2:  46.95% | Theo Limit:  93.90% | Stage 1 Acc:  87.75%
+[C5] Direct_Linear_No_Hurdle    | Pipeline R2:  25.46% | Theo Limit:  50.91% | Stage 1 Acc: 100.00%
+[C6] Hard_Step_Hurdle           | Pipeline R2:  46.95% | Theo Limit:  93.90% | Stage 1 Acc:  87.75%
+[C7] Master_Capstone_Full       | Pipeline R2:  50.71% | Theo Limit: 101.42% | Stage 1 Acc:  88.20%
+
+================================================================================
+ABLATION STUDY TARGET: Energy Above Hull (eV)
+================================================================================
+[C0] Baseline_Classical         | Pipeline R2:  14.34% | Theo Limit:  57.37% | Stage 1 Acc:  90.70%
+[C1] +Harrison_Quantum_Gap      | Pipeline R2:  14.34% | Theo Limit:  57.37% | Stage 1 Acc:  90.70%
+[C2] +Birch_Murnaghan_Strain    | Pipeline R2:  14.39% | Theo Limit:  57.56% | Stage 1 Acc:  90.50%
+[C3] +Octahedral_d0_d10         | Pipeline R2:  15.00% | Theo Limit:  59.98% | Stage 1 Acc:  90.60%
+[C4] +Single_Perov_TieLines     | Pipeline R2:  15.03% | Theo Limit:  60.11% | Stage 1 Acc:  90.55%
+[C5] Direct_Linear_No_Hurdle    | Pipeline R2:  12.65% | Theo Limit:  50.61% | Stage 1 Acc: 100.00%
+[C6] Hard_Step_Hurdle           | Pipeline R2:  15.03% | Theo Limit:  60.11% | Stage 1 Acc:  90.55%
+[C7] Master_Capstone_Full       | Pipeline R2:  16.67% | Theo Limit:  66.66% | Stage 1 Acc:  93.70%

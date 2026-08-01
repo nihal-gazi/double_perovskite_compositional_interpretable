@@ -1,0 +1,51 @@
+======================================================================
+EXPERIMENT 21: Log-Transformed Target Space & Gibbs Phase Separation Engine
+Clean Physical Descriptors (No Leakage: E_GNN, M_net, M_abs removed)
+Introduces Log-Target Space Regression, Gibbs Phase Separation Index (Xi_hull) & High-C Boundary Classifier
+Expanded Features N = 98 (Gibbs Engine, Log-Target Space, Tie-Line Engine, Harrison Gap)
+======================================================================
+Dataset Size       : 2000 materials
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom)
+================================================================================
+--> EXPERIMENT 21 RESULTS (DIRECT_MULTI_OPERATOR):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000, Tau* = 0.5000)
+    - Stage 2 Sub R2            : 71.26% (109.62% of Lit Ceiling)
+    - Final Pipeline R2         : 71.26% (0.712558)
+    - Pipeline MSE               : 0.100281
+    - Pipeline MAE               : 0.186972
+    - Relative Theoretical Limit : 109.62% of Lit Ceiling (65.0%)
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB)
+================================================================================
+--> EXPERIMENT 21 RESULTS (HARD_MARGIN_HURDLE):
+    - Stage 1 Classification Acc : 92.80% (F1 = 0.9363, Tau* = 0.3600)
+    - Stage 2 Sub R2            : 61.75% (102.92% of Lit Ceiling)
+    - Final Pipeline R2         : 62.23% (0.622300)
+    - Pipeline MSE               : 35.788531
+    - Pipeline MAE               : 3.001105
+    - Relative Theoretical Limit : 103.72% of Lit Ceiling (60.0%)
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV)
+================================================================================
+--> EXPERIMENT 21 RESULTS (SOFT_GATED_REGRESSOR):
+    - Stage 1 Classification Acc : 88.20% (F1 = 0.9094, Tau* = 0.4300)
+    - Stage 2 Sub R2            : 41.04% (82.09% of Lit Ceiling)
+    - Final Pipeline R2         : 50.71% (0.507086)
+    - Pipeline MSE               : 0.768051
+    - Pipeline MAE               : 0.706157
+    - Relative Theoretical Limit : 101.42% of Lit Ceiling (50.0%)
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV)
+================================================================================
+--> EXPERIMENT 21 RESULTS (LOG_TARGET_HURDLE):
+    - Stage 1 Classification Acc : 94.60% (F1 = 0.9613, Tau* = 0.4600)
+    - Stage 2 Sub R2            : 10.73% (42.91% of Lit Ceiling)
+    - Final Pipeline R2         : 15.10% (0.151049)
+    - Pipeline MSE               : 0.062395
+    - Pipeline MAE               : 0.066360
+    - Relative Theoretical Limit : 60.42% of Lit Ceiling (25.0%)

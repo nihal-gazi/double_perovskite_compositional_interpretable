@@ -1,0 +1,62 @@
+{
+  "Band Gap (eV)": {
+    "zero_pct": 37.5,
+    "cls_acc": 0.638,
+    "cls_f1": 0.7736085053158224,
+    "cls_prec": 0.6350102669404517,
+    "cls_rec": 0.9896,
+    "cls_formula": "mod(tan(nth_root(sec(Group_Bprime), mod(Spin_Proxy_Distance, Tolerance_Factor))), log(mod(sign(Val_B), pow(d_electrons_Bprime, EN_avg))))",
+    "reg_sub_r2": 0.27824531167692146,
+    "reg_sub_mse": 0.8570301247249299,
+    "reg_sub_mae": 0.7312923514484754,
+    "reg_formula": "nth_root(ceil(nth_root(ceil(nth_root(ceil(nth_root(nth_root(exp(cos(log(EN_avg))), nth_root(Group_B, Density_g_cm3)), ceil(tan(Shannon_Bprime)))), div(abs(EN_A), sin(ceil(tan(Shannon_Bprime)))))), div(div(tan(Shannon_Bprime), nth_root(Total_HS_FM, Density_g_cm3)), sin(div(ceil(tan(Shannon_Bprime)), EN_A))))), sub(mod(Val_avg, d_AO), exp(Total_HS_FiM)))",
+    "pipe_r2": -0.08612157747321714,
+    "pipe_mse": 1.6923781882103155,
+    "pipe_mae": 1.0628391885229633
+  },
+  "Total Magnetization (uB)": {
+    "zero_pct": 43.7,
+    "cls_acc": 0.63,
+    "cls_f1": 0.6462715105162524,
+    "cls_prec": 0.6997929606625258,
+    "cls_rec": 0.6003552397868561,
+    "cls_formula": "mul(sec(Val_avg), sign(Volume_A3))",
+    "reg_sub_r2": 0.3544095297437685,
+    "reg_sub_mse": 87.78207454703235,
+    "reg_sub_mae": 5.031400334596997,
+    "reg_formula": "mul(EN_Aprime, add(sin(ceil(div(mul(EN_Aprime, Val_A), Shannon_Bprime))), add(sin(log(Volume_A3)), add(sin(mul(log(Volume_A3), add(div(EN_Aprime, Shannon_Bprime), cosec(Val_Aprime)))), add(sin(mul(EN_Aprime, add(div(EN_Aprime, Shannon_Bprime), cosec(Val_Aprime)))), add(sin(log(Volume_A3)), add(sin(add(sin(log(Volume_A3)), cosec(Val_Aprime))), add(sin(mul(EN_Aprime, add(sin(mul(EN_Aprime, add(sin(ceil(log(Volume_A3))), mul(div(EN_Aprime, Shannon_Bprime), Val_A)))), log(Volume_A3)))), add(sin(log(Volume_A3)), add(add(sin(sin(add(sin(log(Volume_A3)), add(sin(sin(add(sin(ceil(log(Volume_A3))), sin(ceil(log(Volume_A3)))))), add(sin(ceil(div(mul(EN_Aprime, Val_A), Shannon_Bprime))), add(div(mul(EN_Aprime, Val_A), Shannon_Bprime), sin(mul(log(Volume_A3), add(div(EN_Aprime, Shannon_Bprime), cosec(Val_Aprime)))))))))), add(sin(log(Volume_A3)), add(sin(log(Volume_A3)), add(add(sin(sin(sin(ceil(mul(EN_Aprime, Val_A))))), ceil(add(sin(log(Volume_A3)), add(add(sin(sin(log(Volume_A3))), ceil(add(div(EN_Aprime, Shannon_Bprime), cosec(Val_Aprime)))), cosec(Shannon_B))))), cosec(Shannon_B))))), cosec(Shannon_B)))))))))))",
+    "pipe_r2": -0.0426693411540211,
+    "pipe_mse": 98.79686377892592,
+    "pipe_mae": 4.732913671997685
+  },
+  "Energy Above Hull (eV)": {
+    "zero_pct": 30.200000000000003,
+    "cls_acc": 0.722,
+    "cls_f1": 0.8304878048780487,
+    "cls_prec": 0.7229299363057324,
+    "cls_rec": 0.9756446991404012,
+    "cls_formula": "mod(d_AO, d_electrons_B)",
+    "reg_sub_r2": -0.05271167930273335,
+    "reg_sub_mse": 0.10497135220877829,
+    "reg_sub_mae": 0.09819104767568271,
+    "reg_formula": "0.065",
+    "pipe_r2": -0.013906009884688375,
+    "pipe_mse": 0.07451903946782004,
+    "pipe_mae": 0.08528200821862472
+  },
+  "Formation Energy (eV/atom)": {
+    "zero_pct": 0.0,
+    "cls_acc": 1.0,
+    "cls_f1": 1.0,
+    "cls_prec": 1.0,
+    "cls_rec": 1.0,
+    "cls_formula": "N/A (Continuous Baseline)",
+    "reg_sub_r2": 0.28563600006389245,
+    "reg_sub_mse": 0.24922343152215073,
+    "reg_sub_mae": 0.35428298889424104,
+    "reg_formula": "sub(log(EN_Aprime), exp(sec(gaussian_function(sec(exp(sec(sin(EN_avg))))))))",
+    "pipe_r2": 0.2856360000639948,
+    "pipe_mse": 0.24922343152215073,
+    "pipe_mae": 0.35428298889424104
+  }
+}

@@ -1,0 +1,165 @@
+======================================================================
+EXPERIMENT 6: Hybrid Symbolic-Fourier Hurdle Architecture Pipeline
+Clean Physical Descriptors (No Leakage: E_GNN, M_net, M_abs removed)
+Stage 1: Symbolic Regression Classifier with 'pow' primitive (+1/-1 fitness)
+Stage 2: Top-K* Fourier Ensemble Non-Zero Regressor (Sweeping K=1..10 per D)
+======================================================================
+Dataset Size       : 2000 materials
+Input Features N   : 33
+K Sweep Range      : K = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Depths Evaluated D : [3, 5, 10, 50, 100]
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV) (Threshold = 0.01)
+================================================================================
+Zero-Inflation Rate: 37.5% (750 zeros, 1250 non-zeros)
+Running Symbolic Regression (with 'pow') for Decision Boundary S(x) > 0...
+--> STAGE 1 DISCOVERED SYMBOLIC DECISION BOUNDARY FORMULA S(x):
+    S(x) = sub(abs(abs(sub(div(neg(Val_Aprime), log(Volume_A3)), mul(mul(EN_Bprime, Total_HS_FM), pow(EN_A, EN_Bprime))))), abs(neg(mul(sub(mul(Shannon_Bprime, Total_HS_FiM), neg(Tolerance_Factor)), sub(div(HS_moment_B, Shannon_Aprime), mul(Total_HS_FiM, HS_moment_Bprime))))))
+--> Stage 1 Symbolic Classifier Metrics:
+    - Classification Accuracy : 64.15%
+    - F1-Score               : 0.7583
+    - Precision              : 0.6552
+    - Recall                 : 0.9000
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 3 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=3: K* = 6
+    - Stage 2 Non-Zero Subset R2 : 21.27%
+    - Final Pipeline R2         : -7.70% (-0.077047)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 5 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=5: K* = 8
+    - Stage 2 Non-Zero Subset R2 : 24.59%
+    - Final Pipeline R2         : -3.98% (-0.039792)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 10 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=10: K* = 6
+    - Stage 2 Non-Zero Subset R2 : 28.55%
+    - Final Pipeline R2         : -1.22% (-0.012156)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 50 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=50: K* = 10
+    - Stage 2 Non-Zero Subset R2 : 31.17%
+    - Final Pipeline R2         : 1.51% (0.015093)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 100 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=100: K* = 9
+    - Stage 2 Non-Zero Subset R2 : 33.30%
+    - Final Pipeline R2         : 2.16% (0.021627)
+
+>>> PRIORITY SELECTED BEST FOURIER DEPTH FOR 'Band Gap (eV)': D* = 10 via Priority 2 (Max R2 between D=5 and D=10)
+    Final Pipeline R2 = -1.22% | Best K* = 6
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB) (Threshold = 0.05)
+================================================================================
+Zero-Inflation Rate: 43.7% (874 zeros, 1126 non-zeros)
+Running Symbolic Regression (with 'pow') for Decision Boundary S(x) > 0...
+--> STAGE 1 DISCOVERED SYMBOLIC DECISION BOUNDARY FORMULA S(x):
+    S(x) = log(pow(add(HS_moment_B, Total_HS_FiM), mul(Val_A, Group_Bprime)))
+--> Stage 1 Symbolic Classifier Metrics:
+    - Classification Accuracy : 63.90%
+    - F1-Score               : 0.7255
+    - Precision              : 0.6343
+    - Recall                 : 0.8472
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 3 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=3: K* = 2
+    - Stage 2 Non-Zero Subset R2 : 27.71%
+    - Final Pipeline R2         : 8.38% (0.083770)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 5 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=5: K* = 2
+    - Stage 2 Non-Zero Subset R2 : 31.52%
+    - Final Pipeline R2         : 12.41% (0.124104)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 10 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=10: K* = 2
+    - Stage 2 Non-Zero Subset R2 : 39.43%
+    - Final Pipeline R2         : 16.50% (0.165029)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 50 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=50: K* = 3
+    - Stage 2 Non-Zero Subset R2 : 51.41%
+    - Final Pipeline R2         : 23.84% (0.238362)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 100 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=100: K* = 3
+    - Stage 2 Non-Zero Subset R2 : 53.63%
+    - Final Pipeline R2         : 25.58% (0.255785)
+
+>>> PRIORITY SELECTED BEST FOURIER DEPTH FOR 'Total Magnetization (uB)': D* = 10 via Priority 2 (Max R2 between D=5 and D=10)
+    Final Pipeline R2 = 16.50% | Best K* = 2
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV) (Threshold = 0.01)
+================================================================================
+Zero-Inflation Rate: 30.2% (604 zeros, 1396 non-zeros)
+Running Symbolic Regression (with 'pow') for Decision Boundary S(x) > 0...
+--> STAGE 1 DISCOVERED SYMBOLIC DECISION BOUNDARY FORMULA S(x):
+    S(x) = log(add(pow(sub(add(d_BprimeO, Shannon_Bprime), abs(Total_HS_FM)), log(log(Total_d_electrons))), add(neg(abs(Shannon_Aprime)), log(mul(EN_Aprime, Val_B)))))
+--> Stage 1 Symbolic Classifier Metrics:
+    - Classification Accuracy : 71.45%
+    - F1-Score               : 0.8167
+    - Precision              : 0.7400
+    - Recall                 : 0.9112
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 3 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=3: K* = 3
+    - Stage 2 Non-Zero Subset R2 : 3.38%
+    - Final Pipeline R2         : 2.45% (0.024479)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 5 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=5: K* = 3
+    - Stage 2 Non-Zero Subset R2 : 4.23%
+    - Final Pipeline R2         : 3.43% (0.034348)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 10 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=10: K* = 6
+    - Stage 2 Non-Zero Subset R2 : 5.25%
+    - Final Pipeline R2         : 4.07% (0.040705)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 50 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=50: K* = 2
+    - Stage 2 Non-Zero Subset R2 : 9.45%
+    - Final Pipeline R2         : 7.66% (0.076580)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 100 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=100: K* = 10
+    - Stage 2 Non-Zero Subset R2 : 9.91%
+    - Final Pipeline R2         : 2.44% (0.024367)
+
+>>> PRIORITY SELECTED BEST FOURIER DEPTH FOR 'Energy Above Hull (eV)': D* = 10 via Priority 2 (Max R2 between D=5 and D=10)
+    Final Pipeline R2 = 4.07% | Best K* = 6
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom) (Threshold = None)
+================================================================================
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 3 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=3: K* = 3
+    - Stage 2 Non-Zero Subset R2 : 46.00%
+    - Final Pipeline R2         : 46.00% (0.460006)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 5 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=5: K* = 4
+    - Stage 2 Non-Zero Subset R2 : 48.32%
+    - Final Pipeline R2         : 48.32% (0.483211)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 10 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=10: K* = 4
+    - Stage 2 Non-Zero Subset R2 : 52.03%
+    - Final Pipeline R2         : 52.03% (0.520265)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 50 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=50: K* = 4
+    - Stage 2 Non-Zero Subset R2 : 56.94%
+    - Final Pipeline R2         : 56.94% (0.569366)
+
+--- Evaluating Stage 2 & Pipeline at Fourier Depth D = 100 ---
+--> OPTIMAL K ENSEMBLE CAPACITY AT D=100: K* = 2
+    - Stage 2 Non-Zero Subset R2 : 58.03%
+    - Final Pipeline R2         : 58.03% (0.580260)
+
+>>> PRIORITY SELECTED BEST FOURIER DEPTH FOR 'Formation Energy (eV/atom)': D* = 10 via Priority 2 (Max R2 between D=5 and D=10)
+    Final Pipeline R2 = 52.03% | Best K* = 4

@@ -1,0 +1,93 @@
+======================================================================
+EXPERIMENT 13: Non-Linear Decision Boundary Hurdle Model
+Clean Physical Descriptors (No Leakage: E_GNN, M_net, M_abs removed)
+Expanded Features N = 62 (Interactions, Ratios, Squares)
+Stage 1 Non-Linear Classifier: RBF_SVC | Stage 2 Regressor: RIDGE
+======================================================================
+Dataset Size       : 2000 materials
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV) (Threshold = 0.01)
+================================================================================
+--> 1. DIRECT INTERACTION MODEL RESULT:
+    - Direct R2  : 25.03% (0.250296)
+    - Direct MSE : 1.168177
+    - Direct MAE : 0.909369
+Zero-Inflation Rate: 37.5% (750 zeros, 1250 non-zeros)
+--> STAGE 1 NON-LINEAR (RBF_SVC) CLASSIFIER METRICS:
+    - Classification Accuracy : 78.25%
+    - F1-Score               : 0.8405
+    - Precision              : 0.7759
+    - Recall                 : 0.9168
+--> STAGE 2 INTERACTION REGRESSOR (NON-ZERO SUBSET) METRICS:
+    - Subset R2  : 33.23%
+    - Subset MSE : 0.792802
+    - Subset MAE : 0.753120
+
+>>> COMBINED NON-LINEAR HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : 27.19% (0.271863)
+    - Hurdle Pipeline MSE       : 1.134573
+    - Hurdle Pipeline MAE       : 0.779248
+    - Relative Theoretical Limit: 54.37% of Lit Ceiling (50.0%)
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB) (Threshold = 0.05)
+================================================================================
+--> 1. DIRECT INTERACTION MODEL RESULT:
+    - Direct R2  : 35.15% (0.351468)
+    - Direct MSE : 61.450850
+    - Direct MAE : 4.790364
+Zero-Inflation Rate: 43.7% (874 zeros, 1126 non-zeros)
+--> STAGE 1 NON-LINEAR (RBF_SVC) CLASSIFIER METRICS:
+    - Classification Accuracy : 81.90%
+    - F1-Score               : 0.8391
+    - Precision              : 0.8399
+    - Recall                 : 0.8384
+--> STAGE 2 INTERACTION REGRESSOR (NON-ZERO SUBSET) METRICS:
+    - Subset R2  : 56.23%
+    - Subset MSE : 59.512875
+    - Subset MAE : 5.108778
+
+>>> COMBINED NON-LINEAR HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : 49.87% (0.498730)
+    - Hurdle Pipeline MSE       : 47.497219
+    - Hurdle Pipeline MAE       : 3.616713
+    - Relative Theoretical Limit: 83.12% of Lit Ceiling (60.0%)
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV) (Threshold = 0.01)
+================================================================================
+--> 1. DIRECT INTERACTION MODEL RESULT:
+    - Direct R2  : 10.47% (0.104659)
+    - Direct MSE : 0.065805
+    - Direct MAE : 0.090945
+Zero-Inflation Rate: 30.2% (604 zeros, 1396 non-zeros)
+--> STAGE 1 NON-LINEAR (RBF_SVC) CLASSIFIER METRICS:
+    - Classification Accuracy : 84.50%
+    - F1-Score               : 0.8930
+    - Precision              : 0.8620
+    - Recall                 : 0.9262
+--> STAGE 2 INTERACTION REGRESSOR (NON-ZERO SUBSET) METRICS:
+    - Subset R2  : 9.49%
+    - Subset MSE : 0.090251
+    - Subset MAE : 0.108470
+
+>>> COMBINED NON-LINEAR HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : 12.34% (0.123437)
+    - Hurdle Pipeline MSE       : 0.064425
+    - Hurdle Pipeline MAE       : 0.085409
+    - Relative Theoretical Limit: 49.37% of Lit Ceiling (25.0%)
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom) (Threshold = None)
+================================================================================
+--> 1. DIRECT INTERACTION MODEL RESULT:
+    - Direct R2  : 68.20% (0.681955)
+    - Direct MSE : 0.110958
+    - Direct MAE : 0.197861
+
+>>> COMBINED NON-LINEAR HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : 68.20% (0.681955)
+    - Hurdle Pipeline MSE       : 0.110958
+    - Hurdle Pipeline MAE       : 0.197861
+    - Relative Theoretical Limit: 104.92% of Lit Ceiling (65.0%)

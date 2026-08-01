@@ -1,0 +1,50 @@
+======================================================================
+EXPERIMENT 15: Target-Specific Optimal Interpretable Master Model
+Clean Physical Descriptors (No Leakage: E_GNN, M_net, M_abs removed)
+Expanded Features N = 78 (Roots, Logs, Squares, Interactions, Ratios, Triplets)
+======================================================================
+Dataset Size       : 2000 materials
+
+================================================================================
+MASTER TARGET: Formation Energy (eV/atom)
+================================================================================
+--> MASTER OPTIMAL MODEL RESULTS (DIRECT_MULTI_OPERATOR):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000)
+    - Stage 2 Sub R2            : 69.61% (107.10% of Lit Ceiling)
+    - Final Master Pipeline R2   : 69.61% (0.696131)
+    - Master MSE                 : 0.106012
+    - Master MAE                 : 0.191431
+    - Relative Theoretical Limit : 107.10% of Lit Ceiling (65.0%)
+
+================================================================================
+MASTER TARGET: Total Magnetization (uB)
+================================================================================
+--> MASTER OPTIMAL MODEL RESULTS (NONLINEAR_HURDLE):
+    - Stage 1 Classification Acc : 83.00% (F1 = 0.8493)
+    - Stage 2 Sub R2            : 58.79% (97.98% of Lit Ceiling)
+    - Final Master Pipeline R2   : 50.80% (0.507988)
+    - Master MSE                 : 46.620004
+    - Master MAE                 : 3.574990
+    - Relative Theoretical Limit : 84.66% of Lit Ceiling (60.0%)
+
+================================================================================
+MASTER TARGET: Band Gap (eV)
+================================================================================
+--> MASTER OPTIMAL MODEL RESULTS (DIRECT_MULTI_OPERATOR):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000)
+    - Stage 2 Sub R2            : 29.10% (58.19% of Lit Ceiling)
+    - Final Master Pipeline R2   : 29.10% (0.290971)
+    - Master MSE                 : 1.104798
+    - Master MAE                 : 0.878608
+    - Relative Theoretical Limit : 58.19% of Lit Ceiling (50.0%)
+
+================================================================================
+MASTER TARGET: Energy Above Hull (eV)
+================================================================================
+--> MASTER OPTIMAL MODEL RESULTS (NONLINEAR_HURDLE):
+    - Stage 1 Classification Acc : 85.20% (F1 = 0.8970)
+    - Stage 2 Sub R2            : 10.44% (41.76% of Lit Ceiling)
+    - Final Master Pipeline R2   : 13.58% (0.135807)
+    - Master MSE                 : 0.063516
+    - Master MAE                 : 0.083193
+    - Relative Theoretical Limit : 54.32% of Lit Ceiling (25.0%)

@@ -1,0 +1,23 @@
+{
+  "target_key": "energy_above_hull",
+  "target_display": "Energy Above Hull (eV)",
+  "paper_folder": "bartel_2019_tau",
+  "dataset_label": "5000",
+  "dataset_size": 5000,
+  "lit_limit_r2": 0.25,
+  "in_dist_r2": 0.006119898214440256,
+  "in_dist_limit_achieved_pct": 2.4479592857761023,
+  "in_dist_cls_acc": 0.5954,
+  "in_dist_mse": 0.08102030111323438,
+  "in_dist_mae": 0.09764374198701109,
+  "ood_train_r2_mean": 0.0060724304690473185,
+  "ood_train_r2_std": 0.0009128615656608427,
+  "ood_train_limit_achieved_pct": 2.4289721876189274,
+  "ood_test_r2_mean": 0.006357161412318313,
+  "ood_test_r2_std": 0.0062995554129521404,
+  "ood_test_limit_achieved_pct": 2.542864564927325,
+  "ood_test_cls_acc_mean": 0.5600999999999999,
+  "ood_test_cls_acc_std": 0.04291258556647454,
+  "ood_test_mse": 0.07309211231424884,
+  "ood_test_mae": 0.09586548594364114
+}

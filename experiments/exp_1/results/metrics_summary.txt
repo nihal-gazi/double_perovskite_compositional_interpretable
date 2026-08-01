@@ -1,0 +1,41 @@
+======================================================================
+SEQUENTIAL DFT-SYMBOLIC DISTILLATION OF PAIRFORMER BLOCK
+======================================================================
+Generated Results Summary
+Date / Seed: torch.manual_seed(42)
+
+1. ARCHITECTURAL & TENSOR DIMENSIONS
+------------------------------------
+Input Tensor Z_in      : [64, 16, 16, 32]
+Intermediate L1        : [64, 16, 16, 32]
+Final Output L2        : [64, 16, 16, 32]
+Fourier Mode Grid (k)  : 4 x 4 corner grid (out of 16x16)
+Complex Weight W1      : [32, 32] (dtype: torch.complex64)
+Complex Weight W2      : [32, 32] (dtype: torch.complex64)
+
+2. BASE MODEL TRAINING METRICS
+------------------------------
+Task                   : Synthetic Non-Linear Target Z_in -> Target
+Epochs                 : 50
+Final Base Training MSE: 5.598409e-01
+
+3. DISTILLATION PERFORMANCE METRICS
+-----------------------------------
+Stage 1 (Z_in -> L1):
+  - MSE Error          : 9.402887e-01
+  - Relative L2 Error  : 0.954363 (95.44%)
+
+Stage 2 (L1_hat -> L2):
+  - MSE Error          : 6.286871e-01
+  - Relative L2 Error  : 0.945273 (94.53%)
+
+End-to-End Reconstructed Error (Z_in -> L2_hat):
+  - Final MSE          : 6.286871e-01
+  - Final Relative L2  : 0.945273 (94.53%)
+
+4. ARTIFACT SAVED PATHS
+-----------------------
+Weight Matrix W1       : C:\Users\user\Desktop\IEM\IEM projects\Prof SOP sir\exp_v2\experiments\exp_1\results\W1.pt
+Weight Matrix W2       : C:\Users\user\Desktop\IEM\IEM projects\Prof SOP sir\exp_v2\experiments\exp_1\results\W2.pt
+Metrics Summary        : C:\Users\user\Desktop\IEM\IEM projects\Prof SOP sir\exp_v2\experiments\exp_1\results\metrics_summary.txt
+======================================================================

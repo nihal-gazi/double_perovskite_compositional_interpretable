@@ -1,0 +1,87 @@
+======================================================================
+EXPERIMENT 12: Physical Interaction & Polynomial-Linear Hybrid Model
+Clean Physical Descriptors (No Leakage: E_GNN, M_net, M_abs removed)
+Expanded Features N = 62 (Interactions, Ratios, Squares)
+======================================================================
+Dataset Size       : 2000 materials
+Model Regularization: RIDGE (alpha = 1.0)
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV) (Threshold = 0.01)
+================================================================================
+--> 1. DIRECT INTERACTION MODEL RESULT:
+    - Direct R2  : 25.03% (0.250296)
+    - Direct MSE : 1.168177
+    - Direct MAE : 0.909369
+Zero-Inflation Rate: 37.5% (750 zeros, 1250 non-zeros)
+--> STAGE 1 INTERACTION LOGISTIC CLASSIFIER METRICS:
+    - Classification Accuracy : 68.45%
+    - F1-Score               : 0.7758
+--> STAGE 2 INTERACTION REGRESSOR (NON-ZERO SUBSET) METRICS:
+    - Subset R2  : 33.23%
+    - Subset MSE : 0.792802
+    - Subset MAE : 0.753120
+
+>>> COMBINED HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : 7.68% (0.076829)
+    - Hurdle Pipeline MSE       : 1.438472
+    - Hurdle Pipeline MAE       : 0.930029
+    - Relative Theoretical Limit: 15.37% of Lit Ceiling (50.0%)
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB) (Threshold = 0.05)
+================================================================================
+--> 1. DIRECT INTERACTION MODEL RESULT:
+    - Direct R2  : 35.15% (0.351468)
+    - Direct MSE : 61.450850
+    - Direct MAE : 4.790364
+Zero-Inflation Rate: 43.7% (874 zeros, 1126 non-zeros)
+--> STAGE 1 INTERACTION LOGISTIC CLASSIFIER METRICS:
+    - Classification Accuracy : 70.75%
+    - F1-Score               : 0.7566
+--> STAGE 2 INTERACTION REGRESSOR (NON-ZERO SUBSET) METRICS:
+    - Subset R2  : 56.23%
+    - Subset MSE : 59.512875
+    - Subset MAE : 5.108778
+
+>>> COMBINED HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : 20.53% (0.205340)
+    - Hurdle Pipeline MSE       : 75.297068
+    - Hurdle Pipeline MAE       : 4.682510
+    - Relative Theoretical Limit: 34.22% of Lit Ceiling (60.0%)
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV) (Threshold = 0.01)
+================================================================================
+--> 1. DIRECT INTERACTION MODEL RESULT:
+    - Direct R2  : 10.47% (0.104659)
+    - Direct MSE : 0.065805
+    - Direct MAE : 0.090945
+Zero-Inflation Rate: 30.2% (604 zeros, 1396 non-zeros)
+--> STAGE 1 INTERACTION LOGISTIC CLASSIFIER METRICS:
+    - Classification Accuracy : 79.25%
+    - F1-Score               : 0.8599
+--> STAGE 2 INTERACTION REGRESSOR (NON-ZERO SUBSET) METRICS:
+    - Subset R2  : 9.49%
+    - Subset MSE : 0.090251
+    - Subset MAE : 0.108470
+
+>>> COMBINED HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : 10.83% (0.108256)
+    - Hurdle Pipeline MSE       : 0.065541
+    - Hurdle Pipeline MAE       : 0.090738
+    - Relative Theoretical Limit: 43.30% of Lit Ceiling (25.0%)
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom) (Threshold = None)
+================================================================================
+--> 1. DIRECT INTERACTION MODEL RESULT:
+    - Direct R2  : 68.20% (0.681955)
+    - Direct MSE : 0.110958
+    - Direct MAE : 0.197861
+
+>>> COMBINED HURDLE SYSTEM RESULT:
+    - Hurdle Pipeline R2        : 68.20% (0.681955)
+    - Hurdle Pipeline MSE       : 0.110958
+    - Hurdle Pipeline MAE       : 0.197861
+    - Relative Theoretical Limit: 104.92% of Lit Ceiling (65.0%)

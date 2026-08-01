@@ -1,0 +1,51 @@
+======================================================================
+EXPERIMENT 19: Octahedral d0/d10 Closed-Shell Engine & Oxidation Enthalpy Mismatch
+Clean Physical Descriptors (No Leakage: E_GNN, M_net, M_abs removed)
+Introduces d0/d10 Closed-Shell Engine, Binary Oxidation Enthalpy Mismatch & Soft-Gated Regressor
+Expanded Features N = 93 (d0/d10 Engine, Oxidation Enthalpy, Harrison Gap, Strain)
+======================================================================
+Dataset Size       : 2000 materials
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom)
+================================================================================
+--> EXPERIMENT 19 RESULTS (DIRECT_MULTI_OPERATOR):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000, Tau* = 0.5000)
+    - Stage 2 Sub R2            : 71.24% (109.59% of Lit Ceiling)
+    - Final Pipeline R2         : 71.24% (0.712353)
+    - Pipeline MSE               : 0.100353
+    - Pipeline MAE               : 0.187046
+    - Relative Theoretical Limit : 109.59% of Lit Ceiling (65.0%)
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB)
+================================================================================
+--> EXPERIMENT 19 RESULTS (HARD_MARGIN_HURDLE):
+    - Stage 1 Classification Acc : 91.35% (F1 = 0.9245, Tau* = 0.3500)
+    - Stage 2 Sub R2            : 61.67% (102.78% of Lit Ceiling)
+    - Final Pipeline R2         : 61.16% (0.611644)
+    - Pipeline MSE               : 36.798237
+    - Pipeline MAE               : 3.096150
+    - Relative Theoretical Limit : 101.94% of Lit Ceiling (60.0%)
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV)
+================================================================================
+--> EXPERIMENT 19 RESULTS (SOFT_GATED_REGRESSOR):
+    - Stage 1 Classification Acc : 88.65% (F1 = 0.9125, Tau* = 0.4400)
+    - Stage 2 Sub R2            : 41.03% (82.06% of Lit Ceiling)
+    - Final Pipeline R2         : 50.82% (0.508157)
+    - Pipeline MSE               : 0.766382
+    - Pipeline MAE               : 0.705154
+    - Relative Theoretical Limit : 101.63% of Lit Ceiling (50.0%)
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV)
+================================================================================
+--> EXPERIMENT 19 RESULTS (HARD_MARGIN_HURDLE):
+    - Stage 1 Classification Acc : 92.70% (F1 = 0.9483, Tau* = 0.4200)
+    - Stage 2 Sub R2            : 12.25% (49.00% of Lit Ceiling)
+    - Final Pipeline R2         : 16.29% (0.162858)
+    - Pipeline MSE               : 0.061527
+    - Pipeline MAE               : 0.077979
+    - Relative Theoretical Limit : 65.14% of Lit Ceiling (25.0%)

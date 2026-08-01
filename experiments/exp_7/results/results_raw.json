@@ -1,0 +1,62 @@
+{
+  "Band Gap (eV)": {
+    "zero_pct": 37.5,
+    "cls_acc": 0.6325,
+    "cls_f1": 0.76374156219865,
+    "cls_prec": 0.6383664696399785,
+    "cls_rec": 0.9504,
+    "cls_formula": "log(add(add(d_AO, Density_g_cm3), neg(Total_HS_FM)))",
+    "reg_sub_r2": 0.07294099284083522,
+    "reg_sub_mse": 1.1008137659334372,
+    "reg_sub_mae": 0.8662451388267728,
+    "reg_formula": "add(div(Spin_Proxy_Distance, Group_B), div(EN_A, EN_Aprime))",
+    "pipe_r2": -0.18587253215464372,
+    "pipe_mse": 1.84780861465368,
+    "pipe_mae": 1.1492738904544573
+  },
+  "Total Magnetization (uB)": {
+    "zero_pct": 43.7,
+    "cls_acc": 0.628,
+    "cls_f1": 0.7061611374407583,
+    "cls_prec": 0.635846372688478,
+    "cls_rec": 0.7939609236234458,
+    "cls_formula": "sub(sub(log(neg(Group_Bprime)), add(neg(Shannon_Aprime), sub(d_BO, EN_Aprime))), neg(mul(abs(Group_B), sub(Group_B, Spin_Proxy_Distance))))",
+    "reg_sub_r2": -0.002851772316087464,
+    "reg_sub_mse": 136.3595237118893,
+    "reg_sub_mae": 6.156211868650088,
+    "reg_formula": "mul(Total_A_Charge, EN_Aprime)",
+    "pipe_r2": 0.0015867172566138565,
+    "pipe_mse": 94.60343485413526,
+    "pipe_mae": 5.076206228249999
+  },
+  "Energy Above Hull (eV)": {
+    "zero_pct": 30.200000000000003,
+    "cls_acc": 0.7245,
+    "cls_f1": 0.8327769347496207,
+    "cls_prec": 0.7224855186940495,
+    "cls_rec": 0.9828080229226361,
+    "cls_formula": "div(add(div(log(add(log(Spin_Proxy_Distance), log(Group_Bprime))), div(abs(abs(EN_avg)), neg(mul(EN_B, Group_B)))), abs(sub(abs(neg(EN_Bprime)), sub(abs(Val_B), div(Group_B, EN_A))))), neg(div(neg(neg(sub(d_AO, Tolerance_Factor))), abs(log(div(-0.536, Total_d_electrons))))))",
+    "reg_sub_r2": -0.013657324714778873,
+    "reg_sub_mse": 0.10107703955768503,
+    "reg_sub_mae": 0.09834871152088474,
+    "reg_formula": "0.100",
+    "pipe_r2": 0.0014667581782058514,
+    "pipe_mse": 0.07338918729331843,
+    "pipe_mae": 0.0952647599349261
+  },
+  "Formation Energy (eV/atom)": {
+    "zero_pct": 0.0,
+    "cls_acc": 1.0,
+    "cls_f1": 1.0,
+    "cls_prec": 1.0,
+    "cls_rec": 1.0,
+    "cls_formula": "N/A (Continuous Baseline)",
+    "reg_sub_r2": 0.030224453141556196,
+    "reg_sub_mse": 0.33833002449169197,
+    "reg_sub_mae": 0.41684599064568234,
+    "reg_formula": "sub(-0.411, d_BO)",
+    "pipe_r2": 0.030224453141556196,
+    "pipe_mse": 0.33833002449169197,
+    "pipe_mae": 0.41684599064568234
+  }
+}

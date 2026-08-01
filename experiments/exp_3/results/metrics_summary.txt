@@ -1,0 +1,548 @@
+======================================================================
+EXPERIMENT 3: Two-Stage Fourier Ensemble Hurdle Architecture Pipeline
+======================================================================
+Dataset Size       : 2000 materials
+Input Features N   : 36
+Top-K Ensemble     : K = 5
+Depths Evaluated D : [3, 5, 10, 50, 100]
+
+===========================================================================
+TARGET PROPERTY: Band Gap (eV) (Threshold = 0.01)
+===========================================================================
+
+--- Evaluating Depth D = 3 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'Group_Bprime        ' -> Acc = 66.45% | F1 = 0.7492
+  Rank 2: Feature 'Val_Bprime          ' -> Acc = 65.15% | F1 = 0.7444
+  Rank 3: Feature 'Val_B               ' -> Acc = 64.30% | F1 = 0.7739
+  Rank 4: Feature 'Total_HS_FM         ' -> Acc = 64.25% | F1 = 0.7708
+  Rank 5: Feature 'Group_B             ' -> Acc = 63.90% | F1 = 0.7669
+--> Stage 1 Ensemble Classifier Result (K=5, D=3):
+    - Accuracy  : 64.45%
+    - F1-Score  : 0.7745
+    - Precision : 0.6416
+    - Recall    : 0.9768
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1250 active samples):
+  Rank 1: Feature 'M_net               ' -> Subset R2 = 24.50% | MSE = 0.896512
+  Rank 2: Feature 'Spin_Proxy_Distance ' -> Subset R2 = 20.35% | MSE = 0.945824
+  Rank 3: Feature 'Val_avg             ' -> Subset R2 = 18.43% | MSE = 0.968608
+  Rank 4: Feature 'Total_d_electrons   ' -> Subset R2 = 17.83% | MSE = 0.975698
+  Rank 5: Feature 'M_abs               ' -> Subset R2 = 15.41% | MSE = 1.004485
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=3):
+    - Subset R2  : 26.50%
+    - Subset MSE : 0.872764
+    - Subset MAE : 0.773447
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=3):
+    - Final Pipeline R2  : -5.00% (-0.050002)
+    - Final Pipeline MSE : 1.636097e+00
+    - Final Pipeline MAE : 1.086586
+
+--- Evaluating Depth D = 5 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'M_net               ' -> Acc = 68.25% | F1 = 0.7637
+  Rank 2: Feature 'Val_Bprime          ' -> Acc = 68.00% | F1 = 0.7833
+  Rank 3: Feature 'Group_Bprime        ' -> Acc = 68.00% | F1 = 0.7833
+  Rank 4: Feature 'HS_moment_Bprime    ' -> Acc = 65.45% | F1 = 0.7647
+  Rank 5: Feature 'Val_avg             ' -> Acc = 64.35% | F1 = 0.7675
+--> Stage 1 Ensemble Classifier Result (K=5, D=5):
+    - Accuracy  : 69.95%
+    - F1-Score  : 0.7993
+    - Precision : 0.6860
+    - Recall    : 0.9576
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1250 active samples):
+  Rank 1: Feature 'M_net               ' -> Subset R2 = 27.50% | MSE = 0.860865
+  Rank 2: Feature 'Spin_Proxy_Distance ' -> Subset R2 = 21.14% | MSE = 0.936421
+  Rank 3: Feature 'Total_d_electrons   ' -> Subset R2 = 21.04% | MSE = 0.937598
+  Rank 4: Feature 'd_electrons_Bprime  ' -> Subset R2 = 18.73% | MSE = 0.965072
+  Rank 5: Feature 'Val_avg             ' -> Subset R2 = 18.65% | MSE = 0.965925
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=5):
+    - Subset R2  : 28.74%
+    - Subset MSE : 0.846104
+    - Subset MAE : 0.767170
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=5):
+    - Final Pipeline R2  : 9.20% (0.092012)
+    - Final Pipeline MSE : 1.414813e+00
+    - Final Pipeline MAE : 0.961736
+
+--- Evaluating Depth D = 10 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'M_net               ' -> Acc = 71.50% | F1 = 0.7831
+  Rank 2: Feature 'Val_Bprime          ' -> Acc = 68.00% | F1 = 0.7833
+  Rank 3: Feature 'Group_Bprime        ' -> Acc = 68.00% | F1 = 0.7833
+  Rank 4: Feature 'HS_moment_Bprime    ' -> Acc = 66.25% | F1 = 0.7664
+  Rank 5: Feature 'Total_HS_FM         ' -> Acc = 66.15% | F1 = 0.7798
+--> Stage 1 Ensemble Classifier Result (K=5, D=10):
+    - Accuracy  : 69.40%
+    - F1-Score  : 0.7937
+    - Precision : 0.6859
+    - Recall    : 0.9416
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1250 active samples):
+  Rank 1: Feature 'M_net               ' -> Subset R2 = 28.53% | MSE = 0.848630
+  Rank 2: Feature 'Total_d_electrons   ' -> Subset R2 = 24.09% | MSE = 0.901325
+  Rank 3: Feature 'd_electrons_Bprime  ' -> Subset R2 = 23.03% | MSE = 0.913942
+  Rank 4: Feature 'Spin_Proxy_Distance ' -> Subset R2 = 22.75% | MSE = 0.917327
+  Rank 5: Feature 'Val_avg             ' -> Subset R2 = 21.62% | MSE = 0.930662
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=10):
+    - Subset R2  : 32.23%
+    - Subset MSE : 0.804684
+    - Subset MAE : 0.745393
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=10):
+    - Final Pipeline R2  : 12.24% (0.122438)
+    - Final Pipeline MSE : 1.367404e+00
+    - Final Pipeline MAE : 0.942565
+
+--- Evaluating Depth D = 50 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'M_net               ' -> Acc = 75.85% | F1 = 0.8115
+  Rank 2: Feature 'Val_Bprime          ' -> Acc = 68.00% | F1 = 0.7833
+  Rank 3: Feature 'Group_Bprime        ' -> Acc = 68.00% | F1 = 0.7833
+  Rank 4: Feature 'EN_avg              ' -> Acc = 67.60% | F1 = 0.7796
+  Rank 5: Feature 'EN_Bprime           ' -> Acc = 67.15% | F1 = 0.7525
+--> Stage 1 Ensemble Classifier Result (K=5, D=50):
+    - Accuracy  : 73.45%
+    - F1-Score  : 0.8175
+    - Precision : 0.7167
+    - Recall    : 0.9512
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1250 active samples):
+  Rank 1: Feature 'M_net               ' -> Subset R2 = 31.08% | MSE = 0.818340
+  Rank 2: Feature 'd_electrons_Bprime  ' -> Subset R2 = 27.47% | MSE = 0.861222
+  Rank 3: Feature 'Total_d_electrons   ' -> Subset R2 = 25.00% | MSE = 0.890628
+  Rank 4: Feature 'EN_Bprime           ' -> Subset R2 = 22.87% | MSE = 0.915892
+  Rank 5: Feature 'Spin_Proxy_Distance ' -> Subset R2 = 22.75% | MSE = 0.917327
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=50):
+    - Subset R2  : 36.31%
+    - Subset MSE : 0.756233
+    - Subset MAE : 0.720882
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=50):
+    - Final Pipeline R2  : 20.16% (0.201561)
+    - Final Pipeline MSE : 1.244115e+00
+    - Final Pipeline MAE : 0.868236
+
+--- Evaluating Depth D = 100 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'M_net               ' -> Acc = 76.75% | F1 = 0.8208
+  Rank 2: Feature 'EN_avg              ' -> Acc = 70.25% | F1 = 0.7897
+  Rank 3: Feature 'M_abs               ' -> Acc = 68.20% | F1 = 0.7867
+  Rank 4: Feature 'Val_Bprime          ' -> Acc = 68.00% | F1 = 0.7833
+  Rank 5: Feature 'Group_Bprime        ' -> Acc = 68.00% | F1 = 0.7833
+--> Stage 1 Ensemble Classifier Result (K=5, D=100):
+    - Accuracy  : 73.60%
+    - F1-Score  : 0.8195
+    - Precision : 0.7154
+    - Recall    : 0.9592
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1250 active samples):
+  Rank 1: Feature 'M_net               ' -> Subset R2 = 32.52% | MSE = 0.801220
+  Rank 2: Feature 'EN_avg              ' -> Subset R2 = 29.87% | MSE = 0.832778
+  Rank 3: Feature 'd_electrons_Bprime  ' -> Subset R2 = 27.47% | MSE = 0.861222
+  Rank 4: Feature 'Total_d_electrons   ' -> Subset R2 = 25.00% | MSE = 0.890628
+  Rank 5: Feature 'E_GNN               ' -> Subset R2 = 23.64% | MSE = 0.906736
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=100):
+    - Subset R2  : 41.24%
+    - Subset MSE : 0.697774
+    - Subset MAE : 0.692210
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=100):
+    - Final Pipeline R2  : 24.14% (0.241372)
+    - Final Pipeline MSE : 1.182083e+00
+    - Final Pipeline MAE : 0.846360
+
+===========================================================================
+TARGET PROPERTY: Total Magnetization (uB) (Threshold = 0.05)
+===========================================================================
+
+--- Evaluating Depth D = 3 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'M_net               ' -> Acc = 90.90% | F1 = 0.9121
+  Rank 2: Feature 'Val_Bprime          ' -> Acc = 67.70% | F1 = 0.6897
+  Rank 3: Feature 'Group_Bprime        ' -> Acc = 67.70% | F1 = 0.6897
+  Rank 4: Feature 'd_electrons_Bprime  ' -> Acc = 67.05% | F1 = 0.6995
+  Rank 5: Feature 'M_abs               ' -> Acc = 65.45% | F1 = 0.6992
+--> Stage 1 Ensemble Classifier Result (K=5, D=3):
+    - Accuracy  : 85.15%
+    - F1-Score  : 0.8709
+    - Precision : 0.8528
+    - Recall    : 0.8899
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1126 active samples):
+  Rank 1: Feature 'M_net               ' -> Subset R2 = 83.40% | MSE = 22.566550
+  Rank 2: Feature 'M_abs               ' -> Subset R2 = 81.73% | MSE = 24.841513
+  Rank 3: Feature 'Volume_A3           ' -> Subset R2 = 24.71% | MSE = 102.379906
+  Rank 4: Feature 'EN_A                ' -> Subset R2 = 11.96% | MSE = 119.709206
+  Rank 5: Feature 'EN_Aprime           ' -> Subset R2 = 11.96% | MSE = 119.709206
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=3):
+    - Subset R2  : 62.19%
+    - Subset MSE : 51.414996
+    - Subset MAE : 3.891139
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=3):
+    - Final Pipeline R2  : 62.80% (0.628008)
+    - Final Pipeline MSE : 3.524764e+01
+    - Final Pipeline MAE : 2.559936
+
+--- Evaluating Depth D = 5 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'M_net               ' -> Acc = 98.20% | F1 = 0.9838
+  Rank 2: Feature 'd_electrons_Bprime  ' -> Acc = 68.85% | F1 = 0.7245
+  Rank 3: Feature 'M_abs               ' -> Acc = 68.45% | F1 = 0.7481
+  Rank 4: Feature 'Val_Bprime          ' -> Acc = 67.70% | F1 = 0.6897
+  Rank 5: Feature 'Group_Bprime        ' -> Acc = 67.70% | F1 = 0.6897
+--> Stage 1 Ensemble Classifier Result (K=5, D=5):
+    - Accuracy  : 86.20%
+    - F1-Score  : 0.8826
+    - Precision : 0.8472
+    - Recall    : 0.9210
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1126 active samples):
+  Rank 1: Feature 'M_net               ' -> Subset R2 = 83.53% | MSE = 22.397256
+  Rank 2: Feature 'M_abs               ' -> Subset R2 = 82.02% | MSE = 24.451690
+  Rank 3: Feature 'Volume_A3           ' -> Subset R2 = 26.02% | MSE = 100.591449
+  Rank 4: Feature 'EN_A                ' -> Subset R2 = 16.35% | MSE = 113.747015
+  Rank 5: Feature 'EN_Aprime           ' -> Subset R2 = 16.35% | MSE = 113.747015
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=5):
+    - Subset R2  : 63.96%
+    - Subset MSE : 48.999500
+    - Subset MAE : 3.680223
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=5):
+    - Final Pipeline R2  : 66.20% (0.661992)
+    - Final Pipeline MSE : 3.202756e+01
+    - Final Pipeline MAE : 2.494994
+
+--- Evaluating Depth D = 10 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'M_net               ' -> Acc = 98.45% | F1 = 0.9860
+  Rank 2: Feature 'd_electrons_Bprime  ' -> Acc = 68.85% | F1 = 0.7245
+  Rank 3: Feature 'M_abs               ' -> Acc = 68.25% | F1 = 0.7128
+  Rank 4: Feature 'Total_d_electrons   ' -> Acc = 67.95% | F1 = 0.7064
+  Rank 5: Feature 'Val_Bprime          ' -> Acc = 67.70% | F1 = 0.6897
+--> Stage 1 Ensemble Classifier Result (K=5, D=10):
+    - Accuracy  : 88.90%
+    - F1-Score  : 0.9062
+    - Precision : 0.8645
+    - Recall    : 0.9520
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1126 active samples):
+  Rank 1: Feature 'M_net               ' -> Subset R2 = 83.82% | MSE = 22.003800
+  Rank 2: Feature 'M_abs               ' -> Subset R2 = 83.00% | MSE = 23.108789
+  Rank 3: Feature 'Volume_A3           ' -> Subset R2 = 29.97% | MSE = 95.221813
+  Rank 4: Feature 'EN_A                ' -> Subset R2 = 25.38% | MSE = 101.465552
+  Rank 5: Feature 'EN_Aprime           ' -> Subset R2 = 25.38% | MSE = 101.465552
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=10):
+    - Subset R2  : 67.93%
+    - Subset MSE : 43.600082
+    - Subset MAE : 3.476930
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=10):
+    - Final Pipeline R2  : 67.77% (0.677655)
+    - Final Pipeline MSE : 3.054341e+01
+    - Final Pipeline MAE : 2.415869
+
+--- Evaluating Depth D = 50 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'M_net               ' -> Acc = 99.60% | F1 = 0.9964
+  Rank 2: Feature 'M_abs               ' -> Acc = 71.30% | F1 = 0.7551
+  Rank 3: Feature 'd_electrons_Bprime  ' -> Acc = 70.40% | F1 = 0.7312
+  Rank 4: Feature 'EN_Bprime           ' -> Acc = 69.50% | F1 = 0.7398
+  Rank 5: Feature 'Total_d_electrons   ' -> Acc = 68.10% | F1 = 0.7081
+--> Stage 1 Ensemble Classifier Result (K=5, D=50):
+    - Accuracy  : 91.05%
+    - F1-Score  : 0.9238
+    - Precision : 0.8872
+    - Recall    : 0.9636
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1126 active samples):
+  Rank 1: Feature 'M_abs               ' -> Subset R2 = 86.38% | MSE = 18.521557
+  Rank 2: Feature 'M_net               ' -> Subset R2 = 85.04% | MSE = 20.341035
+  Rank 3: Feature 'Volume_A3           ' -> Subset R2 = 43.39% | MSE = 76.973903
+  Rank 4: Feature 'EN_A                ' -> Subset R2 = 35.37% | MSE = 87.881189
+  Rank 5: Feature 'EN_Aprime           ' -> Subset R2 = 35.37% | MSE = 87.881189
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=50):
+    - Subset R2  : 75.05%
+    - Subset MSE : 33.923698
+    - Subset MAE : 3.044883
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=50):
+    - Final Pipeline R2  : 70.09% (0.700909)
+    - Final Pipeline MSE : 2.834000e+01
+    - Final Pipeline MAE : 2.233017
+
+--- Evaluating Depth D = 100 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'M_net               ' -> Acc = 99.90% | F1 = 0.9991
+  Rank 2: Feature 'M_abs               ' -> Acc = 73.15% | F1 = 0.7520
+  Rank 3: Feature 'd_electrons_Bprime  ' -> Acc = 70.40% | F1 = 0.7312
+  Rank 4: Feature 'EN_Bprime           ' -> Acc = 69.50% | F1 = 0.7398
+  Rank 5: Feature 'Total_d_electrons   ' -> Acc = 68.10% | F1 = 0.7081
+--> Stage 1 Ensemble Classifier Result (K=5, D=100):
+    - Accuracy  : 91.60%
+    - F1-Score  : 0.9286
+    - Precision : 0.8901
+    - Recall    : 0.9707
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1126 active samples):
+  Rank 1: Feature 'M_abs               ' -> Subset R2 = 86.97% | MSE = 17.720870
+  Rank 2: Feature 'M_net               ' -> Subset R2 = 85.88% | MSE = 19.193623
+  Rank 3: Feature 'Volume_A3           ' -> Subset R2 = 48.33% | MSE = 70.255668
+  Rank 4: Feature 'EN_A                ' -> Subset R2 = 35.37% | MSE = 87.881189
+  Rank 5: Feature 'EN_Aprime           ' -> Subset R2 = 35.37% | MSE = 87.881189
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=100):
+    - Subset R2  : 76.42%
+    - Subset MSE : 32.057141
+    - Subset MAE : 2.977267
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=100):
+    - Final Pipeline R2  : 68.38% (0.683839)
+    - Final Pipeline MSE : 2.995750e+01
+    - Final Pipeline MAE : 2.317627
+
+===========================================================================
+TARGET PROPERTY: Energy Above Hull (eV) (Threshold = 0.01)
+===========================================================================
+
+--- Evaluating Depth D = 3 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'EN_A                ' -> Acc = 74.00% | F1 = 0.8266
+  Rank 2: Feature 'EN_Aprime           ' -> Acc = 74.00% | F1 = 0.8266
+  Rank 3: Feature 'EN_Bprime           ' -> Acc = 71.35% | F1 = 0.8155
+  Rank 4: Feature 'Shannon_A           ' -> Acc = 70.40% | F1 = 0.8240
+  Rank 5: Feature 'Shannon_Aprime      ' -> Acc = 70.40% | F1 = 0.8240
+--> Stage 1 Ensemble Classifier Result (K=5, D=3):
+    - Accuracy  : 72.75%
+    - F1-Score  : 0.8346
+    - Precision : 0.7241
+    - Recall    : 0.9850
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1396 active samples):
+  Rank 1: Feature 'E_GNN               ' -> Subset R2 = 45.43% | MSE = 0.054413
+  Rank 2: Feature 'EN_B                ' -> Subset R2 = 2.53% | MSE = 0.097196
+  Rank 3: Feature 'Volume_A3           ' -> Subset R2 = 2.09% | MSE = 0.097626
+  Rank 4: Feature 'Group_B             ' -> Subset R2 = 1.71% | MSE = 0.098008
+  Rank 5: Feature 'd_electrons_Bprime  ' -> Subset R2 = 1.06% | MSE = 0.098658
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=3):
+    - Subset R2  : 18.75%
+    - Subset MSE : 0.081023
+    - Subset MAE : 0.103763
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=3):
+    - Final Pipeline R2  : 15.96% (0.159569)
+    - Final Pipeline MSE : 6.176913e-02
+    - Final Pipeline MAE : 0.107168
+
+--- Evaluating Depth D = 5 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'EN_A                ' -> Acc = 74.70% | F1 = 0.8302
+  Rank 2: Feature 'EN_Aprime           ' -> Acc = 74.70% | F1 = 0.8302
+  Rank 3: Feature 'Shannon_A           ' -> Acc = 74.60% | F1 = 0.8292
+  Rank 4: Feature 'Shannon_Aprime      ' -> Acc = 74.60% | F1 = 0.8292
+  Rank 5: Feature 'd_AO                ' -> Acc = 74.60% | F1 = 0.8292
+--> Stage 1 Ensemble Classifier Result (K=5, D=5):
+    - Accuracy  : 74.75%
+    - F1-Score  : 0.8304
+    - Precision : 0.7818
+    - Recall    : 0.8854
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1396 active samples):
+  Rank 1: Feature 'E_GNN               ' -> Subset R2 = 53.37% | MSE = 0.046495
+  Rank 2: Feature 'EN_B                ' -> Subset R2 = 3.47% | MSE = 0.096259
+  Rank 3: Feature 'Group_B             ' -> Subset R2 = 2.49% | MSE = 0.097235
+  Rank 4: Feature 'Volume_A3           ' -> Subset R2 = 2.23% | MSE = 0.097491
+  Rank 5: Feature 'HS_moment_Bprime    ' -> Subset R2 = 1.48% | MSE = 0.098242
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=5):
+    - Subset R2  : 22.24%
+    - Subset MSE : 0.077542
+    - Subset MAE : 0.103042
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=5):
+    - Final Pipeline R2  : 13.22% (0.132219)
+    - Final Pipeline MSE : 6.377926e-02
+    - Final Pipeline MAE : 0.095056
+
+--- Evaluating Depth D = 10 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'EN_A                ' -> Acc = 75.85% | F1 = 0.8338
+  Rank 2: Feature 'EN_Aprime           ' -> Acc = 75.85% | F1 = 0.8338
+  Rank 3: Feature 'Shannon_A           ' -> Acc = 74.60% | F1 = 0.8292
+  Rank 4: Feature 'Shannon_Aprime      ' -> Acc = 74.60% | F1 = 0.8292
+  Rank 5: Feature 'd_AO                ' -> Acc = 74.60% | F1 = 0.8292
+--> Stage 1 Ensemble Classifier Result (K=5, D=10):
+    - Accuracy  : 74.75%
+    - F1-Score  : 0.8304
+    - Precision : 0.7818
+    - Recall    : 0.8854
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1396 active samples):
+  Rank 1: Feature 'E_GNN               ' -> Subset R2 = 62.49% | MSE = 0.037407
+  Rank 2: Feature 'EN_B                ' -> Subset R2 = 5.19% | MSE = 0.094540
+  Rank 3: Feature 'Volume_A3           ' -> Subset R2 = 2.96% | MSE = 0.096762
+  Rank 4: Feature 'Group_B             ' -> Subset R2 = 2.83% | MSE = 0.096895
+  Rank 5: Feature 'EN_A                ' -> Subset R2 = 2.75% | MSE = 0.096969
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=10):
+    - Subset R2  : 26.55%
+    - Subset MSE : 0.073236
+    - Subset MAE : 0.100506
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=10):
+    - Final Pipeline R2  : 16.90% (0.169013)
+    - Final Pipeline MSE : 6.107507e-02
+    - Final Pipeline MAE : 0.092132
+
+--- Evaluating Depth D = 50 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'EN_A                ' -> Acc = 76.40% | F1 = 0.8370
+  Rank 2: Feature 'EN_Aprime           ' -> Acc = 76.40% | F1 = 0.8370
+  Rank 3: Feature 'Shannon_A           ' -> Acc = 74.55% | F1 = 0.8287
+  Rank 4: Feature 'Shannon_Aprime      ' -> Acc = 74.55% | F1 = 0.8287
+  Rank 5: Feature 'd_AO                ' -> Acc = 74.55% | F1 = 0.8287
+--> Stage 1 Ensemble Classifier Result (K=5, D=50):
+    - Accuracy  : 75.20%
+    - F1-Score  : 0.8331
+    - Precision : 0.7855
+    - Recall    : 0.8868
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1396 active samples):
+  Rank 1: Feature 'E_GNN               ' -> Subset R2 = 73.52% | MSE = 0.026407
+  Rank 2: Feature 'EN_B                ' -> Subset R2 = 7.04% | MSE = 0.092691
+  Rank 3: Feature 'Density_g_cm3       ' -> Subset R2 = 6.11% | MSE = 0.093627
+  Rank 4: Feature 'EN_avg              ' -> Subset R2 = 5.96% | MSE = 0.093770
+  Rank 5: Feature 'Volume_A3           ' -> Subset R2 = 5.40% | MSE = 0.094330
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=50):
+    - Subset R2  : 33.62%
+    - Subset MSE : 0.066195
+    - Subset MAE : 0.097006
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=50):
+    - Final Pipeline R2  : 19.94% (0.199366)
+    - Final Pipeline MSE : 5.884418e-02
+    - Final Pipeline MAE : 0.090837
+
+--- Evaluating Depth D = 100 ---
+Stage 1 Top 5 Fourier Classifiers (Zero vs Non-Zero):
+  Rank 1: Feature 'EN_A                ' -> Acc = 76.40% | F1 = 0.8370
+  Rank 2: Feature 'EN_Aprime           ' -> Acc = 76.40% | F1 = 0.8370
+  Rank 3: Feature 'Shannon_A           ' -> Acc = 74.70% | F1 = 0.8296
+  Rank 4: Feature 'Shannon_Aprime      ' -> Acc = 74.70% | F1 = 0.8296
+  Rank 5: Feature 'd_AO                ' -> Acc = 74.70% | F1 = 0.8296
+--> Stage 1 Ensemble Classifier Result (K=5, D=100):
+    - Accuracy  : 76.20%
+    - F1-Score  : 0.8374
+    - Precision : 0.8003
+    - Recall    : 0.8782
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 1396 active samples):
+  Rank 1: Feature 'E_GNN               ' -> Subset R2 = 74.45% | MSE = 0.025472
+  Rank 2: Feature 'Density_g_cm3       ' -> Subset R2 = 12.27% | MSE = 0.087483
+  Rank 3: Feature 'EN_avg              ' -> Subset R2 = 7.96% | MSE = 0.091782
+  Rank 4: Feature 'M_net               ' -> Subset R2 = 7.30% | MSE = 0.092432
+  Rank 5: Feature 'Volume_A3           ' -> Subset R2 = 7.12% | MSE = 0.092619
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=100):
+    - Subset R2  : 36.89%
+    - Subset MSE : 0.062930
+    - Subset MAE : 0.093211
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=100):
+    - Final Pipeline R2  : -1.55% (-0.015503)
+    - Final Pipeline MSE : 7.463644e-02
+    - Final Pipeline MAE : 0.094345
+
+===========================================================================
+TARGET PROPERTY: Formation Energy (eV/atom) (Threshold = None)
+===========================================================================
+
+--- Evaluating Depth D = 3 ---
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 2000 active samples):
+  Rank 1: Feature 'E_GNN               ' -> Subset R2 = 88.06% | MSE = 0.041671
+  Rank 2: Feature 'EN_avg              ' -> Subset R2 = 36.61% | MSE = 0.221149
+  Rank 3: Feature 'EN_B                ' -> Subset R2 = 33.24% | MSE = 0.232903
+  Rank 4: Feature 'EN_A                ' -> Subset R2 = 29.24% | MSE = 0.246870
+  Rank 5: Feature 'EN_Aprime           ' -> Subset R2 = 29.24% | MSE = 0.246870
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=3):
+    - Subset R2  : 61.37%
+    - Subset MSE : 0.134753
+    - Subset MAE : 0.237406
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=3):
+    - Final Pipeline R2  : 61.37% (0.613749)
+    - Final Pipeline MSE : 1.347531e-01
+    - Final Pipeline MAE : 0.237406
+
+--- Evaluating Depth D = 5 ---
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 2000 active samples):
+  Rank 1: Feature 'E_GNN               ' -> Subset R2 = 90.98% | MSE = 0.031482
+  Rank 2: Feature 'EN_avg              ' -> Subset R2 = 36.85% | MSE = 0.220298
+  Rank 3: Feature 'EN_B                ' -> Subset R2 = 33.71% | MSE = 0.231285
+  Rank 4: Feature 'EN_A                ' -> Subset R2 = 33.50% | MSE = 0.232007
+  Rank 5: Feature 'EN_Aprime           ' -> Subset R2 = 33.50% | MSE = 0.232007
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=5):
+    - Subset R2  : 64.03%
+    - Subset MSE : 0.125496
+    - Subset MAE : 0.227778
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=5):
+    - Final Pipeline R2  : 64.03% (0.640284)
+    - Final Pipeline MSE : 1.254959e-01
+    - Final Pipeline MAE : 0.227778
+
+--- Evaluating Depth D = 10 ---
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 2000 active samples):
+  Rank 1: Feature 'E_GNN               ' -> Subset R2 = 94.68% | MSE = 0.018567
+  Rank 2: Feature 'EN_A                ' -> Subset R2 = 38.97% | MSE = 0.212913
+  Rank 3: Feature 'EN_Aprime           ' -> Subset R2 = 38.97% | MSE = 0.212913
+  Rank 4: Feature 'EN_avg              ' -> Subset R2 = 38.64% | MSE = 0.214065
+  Rank 5: Feature 'EN_B                ' -> Subset R2 = 36.04% | MSE = 0.223134
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=10):
+    - Subset R2  : 67.53%
+    - Subset MSE : 0.113263
+    - Subset MAE : 0.215934
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=10):
+    - Final Pipeline R2  : 67.53% (0.675348)
+    - Final Pipeline MSE : 1.132627e-01
+    - Final Pipeline MAE : 0.215934
+
+--- Evaluating Depth D = 50 ---
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 2000 active samples):
+  Rank 1: Feature 'E_GNN               ' -> Subset R2 = 96.45% | MSE = 0.012387
+  Rank 2: Feature 'EN_avg              ' -> Subset R2 = 43.11% | MSE = 0.198458
+  Rank 3: Feature 'EN_A                ' -> Subset R2 = 42.86% | MSE = 0.199340
+  Rank 4: Feature 'EN_Aprime           ' -> Subset R2 = 42.86% | MSE = 0.199340
+  Rank 5: Feature 'EN_B                ' -> Subset R2 = 40.96% | MSE = 0.205977
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=50):
+    - Subset R2  : 71.28%
+    - Subset MSE : 0.100183
+    - Subset MAE : 0.199555
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=50):
+    - Final Pipeline R2  : 71.28% (0.712840)
+    - Final Pipeline MSE : 1.001828e-01
+    - Final Pipeline MAE : 0.199555
+
+--- Evaluating Depth D = 100 ---
+
+Stage 2 Top 5 Non-Zero Fourier Regressors (on 2000 active samples):
+  Rank 1: Feature 'E_GNN               ' -> Subset R2 = 96.45% | MSE = 0.012369
+  Rank 2: Feature 'EN_avg              ' -> Subset R2 = 47.17% | MSE = 0.184317
+  Rank 3: Feature 'EN_A                ' -> Subset R2 = 42.86% | MSE = 0.199340
+  Rank 4: Feature 'EN_Aprime           ' -> Subset R2 = 42.86% | MSE = 0.199340
+  Rank 5: Feature 'EN_B                ' -> Subset R2 = 40.96% | MSE = 0.205977
+--> Stage 2 Ensemble Regressor Subset Result (K=5, D=100):
+    - Subset R2  : 71.98%
+    - Subset MSE : 0.097745
+    - Subset MAE : 0.196323
+
+>>> COMBINED TWO-STAGE PIPELINE RESULT (D=100):
+    - Final Pipeline R2  : 71.98% (0.719827)
+    - Final Pipeline MSE : 9.774525e-02
+    - Final Pipeline MAE : 0.196323

@@ -1,0 +1,283 @@
+======================================================================
+EXPERIMENT 4: Top-K Ensemble Size Sweep (K = 1 to 10) Pipeline
+======================================================================
+Dataset Size       : 2000 materials
+Input Features N   : 36
+K Sweep Range      : K = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Depths Evaluated D : [3, 5, 10, 50, 100]
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV) (Threshold = 0.01)
+================================================================================
+
+--- Evaluating Depth D = 3 ---
+  K =  1 -> Cls Acc = 66.45% | Sub R2 = 24.50% | Final Pipeline R2 = 14.31% (MSE = 1.335171)
+  K =  2 -> Cls Acc = 65.15% | Sub R2 = 29.30% | Final Pipeline R2 = 6.38% (MSE = 1.458814)
+  K =  3 -> Cls Acc = 64.80% | Sub R2 = 28.31% | Final Pipeline R2 = 0.49% (MSE = 1.550588)
+  K =  4 -> Cls Acc = 63.80% | Sub R2 = 26.72% | Final Pipeline R2 = -5.21% (MSE = 1.639411)
+  K =  5 -> Cls Acc = 64.45% | Sub R2 = 26.50% | Final Pipeline R2 = -5.00% (MSE = 1.636097)
+  K =  6 -> Cls Acc = 64.65% | Sub R2 = 26.01% | Final Pipeline R2 = -5.24% (MSE = 1.639911)
+  K =  7 -> Cls Acc = 64.35% | Sub R2 = 25.41% | Final Pipeline R2 = -5.73% (MSE = 1.647497)
+  K =  8 -> Cls Acc = 64.35% | Sub R2 = 24.49% | Final Pipeline R2 = -6.04% (MSE = 1.652324)
+  K =  9 -> Cls Acc = 64.10% | Sub R2 = 24.36% | Final Pipeline R2 = -6.81% (MSE = 1.664278)
+  K = 10 -> Cls Acc = 64.15% | Sub R2 = 23.80% | Final Pipeline R2 = -7.35% (MSE = 1.672734)
+>>> BEST K FOR DEPTH D=3: K* = 1 (Achieving Pipeline R2 = 14.31%)
+
+--- Evaluating Depth D = 5 ---
+  K =  1 -> Cls Acc = 68.25% | Sub R2 = 27.50% | Final Pipeline R2 = 12.85% (MSE = 1.357974)
+  K =  2 -> Cls Acc = 68.95% | Sub R2 = 31.51% | Final Pipeline R2 = 13.15% (MSE = 1.353246)
+  K =  3 -> Cls Acc = 68.40% | Sub R2 = 29.89% | Final Pipeline R2 = 11.94% (MSE = 1.372129)
+  K =  4 -> Cls Acc = 69.10% | Sub R2 = 29.58% | Final Pipeline R2 = 10.26% (MSE = 1.398333)
+  K =  5 -> Cls Acc = 69.95% | Sub R2 = 28.74% | Final Pipeline R2 = 9.20% (MSE = 1.414813)
+  K =  6 -> Cls Acc = 69.70% | Sub R2 = 28.36% | Final Pipeline R2 = 8.01% (MSE = 1.433328)
+  K =  7 -> Cls Acc = 69.45% | Sub R2 = 28.16% | Final Pipeline R2 = 5.83% (MSE = 1.467273)
+  K =  8 -> Cls Acc = 68.85% | Sub R2 = 27.43% | Final Pipeline R2 = 4.16% (MSE = 1.493351)
+  K =  9 -> Cls Acc = 67.05% | Sub R2 = 27.19% | Final Pipeline R2 = 2.40% (MSE = 1.520852)
+  K = 10 -> Cls Acc = 65.90% | Sub R2 = 26.88% | Final Pipeline R2 = -0.40% (MSE = 1.564402)
+>>> BEST K FOR DEPTH D=5: K* = 2 (Achieving Pipeline R2 = 13.15%)
+
+--- Evaluating Depth D = 10 ---
+  K =  1 -> Cls Acc = 71.50% | Sub R2 = 28.53% | Final Pipeline R2 = 21.81% (MSE = 1.218408)
+  K =  2 -> Cls Acc = 70.95% | Sub R2 = 33.96% | Final Pipeline R2 = 22.77% (MSE = 1.203368)
+  K =  3 -> Cls Acc = 69.05% | Sub R2 = 33.63% | Final Pipeline R2 = 16.35% (MSE = 1.303472)
+  K =  4 -> Cls Acc = 69.85% | Sub R2 = 32.58% | Final Pipeline R2 = 13.88% (MSE = 1.341955)
+  K =  5 -> Cls Acc = 69.40% | Sub R2 = 32.23% | Final Pipeline R2 = 12.24% (MSE = 1.367404)
+  K =  6 -> Cls Acc = 70.60% | Sub R2 = 31.33% | Final Pipeline R2 = 11.15% (MSE = 1.384430)
+  K =  7 -> Cls Acc = 70.35% | Sub R2 = 30.95% | Final Pipeline R2 = 10.77% (MSE = 1.390393)
+  K =  8 -> Cls Acc = 70.45% | Sub R2 = 30.94% | Final Pipeline R2 = 10.79% (MSE = 1.390046)
+  K =  9 -> Cls Acc = 70.15% | Sub R2 = 29.94% | Final Pipeline R2 = 9.61% (MSE = 1.408492)
+  K = 10 -> Cls Acc = 70.55% | Sub R2 = 29.42% | Final Pipeline R2 = 8.31% (MSE = 1.428682)
+>>> BEST K FOR DEPTH D=10: K* = 2 (Achieving Pipeline R2 = 22.77%)
+
+--- Evaluating Depth D = 50 ---
+  K =  1 -> Cls Acc = 75.85% | Sub R2 = 31.08% | Final Pipeline R2 = 29.22% (MSE = 1.102906)
+  K =  2 -> Cls Acc = 75.70% | Sub R2 = 36.96% | Final Pipeline R2 = 30.57% (MSE = 1.081820)
+  K =  3 -> Cls Acc = 72.75% | Sub R2 = 36.41% | Final Pipeline R2 = 22.44% (MSE = 1.208600)
+  K =  4 -> Cls Acc = 72.85% | Sub R2 = 37.76% | Final Pipeline R2 = 20.76% (MSE = 1.234683)
+  K =  5 -> Cls Acc = 73.45% | Sub R2 = 36.31% | Final Pipeline R2 = 20.16% (MSE = 1.244115)
+  K =  6 -> Cls Acc = 73.20% | Sub R2 = 36.91% | Final Pipeline R2 = 19.49% (MSE = 1.254529)
+  K =  7 -> Cls Acc = 72.40% | Sub R2 = 35.99% | Final Pipeline R2 = 16.11% (MSE = 1.307223)
+  K =  8 -> Cls Acc = 72.30% | Sub R2 = 35.58% | Final Pipeline R2 = 15.42% (MSE = 1.317850)
+  K =  9 -> Cls Acc = 71.35% | Sub R2 = 35.45% | Final Pipeline R2 = 13.25% (MSE = 1.351659)
+  K = 10 -> Cls Acc = 70.60% | Sub R2 = 34.74% | Final Pipeline R2 = 12.06% (MSE = 1.370207)
+>>> BEST K FOR DEPTH D=50: K* = 2 (Achieving Pipeline R2 = 30.57%)
+
+--- Evaluating Depth D = 100 ---
+  K =  1 -> Cls Acc = 76.75% | Sub R2 = 32.52% | Final Pipeline R2 = 25.90% (MSE = 1.154653)
+  K =  2 -> Cls Acc = 78.15% | Sub R2 = 42.38% | Final Pipeline R2 = 36.54% (MSE = 0.988828)
+  K =  3 -> Cls Acc = 77.20% | Sub R2 = 42.61% | Final Pipeline R2 = 32.55% (MSE = 1.051000)
+  K =  4 -> Cls Acc = 75.45% | Sub R2 = 40.99% | Final Pipeline R2 = 28.27% (MSE = 1.117727)
+  K =  5 -> Cls Acc = 73.60% | Sub R2 = 41.24% | Final Pipeline R2 = 24.14% (MSE = 1.182083)
+  K =  6 -> Cls Acc = 74.25% | Sub R2 = 40.51% | Final Pipeline R2 = 25.13% (MSE = 1.166633)
+  K =  7 -> Cls Acc = 74.15% | Sub R2 = 40.22% | Final Pipeline R2 = 23.37% (MSE = 1.194017)
+  K =  8 -> Cls Acc = 74.10% | Sub R2 = 39.23% | Final Pipeline R2 = 21.77% (MSE = 1.218906)
+  K =  9 -> Cls Acc = 73.75% | Sub R2 = 38.30% | Final Pipeline R2 = 20.05% (MSE = 1.245845)
+  K = 10 -> Cls Acc = 72.30% | Sub R2 = 37.33% | Final Pipeline R2 = 17.14% (MSE = 1.291156)
+>>> BEST K FOR DEPTH D=100: K* = 2 (Achieving Pipeline R2 = 36.54%)
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB) (Threshold = 0.05)
+================================================================================
+
+--- Evaluating Depth D = 3 ---
+  K =  1 -> Cls Acc = 90.90% | Sub R2 = 83.40% | Final Pipeline R2 = 83.00% (MSE = 16.111976)
+  K =  2 -> Cls Acc = 94.90% | Sub R2 = 82.97% | Final Pipeline R2 = 82.53% (MSE = 16.553482)
+  K =  3 -> Cls Acc = 89.90% | Sub R2 = 76.70% | Final Pipeline R2 = 74.89% (MSE = 23.789096)
+  K =  4 -> Cls Acc = 84.10% | Sub R2 = 69.41% | Final Pipeline R2 = 63.98% (MSE = 34.126257)
+  K =  5 -> Cls Acc = 85.15% | Sub R2 = 62.19% | Final Pipeline R2 = 62.80% (MSE = 35.247636)
+  K =  6 -> Cls Acc = 84.25% | Sub R2 = 56.64% | Final Pipeline R2 = 56.91% (MSE = 40.829283)
+  K =  7 -> Cls Acc = 82.40% | Sub R2 = 51.60% | Final Pipeline R2 = 51.49% (MSE = 45.963291)
+  K =  8 -> Cls Acc = 78.80% | Sub R2 = 47.42% | Final Pipeline R2 = 46.68% (MSE = 50.521727)
+  K =  9 -> Cls Acc = 78.55% | Sub R2 = 43.85% | Final Pipeline R2 = 43.31% (MSE = 53.720094)
+  K = 10 -> Cls Acc = 77.35% | Sub R2 = 40.81% | Final Pipeline R2 = 39.96% (MSE = 56.885965)
+>>> BEST K FOR DEPTH D=3: K* = 1 (Achieving Pipeline R2 = 83.00%)
+
+--- Evaluating Depth D = 5 ---
+  K =  1 -> Cls Acc = 98.20% | Sub R2 = 83.53% | Final Pipeline R2 = 86.37% (MSE = 12.912806)
+  K =  2 -> Cls Acc = 97.55% | Sub R2 = 83.25% | Final Pipeline R2 = 85.87% (MSE = 13.385127)
+  K =  3 -> Cls Acc = 94.65% | Sub R2 = 77.13% | Final Pipeline R2 = 80.57% (MSE = 18.411499)
+  K =  4 -> Cls Acc = 88.55% | Sub R2 = 70.64% | Final Pipeline R2 = 72.79% (MSE = 25.787146)
+  K =  5 -> Cls Acc = 86.20% | Sub R2 = 63.96% | Final Pipeline R2 = 66.20% (MSE = 32.027559)
+  K =  6 -> Cls Acc = 85.45% | Sub R2 = 58.96% | Final Pipeline R2 = 60.08% (MSE = 37.829248)
+  K =  7 -> Cls Acc = 82.70% | Sub R2 = 53.99% | Final Pipeline R2 = 55.16% (MSE = 42.485060)
+  K =  8 -> Cls Acc = 81.95% | Sub R2 = 49.82% | Final Pipeline R2 = 51.00% (MSE = 46.426207)
+  K =  9 -> Cls Acc = 79.80% | Sub R2 = 46.23% | Final Pipeline R2 = 46.38% (MSE = 50.804231)
+  K = 10 -> Cls Acc = 78.95% | Sub R2 = 43.14% | Final Pipeline R2 = 42.79% (MSE = 54.209093)
+>>> BEST K FOR DEPTH D=5: K* = 1 (Achieving Pipeline R2 = 86.37%)
+
+--- Evaluating Depth D = 10 ---
+  K =  1 -> Cls Acc = 98.45% | Sub R2 = 83.82% | Final Pipeline R2 = 86.36% (MSE = 12.921445)
+  K =  2 -> Cls Acc = 98.70% | Sub R2 = 84.07% | Final Pipeline R2 = 85.83% (MSE = 13.426053)
+  K =  3 -> Cls Acc = 97.30% | Sub R2 = 78.66% | Final Pipeline R2 = 80.42% (MSE = 18.553179)
+  K =  4 -> Cls Acc = 94.55% | Sub R2 = 73.61% | Final Pipeline R2 = 74.56% (MSE = 24.109371)
+  K =  5 -> Cls Acc = 88.90% | Sub R2 = 67.93% | Final Pipeline R2 = 67.77% (MSE = 30.543410)
+  K =  6 -> Cls Acc = 84.70% | Sub R2 = 63.74% | Final Pipeline R2 = 62.65% (MSE = 35.391977)
+  K =  7 -> Cls Acc = 83.05% | Sub R2 = 59.58% | Final Pipeline R2 = 57.47% (MSE = 40.298049)
+  K =  8 -> Cls Acc = 81.25% | Sub R2 = 55.29% | Final Pipeline R2 = 51.76% (MSE = 45.712249)
+  K =  9 -> Cls Acc = 81.70% | Sub R2 = 51.79% | Final Pipeline R2 = 49.56% (MSE = 47.789326)
+  K = 10 -> Cls Acc = 79.70% | Sub R2 = 48.68% | Final Pipeline R2 = 43.71% (MSE = 53.332222)
+>>> BEST K FOR DEPTH D=10: K* = 1 (Achieving Pipeline R2 = 86.36%)
+
+--- Evaluating Depth D = 50 ---
+  K =  1 -> Cls Acc = 99.60% | Sub R2 = 86.38% | Final Pipeline R2 = 84.57% (MSE = 14.622447)
+  K =  2 -> Cls Acc = 99.55% | Sub R2 = 86.87% | Final Pipeline R2 = 85.99% (MSE = 13.276317)
+  K =  3 -> Cls Acc = 98.35% | Sub R2 = 83.59% | Final Pipeline R2 = 80.08% (MSE = 18.877632)
+  K =  4 -> Cls Acc = 95.30% | Sub R2 = 79.93% | Final Pipeline R2 = 75.74% (MSE = 22.984734)
+  K =  5 -> Cls Acc = 91.05% | Sub R2 = 75.05% | Final Pipeline R2 = 70.09% (MSE = 28.340001)
+  K =  6 -> Cls Acc = 88.95% | Sub R2 = 70.80% | Final Pipeline R2 = 62.76% (MSE = 35.288625)
+  K =  7 -> Cls Acc = 85.75% | Sub R2 = 67.17% | Final Pipeline R2 = 55.47% (MSE = 42.190912)
+  K =  8 -> Cls Acc = 84.35% | Sub R2 = 63.59% | Final Pipeline R2 = 51.93% (MSE = 45.552570)
+  K =  9 -> Cls Acc = 84.25% | Sub R2 = 60.17% | Final Pipeline R2 = 48.33% (MSE = 48.961370)
+  K = 10 -> Cls Acc = 83.45% | Sub R2 = 57.07% | Final Pipeline R2 = 46.19% (MSE = 50.985856)
+>>> BEST K FOR DEPTH D=50: K* = 2 (Achieving Pipeline R2 = 85.99%)
+
+--- Evaluating Depth D = 100 ---
+  K =  1 -> Cls Acc = 99.90% | Sub R2 = 86.97% | Final Pipeline R2 = 82.41% (MSE = 16.669322)
+  K =  2 -> Cls Acc = 99.85% | Sub R2 = 87.67% | Final Pipeline R2 = 84.51% (MSE = 14.678786)
+  K =  3 -> Cls Acc = 97.85% | Sub R2 = 85.07% | Final Pipeline R2 = 78.66% (MSE = 20.222036)
+  K =  4 -> Cls Acc = 95.35% | Sub R2 = 81.42% | Final Pipeline R2 = 72.09% (MSE = 26.444126)
+  K =  5 -> Cls Acc = 91.60% | Sub R2 = 76.42% | Final Pipeline R2 = 68.38% (MSE = 29.957496)
+  K =  6 -> Cls Acc = 89.50% | Sub R2 = 73.23% | Final Pipeline R2 = 62.19% (MSE = 35.822732)
+  K =  7 -> Cls Acc = 85.70% | Sub R2 = 68.93% | Final Pipeline R2 = 55.69% (MSE = 41.989109)
+  K =  8 -> Cls Acc = 86.90% | Sub R2 = 65.08% | Final Pipeline R2 = 54.23% (MSE = 43.371251)
+  K =  9 -> Cls Acc = 84.65% | Sub R2 = 61.72% | Final Pipeline R2 = 50.24% (MSE = 47.152890)
+  K = 10 -> Cls Acc = 84.35% | Sub R2 = 59.87% | Final Pipeline R2 = 48.80% (MSE = 48.511067)
+>>> BEST K FOR DEPTH D=100: K* = 2 (Achieving Pipeline R2 = 84.51%)
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV) (Threshold = 0.01)
+================================================================================
+
+--- Evaluating Depth D = 3 ---
+  K =  1 -> Cls Acc = 74.00% | Sub R2 = 45.43% | Final Pipeline R2 = 21.03% (MSE = 0.058039)
+  K =  2 -> Cls Acc = 74.00% | Sub R2 = 35.44% | Final Pipeline R2 = 17.33% (MSE = 0.060757)
+  K =  3 -> Cls Acc = 72.10% | Sub R2 = 27.53% | Final Pipeline R2 = 23.66% (MSE = 0.056111)
+  K =  4 -> Cls Acc = 72.80% | Sub R2 = 22.36% | Final Pipeline R2 = 19.29% (MSE = 0.059319)
+  K =  5 -> Cls Acc = 72.75% | Sub R2 = 18.75% | Final Pipeline R2 = 15.96% (MSE = 0.061769)
+  K =  6 -> Cls Acc = 72.70% | Sub R2 = 16.18% | Final Pipeline R2 = 13.64% (MSE = 0.063474)
+  K =  7 -> Cls Acc = 70.65% | Sub R2 = 14.25% | Final Pipeline R2 = 11.78% (MSE = 0.064841)
+  K =  8 -> Cls Acc = 70.50% | Sub R2 = 12.77% | Final Pipeline R2 = 10.30% (MSE = 0.065924)
+  K =  9 -> Cls Acc = 70.40% | Sub R2 = 11.59% | Final Pipeline R2 = 9.20% (MSE = 0.066732)
+  K = 10 -> Cls Acc = 70.45% | Sub R2 = 10.62% | Final Pipeline R2 = 8.28% (MSE = 0.067409)
+>>> BEST K FOR DEPTH D=3: K* = 3 (Achieving Pipeline R2 = 23.66%)
+
+--- Evaluating Depth D = 5 ---
+  K =  1 -> Cls Acc = 74.70% | Sub R2 = 53.37% | Final Pipeline R2 = 29.02% (MSE = 0.052169)
+  K =  2 -> Cls Acc = 74.70% | Sub R2 = 41.82% | Final Pipeline R2 = 23.18% (MSE = 0.056460)
+  K =  3 -> Cls Acc = 74.70% | Sub R2 = 32.15% | Final Pipeline R2 = 17.99% (MSE = 0.060278)
+  K =  4 -> Cls Acc = 74.75% | Sub R2 = 26.42% | Final Pipeline R2 = 15.84% (MSE = 0.061852)
+  K =  5 -> Cls Acc = 74.75% | Sub R2 = 22.24% | Final Pipeline R2 = 13.22% (MSE = 0.063779)
+  K =  6 -> Cls Acc = 74.90% | Sub R2 = 19.30% | Final Pipeline R2 = 11.21% (MSE = 0.065259)
+  K =  7 -> Cls Acc = 74.65% | Sub R2 = 17.08% | Final Pipeline R2 = 8.18% (MSE = 0.067482)
+  K =  8 -> Cls Acc = 73.80% | Sub R2 = 15.40% | Final Pipeline R2 = 13.96% (MSE = 0.063238)
+  K =  9 -> Cls Acc = 70.90% | Sub R2 = 14.05% | Final Pipeline R2 = 11.64% (MSE = 0.064943)
+  K = 10 -> Cls Acc = 70.60% | Sub R2 = 12.94% | Final Pipeline R2 = 10.47% (MSE = 0.065802)
+>>> BEST K FOR DEPTH D=5: K* = 1 (Achieving Pipeline R2 = 29.02%)
+
+--- Evaluating Depth D = 10 ---
+  K =  1 -> Cls Acc = 75.85% | Sub R2 = 62.49% | Final Pipeline R2 = 38.67% (MSE = 0.045079)
+  K =  2 -> Cls Acc = 75.85% | Sub R2 = 49.12% | Final Pipeline R2 = 30.71% (MSE = 0.050928)
+  K =  3 -> Cls Acc = 74.75% | Sub R2 = 38.20% | Final Pipeline R2 = 23.30% (MSE = 0.056370)
+  K =  4 -> Cls Acc = 74.75% | Sub R2 = 31.08% | Final Pipeline R2 = 19.25% (MSE = 0.059352)
+  K =  5 -> Cls Acc = 74.75% | Sub R2 = 26.55% | Final Pipeline R2 = 16.90% (MSE = 0.061075)
+  K =  6 -> Cls Acc = 75.75% | Sub R2 = 23.22% | Final Pipeline R2 = 14.96% (MSE = 0.062500)
+  K =  7 -> Cls Acc = 75.50% | Sub R2 = 20.78% | Final Pipeline R2 = 19.81% (MSE = 0.058939)
+  K =  8 -> Cls Acc = 75.30% | Sub R2 = 18.90% | Final Pipeline R2 = 17.76% (MSE = 0.060443)
+  K =  9 -> Cls Acc = 74.15% | Sub R2 = 17.33% | Final Pipeline R2 = 15.87% (MSE = 0.061835)
+  K = 10 -> Cls Acc = 72.15% | Sub R2 = 16.02% | Final Pipeline R2 = 13.98% (MSE = 0.063224)
+>>> BEST K FOR DEPTH D=10: K* = 1 (Achieving Pipeline R2 = 38.67%)
+
+--- Evaluating Depth D = 50 ---
+  K =  1 -> Cls Acc = 76.40% | Sub R2 = 73.52% | Final Pipeline R2 = 48.54% (MSE = 0.037823)
+  K =  2 -> Cls Acc = 76.40% | Sub R2 = 57.72% | Final Pipeline R2 = 38.61% (MSE = 0.045122)
+  K =  3 -> Cls Acc = 76.20% | Sub R2 = 45.79% | Final Pipeline R2 = 31.06% (MSE = 0.050669)
+  K =  4 -> Cls Acc = 76.20% | Sub R2 = 38.48% | Final Pipeline R2 = 26.34% (MSE = 0.054136)
+  K =  5 -> Cls Acc = 75.20% | Sub R2 = 33.62% | Final Pipeline R2 = 19.94% (MSE = 0.058844)
+  K =  6 -> Cls Acc = 75.55% | Sub R2 = 29.69% | Final Pipeline R2 = 17.96% (MSE = 0.060297)
+  K =  7 -> Cls Acc = 78.20% | Sub R2 = 26.66% | Final Pipeline R2 = 22.46% (MSE = 0.056991)
+  K =  8 -> Cls Acc = 78.15% | Sub R2 = 24.41% | Final Pipeline R2 = 23.44% (MSE = 0.056268)
+  K =  9 -> Cls Acc = 77.30% | Sub R2 = 22.52% | Final Pipeline R2 = 19.84% (MSE = 0.058919)
+  K = 10 -> Cls Acc = 76.20% | Sub R2 = 21.01% | Final Pipeline R2 = 18.12% (MSE = 0.060179)
+>>> BEST K FOR DEPTH D=50: K* = 1 (Achieving Pipeline R2 = 48.54%)
+
+--- Evaluating Depth D = 100 ---
+  K =  1 -> Cls Acc = 76.40% | Sub R2 = 74.45% | Final Pipeline R2 = 49.26% (MSE = 0.037293)
+  K =  2 -> Cls Acc = 76.40% | Sub R2 = 60.59% | Final Pipeline R2 = 9.52% (MSE = 0.066501)
+  K =  3 -> Cls Acc = 76.45% | Sub R2 = 49.27% | Final Pipeline R2 = 13.12% (MSE = 0.063855)
+  K =  4 -> Cls Acc = 76.20% | Sub R2 = 41.90% | Final Pipeline R2 = 1.56% (MSE = 0.072350)
+  K =  5 -> Cls Acc = 76.20% | Sub R2 = 36.89% | Final Pipeline R2 = -1.55% (MSE = 0.074636)
+  K =  6 -> Cls Acc = 76.05% | Sub R2 = 33.27% | Final Pipeline R2 = 3.81% (MSE = 0.070699)
+  K =  7 -> Cls Acc = 79.10% | Sub R2 = 30.10% | Final Pipeline R2 = 13.37% (MSE = 0.063669)
+  K =  8 -> Cls Acc = 77.75% | Sub R2 = 27.54% | Final Pipeline R2 = 13.13% (MSE = 0.063847)
+  K =  9 -> Cls Acc = 76.20% | Sub R2 = 25.45% | Final Pipeline R2 = 12.89% (MSE = 0.064023)
+  K = 10 -> Cls Acc = 76.00% | Sub R2 = 23.67% | Final Pipeline R2 = 12.91% (MSE = 0.064011)
+>>> BEST K FOR DEPTH D=100: K* = 1 (Achieving Pipeline R2 = 49.26%)
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom) (Threshold = None)
+================================================================================
+
+--- Evaluating Depth D = 3 ---
+  K =  1 -> Cls Acc = 100.00% | Sub R2 = 88.06% | Final Pipeline R2 = 88.06% (MSE = 0.041671)
+  K =  2 -> Cls Acc = 100.00% | Sub R2 = 75.77% | Final Pipeline R2 = 75.77% (MSE = 0.084526)
+  K =  3 -> Cls Acc = 100.00% | Sub R2 = 66.53% | Final Pipeline R2 = 66.53% (MSE = 0.116774)
+  K =  4 -> Cls Acc = 100.00% | Sub R2 = 64.83% | Final Pipeline R2 = 64.83% (MSE = 0.122689)
+  K =  5 -> Cls Acc = 100.00% | Sub R2 = 61.37% | Final Pipeline R2 = 61.37% (MSE = 0.134753)
+  K =  6 -> Cls Acc = 100.00% | Sub R2 = 57.55% | Final Pipeline R2 = 57.55% (MSE = 0.148087)
+  K =  7 -> Cls Acc = 100.00% | Sub R2 = 54.10% | Final Pipeline R2 = 54.10% (MSE = 0.160147)
+  K =  8 -> Cls Acc = 100.00% | Sub R2 = 52.36% | Final Pipeline R2 = 52.36% (MSE = 0.166217)
+  K =  9 -> Cls Acc = 100.00% | Sub R2 = 50.20% | Final Pipeline R2 = 50.20% (MSE = 0.173755)
+  K = 10 -> Cls Acc = 100.00% | Sub R2 = 48.18% | Final Pipeline R2 = 48.18% (MSE = 0.180782)
+>>> BEST K FOR DEPTH D=3: K* = 1 (Achieving Pipeline R2 = 88.06%)
+
+--- Evaluating Depth D = 5 ---
+  K =  1 -> Cls Acc = 100.00% | Sub R2 = 90.98% | Final Pipeline R2 = 90.98% (MSE = 0.031482)
+  K =  2 -> Cls Acc = 100.00% | Sub R2 = 78.11% | Final Pipeline R2 = 78.11% (MSE = 0.076376)
+  K =  3 -> Cls Acc = 100.00% | Sub R2 = 68.49% | Final Pipeline R2 = 68.49% (MSE = 0.109931)
+  K =  4 -> Cls Acc = 100.00% | Sub R2 = 67.19% | Final Pipeline R2 = 67.19% (MSE = 0.114461)
+  K =  5 -> Cls Acc = 100.00% | Sub R2 = 64.03% | Final Pipeline R2 = 64.03% (MSE = 0.125496)
+  K =  6 -> Cls Acc = 100.00% | Sub R2 = 60.26% | Final Pipeline R2 = 60.26% (MSE = 0.138625)
+  K =  7 -> Cls Acc = 100.00% | Sub R2 = 58.13% | Final Pipeline R2 = 58.13% (MSE = 0.146056)
+  K =  8 -> Cls Acc = 100.00% | Sub R2 = 55.08% | Final Pipeline R2 = 55.08% (MSE = 0.156700)
+  K =  9 -> Cls Acc = 100.00% | Sub R2 = 52.75% | Final Pipeline R2 = 52.75% (MSE = 0.164843)
+  K = 10 -> Cls Acc = 100.00% | Sub R2 = 50.59% | Final Pipeline R2 = 50.59% (MSE = 0.172395)
+>>> BEST K FOR DEPTH D=5: K* = 1 (Achieving Pipeline R2 = 90.98%)
+
+--- Evaluating Depth D = 10 ---
+  K =  1 -> Cls Acc = 100.00% | Sub R2 = 94.68% | Final Pipeline R2 = 94.68% (MSE = 0.018567)
+  K =  2 -> Cls Acc = 100.00% | Sub R2 = 80.84% | Final Pipeline R2 = 80.84% (MSE = 0.066848)
+  K =  3 -> Cls Acc = 100.00% | Sub R2 = 70.00% | Final Pipeline R2 = 70.00% (MSE = 0.104672)
+  K =  4 -> Cls Acc = 100.00% | Sub R2 = 69.95% | Final Pipeline R2 = 69.95% (MSE = 0.104852)
+  K =  5 -> Cls Acc = 100.00% | Sub R2 = 67.53% | Final Pipeline R2 = 67.53% (MSE = 0.113263)
+  K =  6 -> Cls Acc = 100.00% | Sub R2 = 64.61% | Final Pipeline R2 = 64.61% (MSE = 0.123472)
+  K =  7 -> Cls Acc = 100.00% | Sub R2 = 61.42% | Final Pipeline R2 = 61.42% (MSE = 0.134581)
+  K =  8 -> Cls Acc = 100.00% | Sub R2 = 58.49% | Final Pipeline R2 = 58.49% (MSE = 0.144808)
+  K =  9 -> Cls Acc = 100.00% | Sub R2 = 55.96% | Final Pipeline R2 = 55.96% (MSE = 0.153638)
+  K = 10 -> Cls Acc = 100.00% | Sub R2 = 53.65% | Final Pipeline R2 = 53.65% (MSE = 0.161710)
+>>> BEST K FOR DEPTH D=10: K* = 1 (Achieving Pipeline R2 = 94.68%)
+
+--- Evaluating Depth D = 50 ---
+  K =  1 -> Cls Acc = 100.00% | Sub R2 = 96.45% | Final Pipeline R2 = 96.45% (MSE = 0.012387)
+  K =  2 -> Cls Acc = 100.00% | Sub R2 = 83.39% | Final Pipeline R2 = 83.39% (MSE = 0.057954)
+  K =  3 -> Cls Acc = 100.00% | Sub R2 = 78.66% | Final Pipeline R2 = 78.66% (MSE = 0.074466)
+  K =  4 -> Cls Acc = 100.00% | Sub R2 = 73.00% | Final Pipeline R2 = 73.00% (MSE = 0.094203)
+  K =  5 -> Cls Acc = 100.00% | Sub R2 = 71.28% | Final Pipeline R2 = 71.28% (MSE = 0.100183)
+  K =  6 -> Cls Acc = 100.00% | Sub R2 = 68.16% | Final Pipeline R2 = 68.16% (MSE = 0.111075)
+  K =  7 -> Cls Acc = 100.00% | Sub R2 = 65.23% | Final Pipeline R2 = 65.23% (MSE = 0.121298)
+  K =  8 -> Cls Acc = 100.00% | Sub R2 = 64.48% | Final Pipeline R2 = 64.48% (MSE = 0.123935)
+  K =  9 -> Cls Acc = 100.00% | Sub R2 = 61.78% | Final Pipeline R2 = 61.78% (MSE = 0.133341)
+  K = 10 -> Cls Acc = 100.00% | Sub R2 = 59.89% | Final Pipeline R2 = 59.89% (MSE = 0.139927)
+>>> BEST K FOR DEPTH D=50: K* = 1 (Achieving Pipeline R2 = 96.45%)
+
+--- Evaluating Depth D = 100 ---
+  K =  1 -> Cls Acc = 100.00% | Sub R2 = 96.45% | Final Pipeline R2 = 96.45% (MSE = 0.012369)
+  K =  2 -> Cls Acc = 100.00% | Sub R2 = 84.46% | Final Pipeline R2 = 84.46% (MSE = 0.054224)
+  K =  3 -> Cls Acc = 100.00% | Sub R2 = 79.56% | Final Pipeline R2 = 79.56% (MSE = 0.071326)
+  K =  4 -> Cls Acc = 100.00% | Sub R2 = 73.74% | Final Pipeline R2 = 73.74% (MSE = 0.091604)
+  K =  5 -> Cls Acc = 100.00% | Sub R2 = 71.98% | Final Pipeline R2 = 71.98% (MSE = 0.097745)
+  K =  6 -> Cls Acc = 100.00% | Sub R2 = 69.19% | Final Pipeline R2 = 69.19% (MSE = 0.107489)
+  K =  7 -> Cls Acc = 100.00% | Sub R2 = 66.50% | Final Pipeline R2 = 66.50% (MSE = 0.116866)
+  K =  8 -> Cls Acc = 100.00% | Sub R2 = 65.63% | Final Pipeline R2 = 65.63% (MSE = 0.119918)
+  K =  9 -> Cls Acc = 100.00% | Sub R2 = 63.58% | Final Pipeline R2 = 63.58% (MSE = 0.127066)
+  K = 10 -> Cls Acc = 100.00% | Sub R2 = 61.58% | Final Pipeline R2 = 61.58% (MSE = 0.134042)
+>>> BEST K FOR DEPTH D=100: K* = 1 (Achieving Pipeline R2 = 96.45%)

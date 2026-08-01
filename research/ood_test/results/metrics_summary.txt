@@ -1,0 +1,64 @@
+======================================================================
+80/20 TRAIN-TEST SPLIT BENCHMARK REPORT (5,000 DATASET)
+Trains Master Algorithm on 80% (4,000) -> Evaluates Generated Eqns on 20% (1,000)
+======================================================================
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom)
+================================================================================
+--> 80% TRAIN SET PERFORMANCE (4,000 Samples):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000)
+    - Stage 2 Sub R2            : 70.95%
+    - Train Pipeline R2         : 70.95% (109.16% of Lit Limit)
+    - Train MSE                 : 0.106889 | MAE: 0.191460
+
+--> 20% HELD-OUT TEST SET PERFORMANCE (1,000 Samples):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000)
+    - Stage 2 Sub R2            : 65.16%
+    - Test Pipeline R2          : 65.16% (100.25% of Lit Limit)
+    - Test MSE                  : 0.127321 | MAE: 0.213281
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB)
+================================================================================
+--> 80% TRAIN SET PERFORMANCE (4,000 Samples):
+    - Stage 1 Classification Acc : 93.53% (F1 = 0.9568)
+    - Stage 2 Sub R2            : 43.50%
+    - Train Pipeline R2         : 48.78% (81.29% of Lit Limit)
+    - Train MSE                 : 46.342325 | MAE: 3.852344
+
+--> 20% HELD-OUT TEST SET PERFORMANCE (1,000 Samples):
+    - Stage 1 Classification Acc : 75.00% (F1 = 0.8414)
+    - Stage 2 Sub R2            : -2.63%
+    - Test Pipeline R2          : -3.89% (0.00% of Lit Limit)
+    - Test MSE                  : 55.420880 | MAE: 4.373461
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV)
+================================================================================
+--> 80% TRAIN SET PERFORMANCE (4,000 Samples):
+    - Stage 1 Classification Acc : 90.28% (F1 = 0.9385)
+    - Stage 2 Sub R2            : 31.30%
+    - Train Pipeline R2         : 41.17% (82.35% of Lit Limit)
+    - Train MSE                 : 0.940935 | MAE: 0.804574
+
+--> 20% HELD-OUT TEST SET PERFORMANCE (1,000 Samples):
+    - Stage 1 Classification Acc : 79.40% (F1 = 0.8741)
+    - Stage 2 Sub R2            : 32.68%
+    - Test Pipeline R2          : 40.37% (80.73% of Lit Limit)
+    - Test MSE                  : 0.973627 | MAE: 0.808819
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV)
+================================================================================
+--> 80% TRAIN SET PERFORMANCE (4,000 Samples):
+    - Stage 1 Classification Acc : 94.35% (F1 = 0.9621)
+    - Stage 2 Sub R2            : 13.84%
+    - Train Pipeline R2         : 17.43% (69.72% of Lit Limit)
+    - Train MSE                 : 0.066412 | MAE: 0.082988
+
+--> 20% HELD-OUT TEST SET PERFORMANCE (1,000 Samples):
+    - Stage 1 Classification Acc : 78.70% (F1 = 0.8644)
+    - Stage 2 Sub R2            : 8.81%
+    - Test Pipeline R2          : 11.03% (44.14% of Lit Limit)
+    - Test MSE                  : 0.076343 | MAE: 0.102936

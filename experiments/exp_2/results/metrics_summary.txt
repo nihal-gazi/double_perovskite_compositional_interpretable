@@ -1,0 +1,303 @@
+======================================================================
+EXPERIMENT 2: Sequential Fourier Distillation & Top-K Ensemble Averaging
+======================================================================
+Dataset Size : 2000 materials
+Input Features N : 36
+Top-K Ensemble : K = 5
+Depths Evaluated D : [3, 5, 10, 50, 100]
+
+======================================================================
+TARGET PROPERTY: Formation Energy (eV/atom)
+======================================================================
+
+--- Evaluating Depth D = 3 ---
+Top 5 Individual Fourier Transforms for D=3:
+  Rank 1: Feature 'E_GNN' -> R2 = 88.06% | MSE = 0.041671
+  Rank 2: Feature 'EN_avg' -> R2 = 36.61% | MSE = 0.221149
+  Rank 3: Feature 'EN_B' -> R2 = 33.24% | MSE = 0.232903
+  Rank 4: Feature 'EN_A' -> R2 = 29.24% | MSE = 0.246870
+  Rank 5: Feature 'EN_Aprime' -> R2 = 29.24% | MSE = 0.246870
+
+>>> FINAL ENSEMBLE ACCURACY (D=3):
+    F_final = (E_GNN + EN_avg + EN_B + EN_A + EN_Aprime) / 5
+    - Final R2 Accuracy : 61.37% (0.613749)
+    - Final MSE         : 1.347530e-01
+    - Final MAE         : 0.237406
+
+--- Evaluating Depth D = 5 ---
+Top 5 Individual Fourier Transforms for D=5:
+  Rank 1: Feature 'E_GNN' -> R2 = 90.98% | MSE = 0.031482
+  Rank 2: Feature 'EN_avg' -> R2 = 36.85% | MSE = 0.220298
+  Rank 3: Feature 'EN_B' -> R2 = 33.71% | MSE = 0.231285
+  Rank 4: Feature 'EN_A' -> R2 = 33.50% | MSE = 0.232007
+  Rank 5: Feature 'EN_Aprime' -> R2 = 33.50% | MSE = 0.232007
+
+>>> FINAL ENSEMBLE ACCURACY (D=5):
+    F_final = (E_GNN + EN_avg + EN_B + EN_A + EN_Aprime) / 5
+    - Final R2 Accuracy : 64.03% (0.640285)
+    - Final MSE         : 1.254955e-01
+    - Final MAE         : 0.227778
+
+--- Evaluating Depth D = 10 ---
+Top 5 Individual Fourier Transforms for D=10:
+  Rank 1: Feature 'E_GNN' -> R2 = 95.09% | MSE = 0.017143
+  Rank 2: Feature 'EN_A' -> R2 = 39.39% | MSE = 0.211437
+  Rank 3: Feature 'EN_Aprime' -> R2 = 39.39% | MSE = 0.211437
+  Rank 4: Feature 'EN_avg' -> R2 = 38.64% | MSE = 0.214065
+  Rank 5: Feature 'EN_B' -> R2 = 36.04% | MSE = 0.223126
+
+>>> FINAL ENSEMBLE ACCURACY (D=10):
+    F_final = (E_GNN + EN_A + EN_Aprime + EN_avg + EN_B) / 5
+    - Final R2 Accuracy : 67.85% (0.678470)
+    - Final MSE         : 1.121737e-01
+    - Final MAE         : 0.215478
+
+--- Evaluating Depth D = 50 ---
+Top 5 Individual Fourier Transforms for D=50:
+  Rank 1: Feature 'E_GNN' -> R2 = 96.45% | MSE = 0.012376
+  Rank 2: Feature 'EN_avg' -> R2 = 44.57% | MSE = 0.193369
+  Rank 3: Feature 'EN_A' -> R2 = 42.86% | MSE = 0.199340
+  Rank 4: Feature 'EN_Aprime' -> R2 = 42.86% | MSE = 0.199340
+  Rank 5: Feature 'EN_B' -> R2 = 40.96% | MSE = 0.205977
+
+>>> FINAL ENSEMBLE ACCURACY (D=50):
+    F_final = (E_GNN + EN_avg + EN_A + EN_Aprime + EN_B) / 5
+    - Final R2 Accuracy : 71.55% (0.715530)
+    - Final MSE         : 9.924424e-02
+    - Final MAE         : 0.198386
+
+--- Evaluating Depth D = 100 ---
+Top 5 Individual Fourier Transforms for D=100:
+  Rank 1: Feature 'E_GNN' -> R2 = 96.46% | MSE = 0.012364
+  Rank 2: Feature 'EN_avg' -> R2 = 47.75% | MSE = 0.182272
+  Rank 3: Feature 'EN_A' -> R2 = 42.86% | MSE = 0.199340
+  Rank 4: Feature 'EN_Aprime' -> R2 = 42.86% | MSE = 0.199340
+  Rank 5: Feature 'EN_B' -> R2 = 40.96% | MSE = 0.205977
+
+>>> FINAL ENSEMBLE ACCURACY (D=100):
+    F_final = (E_GNN + EN_avg + EN_A + EN_Aprime + EN_B) / 5
+    - Final R2 Accuracy : 72.09% (0.720902)
+    - Final MSE         : 9.737031e-02
+    - Final MAE         : 0.195804
+
+======================================================================
+TARGET PROPERTY: Band Gap (eV)
+======================================================================
+
+--- Evaluating Depth D = 3 ---
+Top 5 Individual Fourier Transforms for D=3:
+  Rank 1: Feature 'M_net' -> R2 = 21.73% | MSE = 1.219656
+  Rank 2: Feature 'Group_Bprime' -> R2 = 13.14% | MSE = 1.353454
+  Rank 3: Feature 'Val_Bprime' -> R2 = 11.85% | MSE = 1.373582
+  Rank 4: Feature 'Val_avg' -> R2 = 11.68% | MSE = 1.376113
+  Rank 5: Feature 'Spin_Proxy_Distance' -> R2 = 10.52% | MSE = 1.394286
+
+>>> FINAL ENSEMBLE ACCURACY (D=3):
+    F_final = (M_net + Group_Bprime + Val_Bprime + Val_avg + Spin_Proxy_Distance) / 5
+    - Final R2 Accuracy : 19.48% (0.194818)
+    - Final MSE         : 1.254622e+00
+    - Final MAE         : 0.971202
+
+--- Evaluating Depth D = 5 ---
+Top 5 Individual Fourier Transforms for D=5:
+  Rank 1: Feature 'M_net' -> R2 = 31.43% | MSE = 1.068487
+  Rank 2: Feature 'Group_Bprime' -> R2 = 15.11% | MSE = 1.322753
+  Rank 3: Feature 'Val_Bprime' -> R2 = 14.50% | MSE = 1.332244
+  Rank 4: Feature 'd_electrons_Bprime' -> R2 = 12.77% | MSE = 1.359178
+  Rank 5: Feature 'Val_avg' -> R2 = 11.91% | MSE = 1.372672
+
+>>> FINAL ENSEMBLE ACCURACY (D=5):
+    F_final = (M_net + Group_Bprime + Val_Bprime + d_electrons_Bprime + Val_avg) / 5
+    - Final R2 Accuracy : 24.00% (0.240016)
+    - Final MSE         : 1.184196e+00
+    - Final MAE         : 0.934541
+
+--- Evaluating Depth D = 10 ---
+Top 5 Individual Fourier Transforms for D=10:
+  Rank 1: Feature 'M_net' -> R2 = 35.77% | MSE = 1.000851
+  Rank 2: Feature 'd_electrons_Bprime' -> R2 = 15.93% | MSE = 1.310030
+  Rank 3: Feature 'Total_d_electrons' -> R2 = 15.88% | MSE = 1.310683
+  Rank 4: Feature 'Group_Bprime' -> R2 = 15.11% | MSE = 1.322753
+  Rank 5: Feature 'Val_avg' -> R2 = 14.63% | MSE = 1.330290
+
+>>> FINAL ENSEMBLE ACCURACY (D=10):
+    F_final = (M_net + d_electrons_Bprime + Total_d_electrons + Group_Bprime + Val_avg) / 5
+    - Final R2 Accuracy : 27.96% (0.279645)
+    - Final MSE         : 1.122446e+00
+    - Final MAE         : 0.912734
+
+--- Evaluating Depth D = 50 ---
+Top 5 Individual Fourier Transforms for D=50:
+  Rank 1: Feature 'M_net' -> R2 = 39.41% | MSE = 0.944096
+  Rank 2: Feature 'EN_Bprime' -> R2 = 19.76% | MSE = 1.250358
+  Rank 3: Feature 'd_electrons_Bprime' -> R2 = 19.22% | MSE = 1.258649
+  Rank 4: Feature 'EN_avg' -> R2 = 18.16% | MSE = 1.275260
+  Rank 5: Feature 'M_abs' -> R2 = 17.53% | MSE = 1.285097
+
+>>> FINAL ENSEMBLE ACCURACY (D=50):
+    F_final = (M_net + EN_Bprime + d_electrons_Bprime + EN_avg + M_abs) / 5
+    - Final R2 Accuracy : 34.84% (0.348448)
+    - Final MSE         : 1.015238e+00
+    - Final MAE         : 0.873898
+
+--- Evaluating Depth D = 100 ---
+Top 5 Individual Fourier Transforms for D=100:
+  Rank 1: Feature 'M_net' -> R2 = 40.64% | MSE = 0.924916
+  Rank 2: Feature 'EN_avg' -> R2 = 24.85% | MSE = 1.171043
+  Rank 3: Feature 'M_abs' -> R2 = 20.15% | MSE = 1.244239
+  Rank 4: Feature 'EN_Bprime' -> R2 = 19.76% | MSE = 1.250358
+  Rank 5: Feature 'd_electrons_Bprime' -> R2 = 19.22% | MSE = 1.258649
+
+>>> FINAL ENSEMBLE ACCURACY (D=100):
+    F_final = (M_net + EN_avg + M_abs + EN_Bprime + d_electrons_Bprime) / 5
+    - Final R2 Accuracy : 37.70% (0.376996)
+    - Final MSE         : 9.707560e-01
+    - Final MAE         : 0.850640
+
+======================================================================
+TARGET PROPERTY: Total Magnetization (uB)
+======================================================================
+
+--- Evaluating Depth D = 3 ---
+Top 5 Individual Fourier Transforms for D=3:
+  Rank 1: Feature 'M_net' -> R2 = 86.50% | MSE = 12.794907
+  Rank 2: Feature 'M_abs' -> R2 = 82.79% | MSE = 16.303247
+  Rank 3: Feature 'Volume_A3' -> R2 = 17.90% | MSE = 77.793479
+  Rank 4: Feature 'EN_A' -> R2 = 11.46% | MSE = 83.896666
+  Rank 5: Feature 'EN_Aprime' -> R2 = 11.46% | MSE = 83.896666
+
+>>> FINAL ENSEMBLE ACCURACY (D=3):
+    F_final = (M_net + M_abs + Volume_A3 + EN_A + EN_Aprime) / 5
+    - Final R2 Accuracy : 62.43% (0.624312)
+    - Final MSE         : 3.559789e+01
+    - Final MAE         : 3.314513
+
+--- Evaluating Depth D = 5 ---
+Top 5 Individual Fourier Transforms for D=5:
+  Rank 1: Feature 'M_net' -> R2 = 86.50% | MSE = 12.794110
+  Rank 2: Feature 'M_abs' -> R2 = 82.97% | MSE = 16.138655
+  Rank 3: Feature 'Volume_A3' -> R2 = 27.63% | MSE = 68.572683
+  Rank 4: Feature 'EN_A' -> R2 = 16.42% | MSE = 79.196986
+  Rank 5: Feature 'EN_Aprime' -> R2 = 16.42% | MSE = 79.196986
+
+>>> FINAL ENSEMBLE ACCURACY (D=5):
+    F_final = (M_net + M_abs + Volume_A3 + EN_A + EN_Aprime) / 5
+    - Final R2 Accuracy : 67.37% (0.673747)
+    - Final MSE         : 3.091372e+01
+    - Final MAE         : 3.121055
+
+--- Evaluating Depth D = 10 ---
+Top 5 Individual Fourier Transforms for D=10:
+  Rank 1: Feature 'M_net' -> R2 = 86.50% | MSE = 12.793478
+  Rank 2: Feature 'M_abs' -> R2 = 83.19% | MSE = 15.925253
+  Rank 3: Feature 'Volume_A3' -> R2 = 32.45% | MSE = 64.007056
+  Rank 4: Feature 'EN_A' -> R2 = 23.58% | MSE = 72.411479
+  Rank 5: Feature 'EN_Aprime' -> R2 = 23.58% | MSE = 72.411479
+
+>>> FINAL ENSEMBLE ACCURACY (D=10):
+    F_final = (M_net + M_abs + Volume_A3 + EN_A + EN_Aprime) / 5
+    - Final R2 Accuracy : 70.50% (0.704980)
+    - Final MSE         : 2.795429e+01
+    - Final MAE         : 2.973344
+
+--- Evaluating Depth D = 50 ---
+Top 5 Individual Fourier Transforms for D=50:
+  Rank 1: Feature 'M_net' -> R2 = 86.50% | MSE = 12.792675
+  Rank 2: Feature 'M_abs' -> R2 = 83.45% | MSE = 15.677503
+  Rank 3: Feature 'Volume_A3' -> R2 = 41.84% | MSE = 55.105061
+  Rank 4: Feature 'EN_A' -> R2 = 35.67% | MSE = 60.952140
+  Rank 5: Feature 'EN_Aprime' -> R2 = 35.67% | MSE = 60.952140
+
+>>> FINAL ENSEMBLE ACCURACY (D=50):
+    F_final = (M_net + M_abs + Volume_A3 + EN_A + EN_Aprime) / 5
+    - Final R2 Accuracy : 75.93% (0.759254)
+    - Final MSE         : 2.281159e+01
+    - Final MAE         : 2.648770
+
+--- Evaluating Depth D = 100 ---
+Top 5 Individual Fourier Transforms for D=100:
+  Rank 1: Feature 'M_net' -> R2 = 86.50% | MSE = 12.792128
+  Rank 2: Feature 'M_abs' -> R2 = 83.57% | MSE = 15.564828
+  Rank 3: Feature 'Volume_A3' -> R2 = 44.48% | MSE = 52.610293
+  Rank 4: Feature 'EN_A' -> R2 = 35.67% | MSE = 60.952140
+  Rank 5: Feature 'EN_Aprime' -> R2 = 35.67% | MSE = 60.952140
+
+>>> FINAL ENSEMBLE ACCURACY (D=100):
+    F_final = (M_net + M_abs + Volume_A3 + EN_A + EN_Aprime) / 5
+    - Final R2 Accuracy : 76.40% (0.763974)
+    - Final MSE         : 2.236440e+01
+    - Final MAE         : 2.618564
+
+======================================================================
+TARGET PROPERTY: Energy Above Hull (eV)
+======================================================================
+
+--- Evaluating Depth D = 3 ---
+Top 5 Individual Fourier Transforms for D=3:
+  Rank 1: Feature 'E_GNN' -> R2 = 42.66% | MSE = 0.042147
+  Rank 2: Feature 'Volume_A3' -> R2 = 1.96% | MSE = 0.072057
+  Rank 3: Feature 'd_AO' -> R2 = 1.95% | MSE = 0.072066
+  Rank 4: Feature 'Shannon_A' -> R2 = 1.95% | MSE = 0.072066
+  Rank 5: Feature 'Shannon_Aprime' -> R2 = 1.95% | MSE = 0.072066
+
+>>> FINAL ENSEMBLE ACCURACY (D=3):
+    F_final = (E_GNN + Volume_A3 + d_AO + Shannon_A + Shannon_Aprime) / 5
+    - Final R2 Accuracy : 17.68% (0.176794)
+    - Final MSE         : 6.050315e-02
+    - Final MAE         : 0.090566
+
+--- Evaluating Depth D = 5 ---
+Top 5 Individual Fourier Transforms for D=5:
+  Rank 1: Feature 'E_GNN' -> R2 = 50.66% | MSE = 0.036261
+  Rank 2: Feature 'EN_B' -> R2 = 3.10% | MSE = 0.071219
+  Rank 3: Feature 'Group_B' -> R2 = 2.15% | MSE = 0.071919
+  Rank 4: Feature 'Volume_A3' -> R2 = 2.12% | MSE = 0.071939
+  Rank 5: Feature 'd_AO' -> R2 = 2.00% | MSE = 0.072029
+
+>>> FINAL ENSEMBLE ACCURACY (D=5):
+    F_final = (E_GNN + EN_B + Group_B + Volume_A3 + d_AO) / 5
+    - Final R2 Accuracy : 21.24% (0.212389)
+    - Final MSE         : 5.788703e-02
+    - Final MAE         : 0.090575
+
+--- Evaluating Depth D = 10 ---
+Top 5 Individual Fourier Transforms for D=10:
+  Rank 1: Feature 'E_GNN' -> R2 = 62.99% | MSE = 0.027199
+  Rank 2: Feature 'EN_B' -> R2 = 4.36% | MSE = 0.070290
+  Rank 3: Feature 'EN_A' -> R2 = 3.90% | MSE = 0.070632
+  Rank 4: Feature 'EN_Aprime' -> R2 = 3.90% | MSE = 0.070632
+  Rank 5: Feature 'EN_Bprime' -> R2 = 2.63% | MSE = 0.071561
+
+>>> FINAL ENSEMBLE ACCURACY (D=10):
+    F_final = (E_GNN + EN_B + EN_A + EN_Aprime + EN_Bprime) / 5
+    - Final R2 Accuracy : 26.99% (0.269926)
+    - Final MSE         : 5.365821e-02
+    - Final MAE         : 0.085801
+
+--- Evaluating Depth D = 50 ---
+Top 5 Individual Fourier Transforms for D=50:
+  Rank 1: Feature 'E_GNN' -> R2 = 71.38% | MSE = 0.021037
+  Rank 2: Feature 'EN_B' -> R2 = 7.14% | MSE = 0.068248
+  Rank 3: Feature 'EN_avg' -> R2 = 5.70% | MSE = 0.069306
+  Rank 4: Feature 'M_net' -> R2 = 5.58% | MSE = 0.069394
+  Rank 5: Feature 'Volume_A3' -> R2 = 5.31% | MSE = 0.069592
+
+>>> FINAL ENSEMBLE ACCURACY (D=50):
+    F_final = (E_GNN + EN_B + EN_avg + M_net + Volume_A3) / 5
+    - Final R2 Accuracy : 32.80% (0.328050)
+    - Final MSE         : 4.938633e-02
+    - Final MAE         : 0.085119
+
+--- Evaluating Depth D = 100 ---
+Top 5 Individual Fourier Transforms for D=100:
+  Rank 1: Feature 'E_GNN' -> R2 = 72.67% | MSE = 0.020087
+  Rank 2: Feature 'Density_g_cm3' -> R2 = 9.64% | MSE = 0.066409
+  Rank 3: Feature 'EN_avg' -> R2 = 8.49% | MSE = 0.067260
+  Rank 4: Feature 'M_net' -> R2 = 7.79% | MSE = 0.067774
+  Rank 5: Feature 'EN_B' -> R2 = 7.14% | MSE = 0.068248
+
+>>> FINAL ENSEMBLE ACCURACY (D=100):
+    F_final = (E_GNN + Density_g_cm3 + EN_avg + M_net + EN_B) / 5
+    - Final R2 Accuracy : 35.83% (0.358343)
+    - Final MSE         : 4.715986e-02
+    - Final MAE         : 0.084361

@@ -1,0 +1,64 @@
+======================================================================
+OOD_TEST_2 BENCHMARK REPORT (2,000 DATASET, SEED = 42)
+Trains Master Algorithm on 80% (1,600) -> Evaluates Generated Eqns on 20% (400)
+======================================================================
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom)
+================================================================================
+--> 80% TRAIN SET PERFORMANCE (1,600 Samples):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000)
+    - Stage 2 Sub R2            : 69.96%
+    - Train Pipeline R2         : 69.96% (107.64% of Lit Limit)
+    - Train MSE                 : 0.104507 | MAE: 0.186891
+
+--> 20% HELD-OUT TEST SET PERFORMANCE (400 Samples):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000)
+    - Stage 2 Sub R2            : 75.01%
+    - Test Pipeline R2          : 75.01% (115.40% of Lit Limit)
+    - Test MSE                  : 0.087921 | MAE: 0.195605
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB)
+================================================================================
+--> 80% TRAIN SET PERFORMANCE (1,600 Samples):
+    - Stage 1 Classification Acc : 93.00% (F1 = 0.9395)
+    - Stage 2 Sub R2            : 63.54%
+    - Train Pipeline R2         : 62.60% (104.33% of Lit Limit)
+    - Train MSE                 : 37.120898 | MAE: 3.072392
+
+--> 20% HELD-OUT TEST SET PERFORMANCE (400 Samples):
+    - Stage 1 Classification Acc : 76.25% (F1 = 0.7912)
+    - Stage 2 Sub R2            : 44.24%
+    - Test Pipeline R2          : 30.31% (50.51% of Lit Limit)
+    - Test MSE                  : 53.336908 | MAE: 3.921799
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV)
+================================================================================
+--> 80% TRAIN SET PERFORMANCE (1,600 Samples):
+    - Stage 1 Classification Acc : 88.25% (F1 = 0.9087)
+    - Stage 2 Sub R2            : 40.46%
+    - Train Pipeline R2         : 50.18% (100.36% of Lit Limit)
+    - Train MSE                 : 0.779887 | MAE: 0.717730
+
+--> 20% HELD-OUT TEST SET PERFORMANCE (400 Samples):
+    - Stage 1 Classification Acc : 74.75% (F1 = 0.8147)
+    - Stage 2 Sub R2            : 37.23%
+    - Test Pipeline R2          : 41.07% (82.14% of Lit Limit)
+    - Test MSE                  : 0.901101 | MAE: 0.771777
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV)
+================================================================================
+--> 80% TRAIN SET PERFORMANCE (1,600 Samples):
+    - Stage 1 Classification Acc : 94.06% (F1 = 0.9576)
+    - Stage 2 Sub R2            : 12.78%
+    - Train Pipeline R2         : 16.71% (66.83% of Lit Limit)
+    - Train MSE                 : 0.066326 | MAE: 0.080172
+
+--> 20% HELD-OUT TEST SET PERFORMANCE (400 Samples):
+    - Stage 1 Classification Acc : 84.00% (F1 = 0.8897)
+    - Stage 2 Sub R2            : -2.98%
+    - Test Pipeline R2          : 7.30% (29.21% of Lit Limit)
+    - Test MSE                  : 0.045380 | MAE: 0.085227

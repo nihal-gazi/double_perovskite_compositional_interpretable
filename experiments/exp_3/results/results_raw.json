@@ -1,0 +1,570 @@
+{
+  "Band Gap (eV)": {
+    "3": {
+      "depth": 3,
+      "zero_pct": 37.5,
+      "cls_acc": 0.6445,
+      "cls_f1": 0.774500475737393,
+      "cls_prec": 0.6416184971098265,
+      "cls_rec": 0.9768,
+      "top_cls_features": [
+        "Group_Bprime",
+        "Val_Bprime",
+        "Val_B",
+        "Total_HS_FM",
+        "Group_B"
+      ],
+      "reg_sub_r2": 0.26499527188091976,
+      "reg_sub_mse": 0.8727635635826724,
+      "reg_sub_mae": 0.7734474540036217,
+      "top_reg_features": [
+        "M_net",
+        "Spin_Proxy_Distance",
+        "Val_avg",
+        "Total_d_electrons",
+        "M_abs"
+      ],
+      "pipe_r2": -0.05000175080613656,
+      "pipe_mse": 1.636096821482002,
+      "pipe_mae": 1.0865860900295894
+    },
+    "5": {
+      "depth": 5,
+      "zero_pct": 37.5,
+      "cls_acc": 0.6995,
+      "cls_f1": 0.7993322203672788,
+      "cls_prec": 0.6859598853868195,
+      "cls_rec": 0.9576,
+      "top_cls_features": [
+        "M_net",
+        "Val_Bprime",
+        "Group_Bprime",
+        "HS_moment_Bprime",
+        "Val_avg"
+      ],
+      "reg_sub_r2": 0.2874464581114129,
+      "reg_sub_mse": 0.8461044462306969,
+      "reg_sub_mae": 0.7671704427995704,
+      "top_reg_features": [
+        "M_net",
+        "Spin_Proxy_Distance",
+        "Total_d_electrons",
+        "d_electrons_Bprime",
+        "Val_avg"
+      ],
+      "pipe_r2": 0.09201211166312862,
+      "pipe_mse": 1.4148129723703582,
+      "pipe_mae": 0.9617363676755302
+    },
+    "10": {
+      "depth": 10,
+      "zero_pct": 37.5,
+      "cls_acc": 0.694,
+      "cls_f1": 0.7936614969656103,
+      "cls_prec": 0.6858974358974359,
+      "cls_rec": 0.9416,
+      "top_cls_features": [
+        "M_net",
+        "Val_Bprime",
+        "Group_Bprime",
+        "HS_moment_Bprime",
+        "Total_HS_FM"
+      ],
+      "reg_sub_r2": 0.32232870858563045,
+      "reg_sub_mse": 0.804684362706106,
+      "reg_sub_mae": 0.7453929905138915,
+      "top_reg_features": [
+        "M_net",
+        "Total_d_electrons",
+        "d_electrons_Bprime",
+        "Spin_Proxy_Distance",
+        "Val_avg"
+      ],
+      "pipe_r2": 0.12243812779627816,
+      "pipe_mse": 1.36740361495968,
+      "pipe_mae": 0.9425645474682733
+    },
+    "50": {
+      "depth": 50,
+      "zero_pct": 37.5,
+      "cls_acc": 0.7345,
+      "cls_f1": 0.8174630457201788,
+      "cls_prec": 0.7166968053044003,
+      "cls_rec": 0.9512,
+      "top_cls_features": [
+        "M_net",
+        "Val_Bprime",
+        "Group_Bprime",
+        "EN_avg",
+        "EN_Bprime"
+      ],
+      "reg_sub_r2": 0.36313249227522737,
+      "reg_sub_mse": 0.7562328979764539,
+      "reg_sub_mae": 0.7208824239602666,
+      "top_reg_features": [
+        "M_net",
+        "d_electrons_Bprime",
+        "Total_d_electrons",
+        "EN_Bprime",
+        "Spin_Proxy_Distance"
+      ],
+      "pipe_r2": 0.20156117694107434,
+      "pipe_mse": 1.2441152784284522,
+      "pipe_mae": 0.8682362545709666
+    },
+    "100": {
+      "depth": 100,
+      "zero_pct": 37.5,
+      "cls_acc": 0.736,
+      "cls_f1": 0.8195488721804511,
+      "cls_prec": 0.7153937947494033,
+      "cls_rec": 0.9592,
+      "top_cls_features": [
+        "M_net",
+        "EN_avg",
+        "M_abs",
+        "Val_Bprime",
+        "Group_Bprime"
+      ],
+      "reg_sub_r2": 0.41236421337788964,
+      "reg_sub_mse": 0.6977738830789247,
+      "reg_sub_mae": 0.6922101727822731,
+      "top_reg_features": [
+        "M_net",
+        "EN_avg",
+        "d_electrons_Bprime",
+        "Total_d_electrons",
+        "E_GNN"
+      ],
+      "pipe_r2": 0.24137187168262564,
+      "pipe_mse": 1.1820828569799777,
+      "pipe_mae": 0.8463596203170523
+    }
+  },
+  "Total Magnetization (uB)": {
+    "3": {
+      "depth": 3,
+      "zero_pct": 43.7,
+      "cls_acc": 0.8515,
+      "cls_f1": 0.8709256844850065,
+      "cls_prec": 0.8527659574468085,
+      "cls_rec": 0.8898756660746003,
+      "top_cls_features": [
+        "M_net",
+        "Val_Bprime",
+        "Group_Bprime",
+        "d_electrons_Bprime",
+        "M_abs"
+      ],
+      "reg_sub_r2": 0.6218700514945303,
+      "reg_sub_mse": 51.414995817702376,
+      "reg_sub_mae": 3.8911394838239746,
+      "top_reg_features": [
+        "M_net",
+        "M_abs",
+        "Volume_A3",
+        "EN_A",
+        "EN_Aprime"
+      ],
+      "pipe_r2": 0.6280081404882678,
+      "pipe_mse": 35.247635679374085,
+      "pipe_mae": 2.5599356390571764
+    },
+    "5": {
+      "depth": 5,
+      "zero_pct": 43.7,
+      "cls_acc": 0.862,
+      "cls_f1": 0.8825531914893617,
+      "cls_prec": 0.8472222222222222,
+      "cls_rec": 0.9209591474245116,
+      "top_cls_features": [
+        "M_net",
+        "d_electrons_Bprime",
+        "M_abs",
+        "Val_Bprime",
+        "Group_Bprime"
+      ],
+      "reg_sub_r2": 0.6396347413317731,
+      "reg_sub_mse": 48.999499617799025,
+      "reg_sub_mae": 3.6802230056091965,
+      "top_reg_features": [
+        "M_net",
+        "M_abs",
+        "Volume_A3",
+        "EN_A",
+        "EN_Aprime"
+      ],
+      "pipe_r2": 0.6619917656494555,
+      "pipe_mse": 32.02755865855376,
+      "pipe_mae": 2.494994312783804
+    },
+    "10": {
+      "depth": 10,
+      "zero_pct": 43.7,
+      "cls_acc": 0.889,
+      "cls_f1": 0.9061707523245984,
+      "cls_prec": 0.864516129032258,
+      "cls_rec": 0.9520426287744227,
+      "top_cls_features": [
+        "M_net",
+        "d_electrons_Bprime",
+        "M_abs",
+        "Total_d_electrons",
+        "Val_Bprime"
+      ],
+      "reg_sub_r2": 0.6793445834083469,
+      "reg_sub_mse": 43.600082374181426,
+      "reg_sub_mae": 3.4769301738201426,
+      "top_reg_features": [
+        "M_net",
+        "M_abs",
+        "Volume_A3",
+        "EN_A",
+        "EN_Aprime"
+      ],
+      "pipe_r2": 0.6776549830767629,
+      "pipe_mse": 30.54340956408375,
+      "pipe_mae": 2.415868900497926
+    },
+    "50": {
+      "depth": 50,
+      "zero_pct": 43.7,
+      "cls_acc": 0.9105,
+      "cls_f1": 0.9237973605789698,
+      "cls_prec": 0.8871627146361406,
+      "cls_rec": 0.9635879218472468,
+      "top_cls_features": [
+        "M_net",
+        "M_abs",
+        "d_electrons_Bprime",
+        "EN_Bprime",
+        "Total_d_electrons"
+      ],
+      "reg_sub_r2": 0.7505092446584667,
+      "reg_sub_mse": 33.92369790634237,
+      "reg_sub_mae": 3.0448829266246404,
+      "top_reg_features": [
+        "M_abs",
+        "M_net",
+        "Volume_A3",
+        "EN_A",
+        "EN_Aprime"
+      ],
+      "pipe_r2": 0.7009090245155278,
+      "pipe_mse": 28.340001183635565,
+      "pipe_mae": 2.233016501211129
+    },
+    "100": {
+      "depth": 100,
+      "zero_pct": 43.7,
+      "cls_acc": 0.916,
+      "cls_f1": 0.9286321155480034,
+      "cls_prec": 0.8900651465798045,
+      "cls_rec": 0.9706927175843695,
+      "top_cls_features": [
+        "M_net",
+        "M_abs",
+        "d_electrons_Bprime",
+        "EN_Bprime",
+        "Total_d_electrons"
+      ],
+      "reg_sub_r2": 0.7642367802521478,
+      "reg_sub_mse": 32.057140687253785,
+      "reg_sub_mae": 2.977266976934322,
+      "top_reg_features": [
+        "M_abs",
+        "M_net",
+        "Volume_A3",
+        "EN_A",
+        "EN_Aprime"
+      ],
+      "pipe_r2": 0.6838385180247835,
+      "pipe_mse": 29.957496239677695,
+      "pipe_mae": 2.3176265287680433
+    }
+  },
+  "Energy Above Hull (eV)": {
+    "3": {
+      "depth": 3,
+      "zero_pct": 30.200000000000003,
+      "cls_acc": 0.7275,
+      "cls_f1": 0.834597875569044,
+      "cls_prec": 0.7240652975250131,
+      "cls_rec": 0.9849570200573066,
+      "top_cls_features": [
+        "EN_A",
+        "EN_Aprime",
+        "EN_Bprime",
+        "Shannon_A",
+        "Shannon_Aprime"
+      ],
+      "reg_sub_r2": 0.18745128957125856,
+      "reg_sub_mse": 0.08102345451867718,
+      "reg_sub_mae": 0.10376272896229753,
+      "top_reg_features": [
+        "E_GNN",
+        "EN_B",
+        "Volume_A3",
+        "Group_B",
+        "d_electrons_Bprime"
+      ],
+      "pipe_r2": 0.15956923140837898,
+      "pipe_mse": 0.06176913146197055,
+      "pipe_mae": 0.10716768814453712
+    },
+    "5": {
+      "depth": 5,
+      "zero_pct": 30.200000000000003,
+      "cls_acc": 0.7475,
+      "cls_f1": 0.8303661404098085,
+      "cls_prec": 0.7817836812144212,
+      "cls_rec": 0.8853868194842407,
+      "top_cls_features": [
+        "EN_A",
+        "EN_Aprime",
+        "Shannon_A",
+        "Shannon_Aprime",
+        "d_AO"
+      ],
+      "reg_sub_r2": 0.2223698651780417,
+      "reg_sub_mse": 0.07754154188227616,
+      "reg_sub_mae": 0.10304169453979474,
+      "top_reg_features": [
+        "E_GNN",
+        "EN_B",
+        "Group_B",
+        "Volume_A3",
+        "HS_moment_Bprime"
+      ],
+      "pipe_r2": 0.13221942007547227,
+      "pipe_mse": 0.06377926026117364,
+      "pipe_mae": 0.09505630066943446
+    },
+    "10": {
+      "depth": 10,
+      "zero_pct": 30.200000000000003,
+      "cls_acc": 0.7475,
+      "cls_f1": 0.8303661404098085,
+      "cls_prec": 0.7817836812144212,
+      "cls_rec": 0.8853868194842407,
+      "top_cls_features": [
+        "EN_A",
+        "EN_Aprime",
+        "Shannon_A",
+        "Shannon_Aprime",
+        "d_AO"
+      ],
+      "reg_sub_r2": 0.2655472546165212,
+      "reg_sub_mse": 0.07323609999983452,
+      "reg_sub_mae": 0.10050593220003129,
+      "top_reg_features": [
+        "E_GNN",
+        "EN_B",
+        "Volume_A3",
+        "Group_B",
+        "EN_A"
+      ],
+      "pipe_r2": 0.16901265149096623,
+      "pipe_mse": 0.06107506851433544,
+      "pipe_mae": 0.09213246947604299
+    },
+    "50": {
+      "depth": 50,
+      "zero_pct": 30.200000000000003,
+      "cls_acc": 0.752,
+      "cls_f1": 0.8331090174966352,
+      "cls_prec": 0.7855329949238579,
+      "cls_rec": 0.8868194842406877,
+      "top_cls_features": [
+        "EN_A",
+        "EN_Aprime",
+        "Shannon_A",
+        "Shannon_Aprime",
+        "d_AO"
+      ],
+      "reg_sub_r2": 0.33616396333209075,
+      "reg_sub_mse": 0.06619454099735253,
+      "reg_sub_mae": 0.097005919699803,
+      "top_reg_features": [
+        "E_GNN",
+        "EN_B",
+        "Density_g_cm3",
+        "EN_avg",
+        "Volume_A3"
+      ],
+      "pipe_r2": 0.19936611081100364,
+      "pipe_mse": 0.05884418063024845,
+      "pipe_mae": 0.09083719121242904
+    },
+    "100": {
+      "depth": 100,
+      "zero_pct": 30.200000000000003,
+      "cls_acc": 0.762,
+      "cls_f1": 0.837431693989071,
+      "cls_prec": 0.8002610966057441,
+      "cls_rec": 0.8782234957020058,
+      "top_cls_features": [
+        "EN_A",
+        "EN_Aprime",
+        "Shannon_A",
+        "Shannon_Aprime",
+        "d_AO"
+      ],
+      "reg_sub_r2": 0.36890060067020813,
+      "reg_sub_mse": 0.06293020076467919,
+      "reg_sub_mae": 0.09321088268716439,
+      "top_reg_features": [
+        "E_GNN",
+        "Density_g_cm3",
+        "EN_avg",
+        "M_net",
+        "Volume_A3"
+      ],
+      "pipe_r2": -0.015503416359442523,
+      "pipe_mse": 0.07463644403488823,
+      "pipe_mae": 0.09434479952322607
+    }
+  },
+  "Formation Energy (eV/atom)": {
+    "3": {
+      "depth": 3,
+      "zero_pct": 0.0,
+      "cls_acc": 1.0,
+      "cls_f1": 1.0,
+      "cls_prec": 1.0,
+      "cls_rec": 1.0,
+      "top_cls_features": [
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)"
+      ],
+      "reg_sub_r2": 0.6137490569644368,
+      "reg_sub_mse": 0.13475313070173375,
+      "reg_sub_mae": 0.23740600329294476,
+      "top_reg_features": [
+        "E_GNN",
+        "EN_avg",
+        "EN_B",
+        "EN_A",
+        "EN_Aprime"
+      ],
+      "pipe_r2": 0.6137490569644368,
+      "pipe_mse": 0.13475313070173375,
+      "pipe_mae": 0.23740600329294476
+    },
+    "5": {
+      "depth": 5,
+      "zero_pct": 0.0,
+      "cls_acc": 1.0,
+      "cls_f1": 1.0,
+      "cls_prec": 1.0,
+      "cls_rec": 1.0,
+      "top_cls_features": [
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)"
+      ],
+      "reg_sub_r2": 0.6402837501061835,
+      "reg_sub_mse": 0.1254958511079051,
+      "reg_sub_mae": 0.22777835485459333,
+      "top_reg_features": [
+        "E_GNN",
+        "EN_avg",
+        "EN_B",
+        "EN_A",
+        "EN_Aprime"
+      ],
+      "pipe_r2": 0.6402837501061835,
+      "pipe_mse": 0.1254958511079051,
+      "pipe_mae": 0.22777835485459333
+    },
+    "10": {
+      "depth": 10,
+      "zero_pct": 0.0,
+      "cls_acc": 1.0,
+      "cls_f1": 1.0,
+      "cls_prec": 1.0,
+      "cls_rec": 1.0,
+      "top_cls_features": [
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)"
+      ],
+      "reg_sub_r2": 0.6753482703832887,
+      "reg_sub_mse": 0.11326273176129606,
+      "reg_sub_mae": 0.2159343643909139,
+      "top_reg_features": [
+        "E_GNN",
+        "EN_A",
+        "EN_Aprime",
+        "EN_avg",
+        "EN_B"
+      ],
+      "pipe_r2": 0.6753482703832887,
+      "pipe_mse": 0.11326273176129606,
+      "pipe_mae": 0.2159343643909139
+    },
+    "50": {
+      "depth": 50,
+      "zero_pct": 0.0,
+      "cls_acc": 1.0,
+      "cls_f1": 1.0,
+      "cls_prec": 1.0,
+      "cls_rec": 1.0,
+      "top_cls_features": [
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)"
+      ],
+      "reg_sub_r2": 0.7128400400437894,
+      "reg_sub_mse": 0.10018280683581673,
+      "reg_sub_mae": 0.19955538480905738,
+      "top_reg_features": [
+        "E_GNN",
+        "EN_avg",
+        "EN_A",
+        "EN_Aprime",
+        "EN_B"
+      ],
+      "pipe_r2": 0.7128400400437894,
+      "pipe_mse": 0.10018280683581673,
+      "pipe_mae": 0.19955538480905738
+    },
+    "100": {
+      "depth": 100,
+      "zero_pct": 0.0,
+      "cls_acc": 1.0,
+      "cls_f1": 1.0,
+      "cls_prec": 1.0,
+      "cls_rec": 1.0,
+      "top_cls_features": [
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)",
+        "N/A (Continuous)"
+      ],
+      "reg_sub_r2": 0.719826951716321,
+      "reg_sub_mse": 0.09774525104783399,
+      "reg_sub_mae": 0.1963231016056303,
+      "top_reg_features": [
+        "E_GNN",
+        "EN_avg",
+        "EN_A",
+        "EN_Aprime",
+        "EN_B"
+      ],
+      "pipe_r2": 0.719826951716321,
+      "pipe_mse": 0.09774525104783399,
+      "pipe_mae": 0.1963231016056303
+    }
+  }
+}

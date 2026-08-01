@@ -1,0 +1,4850 @@
+{
+  "Band Gap (eV)": {
+    "3": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.6645,
+        "cls_f1": 0.7491588785046729,
+        "reg_sub_r2": 0.24499571839227463,
+        "pipe_r2": 0.14312418814471306,
+        "pipe_mse": 1.3351709091007846,
+        "pipe_mae": 0.8909090807758293,
+        "top_cls_features": [
+          "Group_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.6515,
+        "cls_f1": 0.7444077741107444,
+        "reg_sub_r2": 0.2929973901149455,
+        "pipe_r2": 0.0637735854839846,
+        "pipe_mse": 1.458813816073298,
+        "pipe_mae": 0.9509750882730496,
+        "top_cls_features": [
+          "Group_Bprime",
+          "Val_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.648,
+        "cls_f1": 0.7635997313633311,
+        "reg_sub_r2": 0.28310961899202525,
+        "pipe_r2": 0.004875287077785839,
+        "pipe_mse": 1.550588252391235,
+        "pipe_mae": 1.0254248453183097,
+        "top_cls_features": [
+          "Group_Bprime",
+          "Val_Bprime",
+          "Val_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Val_avg"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.638,
+        "cls_f1": 0.7652399481193255,
+        "reg_sub_r2": 0.2671879189795451,
+        "pipe_r2": -0.05212901300682682,
+        "pipe_mse": 1.6394114892169236,
+        "pipe_mae": 1.0777511778139492,
+        "top_cls_features": [
+          "Group_Bprime",
+          "Val_Bprime",
+          "Val_B",
+          "Total_HS_FM"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Total_d_electrons"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.6445,
+        "cls_f1": 0.774500475737393,
+        "reg_sub_r2": 0.26499527188091976,
+        "pipe_r2": -0.05000175080613656,
+        "pipe_mse": 1.636096821482002,
+        "pipe_mae": 1.0865860900295894,
+        "top_cls_features": [
+          "Group_Bprime",
+          "Val_Bprime",
+          "Val_B",
+          "Total_HS_FM",
+          "Group_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Total_d_electrons",
+          "M_abs"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.6465,
+        "cls_f1": 0.7766192733017377,
+        "reg_sub_r2": 0.26005310852984076,
+        "pipe_r2": -0.052449401268407136,
+        "pipe_mse": 1.639910713352511,
+        "pipe_mae": 1.0890827827099057,
+        "top_cls_features": [
+          "Group_Bprime",
+          "Val_Bprime",
+          "Val_B",
+          "Total_HS_FM",
+          "Group_B",
+          "d_electrons_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Total_d_electrons",
+          "M_abs",
+          "d_electrons_Bprime"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.6435,
+        "cls_f1": 0.7778124026176378,
+        "reg_sub_r2": 0.2540635353321302,
+        "pipe_r2": -0.05731828349847534,
+        "pipe_mse": 1.647497331884022,
+        "pipe_mae": 1.1021949043856163,
+        "top_cls_features": [
+          "Group_Bprime",
+          "Val_Bprime",
+          "Val_B",
+          "Total_HS_FM",
+          "Group_B",
+          "d_electrons_Bprime",
+          "Total_HS_FiM"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Total_d_electrons",
+          "M_abs",
+          "d_electrons_Bprime",
+          "Group_Bprime"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.6435,
+        "cls_f1": 0.7778124026176378,
+        "reg_sub_r2": 0.24493663828227996,
+        "pipe_r2": -0.060415798743281846,
+        "pipe_mse": 1.6523238332137857,
+        "pipe_mae": 1.1046013498221363,
+        "top_cls_features": [
+          "Group_Bprime",
+          "Val_Bprime",
+          "Val_B",
+          "Total_HS_FM",
+          "Group_B",
+          "d_electrons_Bprime",
+          "Total_HS_FiM",
+          "Val_avg"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Total_d_electrons",
+          "M_abs",
+          "d_electrons_Bprime",
+          "Group_Bprime",
+          "Val_Bprime"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.641,
+        "cls_f1": 0.7763239875389408,
+        "reg_sub_r2": 0.24360306121277098,
+        "pipe_r2": -0.06808771646680079,
+        "pipe_mse": 1.664278099187613,
+        "pipe_mae": 1.1114135888468473,
+        "top_cls_features": [
+          "Group_Bprime",
+          "Val_Bprime",
+          "Val_B",
+          "Total_HS_FM",
+          "Group_B",
+          "d_electrons_Bprime",
+          "Total_HS_FiM",
+          "Val_avg",
+          "EN_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Total_d_electrons",
+          "M_abs",
+          "d_electrons_Bprime",
+          "Group_Bprime",
+          "Val_Bprime",
+          "E_GNN"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.6415,
+        "cls_f1": 0.777121541809139,
+        "reg_sub_r2": 0.23797410918409012,
+        "pipe_r2": -0.07351434300510218,
+        "pipe_mse": 1.6727337864508658,
+        "pipe_mae": 1.1145736934870356,
+        "top_cls_features": [
+          "Group_Bprime",
+          "Val_Bprime",
+          "Val_B",
+          "Total_HS_FM",
+          "Group_B",
+          "d_electrons_Bprime",
+          "Total_HS_FiM",
+          "Val_avg",
+          "EN_B",
+          "d_electrons_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Total_d_electrons",
+          "M_abs",
+          "d_electrons_Bprime",
+          "Group_Bprime",
+          "Val_Bprime",
+          "E_GNN",
+          "Total_HS_FiM"
+        ]
+      }
+    },
+    "5": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.6825,
+        "cls_f1": 0.763676963155936,
+        "reg_sub_r2": 0.27501552057584,
+        "pipe_r2": 0.12848952394473445,
+        "pipe_mse": 1.3579744211546063,
+        "pipe_mae": 0.894126988337922,
+        "top_cls_features": [
+          "M_net"
+        ],
+        "top_reg_features": [
+          "M_net"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.6895,
+        "cls_f1": 0.7881269191402251,
+        "reg_sub_r2": 0.3151377806015453,
+        "pipe_r2": 0.13152438258466825,
+        "pipe_mse": 1.3532455503973615,
+        "pipe_mae": 0.9311383525896599,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.684,
+        "cls_f1": 0.7823691460055097,
+        "reg_sub_r2": 0.2989336447125406,
+        "pipe_r2": 0.1194054030326972,
+        "pipe_mse": 1.372129160743118,
+        "pipe_mae": 0.9343679040234643,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Total_d_electrons"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.691,
+        "cls_f1": 0.7913571910871033,
+        "reg_sub_r2": 0.2958220826181236,
+        "pipe_r2": 0.10258845182807819,
+        "pipe_mse": 1.3983330793477975,
+        "pipe_mae": 0.9558113619289832,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Total_d_electrons",
+          "d_electrons_Bprime"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.6995,
+        "cls_f1": 0.7993322203672788,
+        "reg_sub_r2": 0.2874464581114129,
+        "pipe_r2": 0.09201211166312862,
+        "pipe_mse": 1.4148129723703582,
+        "pipe_mae": 0.9617363676755302,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Val_avg"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Val_avg"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.697,
+        "cls_f1": 0.7978652434956638,
+        "reg_sub_r2": 0.2836047668951739,
+        "pipe_r2": 0.08012986580519632,
+        "pipe_mse": 1.4333277078603754,
+        "pipe_mae": 0.9707330496297009,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Val_avg",
+          "Total_HS_FM"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Val_avg",
+          "Group_Bprime"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.6945,
+        "cls_f1": 0.7997377908882334,
+        "reg_sub_r2": 0.2815838214934746,
+        "pipe_r2": 0.0583444998968945,
+        "pipe_mse": 1.467273334989121,
+        "pipe_mae": 0.9947389093998337,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Val_avg",
+          "Total_HS_FM",
+          "Val_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Val_avg",
+          "Group_Bprime",
+          "M_abs"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.6885,
+        "cls_f1": 0.7975300617484563,
+        "reg_sub_r2": 0.2742865895226224,
+        "pipe_r2": 0.04160850923950332,
+        "pipe_mse": 1.493351102095593,
+        "pipe_mae": 1.011272624832564,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Val_avg",
+          "Total_HS_FM",
+          "Val_B",
+          "Group_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Val_avg",
+          "Group_Bprime",
+          "M_abs",
+          "Val_Bprime"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.6705,
+        "cls_f1": 0.7889849503682357,
+        "reg_sub_r2": 0.2719339445599681,
+        "pipe_r2": 0.023959272844703894,
+        "pipe_mse": 1.5208518748752062,
+        "pipe_mae": 1.034596546391302,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Val_avg",
+          "Total_HS_FM",
+          "Val_B",
+          "Group_B",
+          "HS_moment_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Val_avg",
+          "Group_Bprime",
+          "M_abs",
+          "Val_Bprime",
+          "EN_Bprime"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.659,
+        "cls_f1": 0.7844500632111252,
+        "reg_sub_r2": 0.2688346381383937,
+        "pipe_r2": -0.003989817584437949,
+        "pipe_mse": 1.5644017241771953,
+        "pipe_mae": 1.061177808095059,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Val_avg",
+          "Total_HS_FM",
+          "Val_B",
+          "Group_B",
+          "HS_moment_B",
+          "EN_avg"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Spin_Proxy_Distance",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Val_avg",
+          "Group_Bprime",
+          "M_abs",
+          "Val_Bprime",
+          "EN_Bprime",
+          "E_GNN"
+        ]
+      }
+    },
+    "10": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.715,
+        "cls_f1": 0.7831050228310502,
+        "reg_sub_r2": 0.28531980834066406,
+        "pipe_r2": 0.21805942983110915,
+        "pipe_mse": 1.218407950709552,
+        "pipe_mae": 0.8216475794292513,
+        "top_cls_features": [
+          "M_net"
+        ],
+        "top_reg_features": [
+          "M_net"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.7095,
+        "cls_f1": 0.7925740806854695,
+        "reg_sub_r2": 0.33961923927219084,
+        "pipe_r2": 0.22771157457282876,
+        "pipe_mse": 1.2033681249947021,
+        "pipe_mae": 0.8495652663124356,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Total_d_electrons"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.6905,
+        "cls_f1": 0.786625301620131,
+        "reg_sub_r2": 0.3362586326546645,
+        "pipe_r2": 0.16346777055775918,
+        "pipe_mse": 1.303471847172566,
+        "pipe_mae": 0.9088564759588578,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Total_d_electrons",
+          "d_electrons_Bprime"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.6985,
+        "cls_f1": 0.7944084555063076,
+        "reg_sub_r2": 0.3257521037393437,
+        "pipe_r2": 0.1387705158564032,
+        "pipe_mse": 1.3419547353060357,
+        "pipe_mae": 0.9272242228133696,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.694,
+        "cls_f1": 0.7936614969656103,
+        "reg_sub_r2": 0.32232870858563045,
+        "pipe_r2": 0.12243812779627816,
+        "pipe_mse": 1.36740361495968,
+        "pipe_mae": 0.9425645474682733,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Total_HS_FM"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_avg"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.706,
+        "cls_f1": 0.8030810448760884,
+        "reg_sub_r2": 0.3133054908691305,
+        "pipe_r2": 0.1115111995397724,
+        "pipe_mse": 1.3844297890353952,
+        "pipe_mae": 0.9478188814830535,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Total_HS_FM",
+          "Val_avg"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Group_Bprime"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.7035,
+        "cls_f1": 0.8025308025308026,
+        "reg_sub_r2": 0.3094816451614508,
+        "pipe_r2": 0.1076844508052156,
+        "pipe_mse": 1.390392570941627,
+        "pipe_mae": 0.9547705641744685,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Total_HS_FM",
+          "Val_avg",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Group_Bprime",
+          "M_abs"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.7045,
+        "cls_f1": 0.8042398145081153,
+        "reg_sub_r2": 0.3094173999424864,
+        "pipe_r2": 0.10790705070152151,
+        "pipe_mse": 1.3900457191554003,
+        "pipe_mae": 0.9591719122413536,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Total_HS_FM",
+          "Val_avg",
+          "EN_Bprime",
+          "d_electrons_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Group_Bprime",
+          "M_abs",
+          "EN_Bprime"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.7015,
+        "cls_f1": 0.8019900497512438,
+        "reg_sub_r2": 0.29937946830044393,
+        "pipe_r2": 0.09606850151679602,
+        "pipe_mse": 1.4084923671511937,
+        "pipe_mae": 0.9664257941124206,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Total_HS_FM",
+          "Val_avg",
+          "EN_Bprime",
+          "d_electrons_B",
+          "d_electrons_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Group_Bprime",
+          "M_abs",
+          "EN_Bprime",
+          "Val_Bprime"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.7055,
+        "cls_f1": 0.806568144499179,
+        "reg_sub_r2": 0.2942351476165119,
+        "pipe_r2": 0.0831113621490307,
+        "pipe_mse": 1.42868198542452,
+        "pipe_mae": 0.9780004587930371,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "HS_moment_Bprime",
+          "Total_HS_FM",
+          "Val_avg",
+          "EN_Bprime",
+          "d_electrons_B",
+          "d_electrons_Bprime",
+          "Total_d_electrons"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "Total_d_electrons",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "Group_Bprime",
+          "M_abs",
+          "EN_Bprime",
+          "Val_Bprime",
+          "HS_moment_B"
+        ]
+      }
+    },
+    "50": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.7585,
+        "cls_f1": 0.8115489660554038,
+        "reg_sub_r2": 0.3108284294515399,
+        "pipe_r2": 0.2921855309219237,
+        "pipe_mse": 1.1029057829365703,
+        "pipe_mae": 0.7546083177831533,
+        "top_cls_features": [
+          "M_net"
+        ],
+        "top_reg_features": [
+          "M_net"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.757,
+        "cls_f1": 0.82,
+        "reg_sub_r2": 0.36958328945466923,
+        "pipe_r2": 0.3057180158794123,
+        "pipe_mse": 1.0818196698813283,
+        "pipe_mae": 0.7741524059707633,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "d_electrons_Bprime"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.7275,
+        "cls_f1": 0.8101706722396378,
+        "reg_sub_r2": 0.36414019174105794,
+        "pipe_r2": 0.22435420750767976,
+        "pipe_mse": 1.2085995234943916,
+        "pipe_mae": 0.8574197574968689,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "Total_d_electrons"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.7285,
+        "cls_f1": 0.8125647221263376,
+        "reg_sub_r2": 0.37761854451414634,
+        "pipe_r2": 0.20761443045078698,
+        "pipe_mse": 1.2346831905112063,
+        "pipe_mae": 0.8639121680607847,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_avg"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "EN_Bprime"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.7345,
+        "cls_f1": 0.8174630457201788,
+        "reg_sub_r2": 0.36313249227522737,
+        "pipe_r2": 0.20156117694107434,
+        "pipe_mse": 1.2441152784284522,
+        "pipe_mae": 0.8682362545709666,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_avg",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "EN_Bprime",
+          "Spin_Proxy_Distance"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.732,
+        "cls_f1": 0.8174386920980926,
+        "reg_sub_r2": 0.36908720979896126,
+        "pipe_r2": 0.19487822374925878,
+        "pipe_mse": 1.254528554850942,
+        "pipe_mae": 0.8764906435009505,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_avg",
+          "EN_Bprime",
+          "d_electrons_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "EN_Bprime",
+          "Spin_Proxy_Distance",
+          "EN_avg"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.724,
+        "cls_f1": 0.8150134048257373,
+        "reg_sub_r2": 0.3598660041862498,
+        "pipe_r2": 0.16106023185717355,
+        "pipe_mse": 1.3072232375036763,
+        "pipe_mae": 0.9083103578685552,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_avg",
+          "EN_Bprime",
+          "d_electrons_Bprime",
+          "Shannon_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "EN_Bprime",
+          "Spin_Proxy_Distance",
+          "EN_avg",
+          "Val_avg"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.723,
+        "cls_f1": 0.8144675150703282,
+        "reg_sub_r2": 0.3558243724489667,
+        "pipe_r2": 0.15424025488277382,
+        "pipe_mse": 1.317850022308396,
+        "pipe_mae": 0.9132632357790471,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_avg",
+          "EN_Bprime",
+          "d_electrons_Bprime",
+          "Shannon_B",
+          "d_BO"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "EN_Bprime",
+          "Spin_Proxy_Distance",
+          "EN_avg",
+          "Val_avg",
+          "M_abs"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.7135,
+        "cls_f1": 0.8099502487562189,
+        "reg_sub_r2": 0.35453825789772386,
+        "pipe_r2": 0.1325426392457979,
+        "pipe_mse": 1.3516589182937024,
+        "pipe_mae": 0.9347764025356867,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_avg",
+          "EN_Bprime",
+          "d_electrons_Bprime",
+          "Shannon_B",
+          "d_BO",
+          "HS_moment_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "EN_Bprime",
+          "Spin_Proxy_Distance",
+          "EN_avg",
+          "Val_avg",
+          "M_abs",
+          "E_GNN"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.706,
+        "cls_f1": 0.8054268696227663,
+        "reg_sub_r2": 0.3473982613006388,
+        "pipe_r2": 0.1206392701024197,
+        "pipe_mse": 1.370206567767102,
+        "pipe_mae": 0.9435980333544183,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_avg",
+          "EN_Bprime",
+          "d_electrons_Bprime",
+          "Shannon_B",
+          "d_BO",
+          "HS_moment_Bprime",
+          "Total_HS_FM"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "EN_Bprime",
+          "Spin_Proxy_Distance",
+          "EN_avg",
+          "Val_avg",
+          "M_abs",
+          "E_GNN",
+          "d_electrons_B"
+        ]
+      }
+    },
+    "100": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.7675,
+        "cls_f1": 0.8208092485549133,
+        "reg_sub_r2": 0.32524645486695436,
+        "pipe_r2": 0.25897542003767426,
+        "pipe_mse": 1.1546532746117695,
+        "pipe_mae": 0.7535634339865712,
+        "top_cls_features": [
+          "M_net"
+        ],
+        "top_reg_features": [
+          "M_net"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.7815,
+        "cls_f1": 0.8366355140186916,
+        "reg_sub_r2": 0.42380636646639036,
+        "pipe_r2": 0.3653972578951731,
+        "pipe_mse": 0.9888283790615962,
+        "pipe_mae": 0.7185326780250625,
+        "top_cls_features": [
+          "M_net",
+          "EN_avg"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "EN_avg"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.772,
+        "cls_f1": 0.83632447954056,
+        "reg_sub_r2": 0.4261155423018551,
+        "pipe_r2": 0.32549731746763744,
+        "pipe_mse": 1.050999861785976,
+        "pipe_mae": 0.7673289590973275,
+        "top_cls_features": [
+          "M_net",
+          "EN_avg",
+          "M_abs"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "EN_avg",
+          "d_electrons_Bprime"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.7545,
+        "cls_f1": 0.828860230045312,
+        "reg_sub_r2": 0.4099100334556728,
+        "pipe_r2": 0.28267342667684314,
+        "pipe_mse": 1.1177273996710504,
+        "pipe_mae": 0.809621486056591,
+        "top_cls_features": [
+          "M_net",
+          "EN_avg",
+          "M_abs",
+          "Val_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "EN_avg",
+          "d_electrons_Bprime",
+          "Total_d_electrons"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.736,
+        "cls_f1": 0.8195488721804511,
+        "reg_sub_r2": 0.41236421337788964,
+        "pipe_r2": 0.24137187168262564,
+        "pipe_mse": 1.1820828569799777,
+        "pipe_mae": 0.8463596203170523,
+        "top_cls_features": [
+          "M_net",
+          "EN_avg",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "EN_avg",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "E_GNN"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.7425,
+        "cls_f1": 0.8232063165121868,
+        "reg_sub_r2": 0.40514948196982636,
+        "pipe_r2": 0.2512873054735917,
+        "pipe_mse": 1.1666327782571948,
+        "pipe_mae": 0.8355246758933843,
+        "top_cls_features": [
+          "M_net",
+          "EN_avg",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "EN_avg",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "E_GNN",
+          "M_abs"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.7415,
+        "cls_f1": 0.8251606357795063,
+        "reg_sub_r2": 0.40219224472263315,
+        "pipe_r2": 0.23371255100478416,
+        "pipe_mse": 1.1940174944280648,
+        "pipe_mae": 0.852990914504014,
+        "top_cls_features": [
+          "M_net",
+          "EN_avg",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_Bprime",
+          "Shannon_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "EN_avg",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "E_GNN",
+          "M_abs",
+          "EN_Bprime"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.741,
+        "cls_f1": 0.8261744966442953,
+        "reg_sub_r2": 0.3923451434295503,
+        "pipe_r2": 0.2177400709924776,
+        "pipe_mse": 1.2189055708138958,
+        "pipe_mae": 0.869897969985132,
+        "top_cls_features": [
+          "M_net",
+          "EN_avg",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_Bprime",
+          "Shannon_B",
+          "d_BO"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "EN_avg",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "E_GNN",
+          "M_abs",
+          "EN_Bprime",
+          "Spin_Proxy_Distance"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.7375,
+        "cls_f1": 0.8244734202607823,
+        "reg_sub_r2": 0.3830245235595371,
+        "pipe_r2": 0.2004510654711983,
+        "pipe_mse": 1.2458450373035785,
+        "pipe_mae": 0.8814345507101539,
+        "top_cls_features": [
+          "M_net",
+          "EN_avg",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_Bprime",
+          "Shannon_B",
+          "d_BO",
+          "d_electrons_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "EN_avg",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "E_GNN",
+          "M_abs",
+          "EN_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_avg"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.723,
+        "cls_f1": 0.8154563624250499,
+        "reg_sub_r2": 0.3732579713110147,
+        "pipe_r2": 0.17137176573737,
+        "pipe_mse": 1.2911559616224304,
+        "pipe_mae": 0.9060878972085488,
+        "top_cls_features": [
+          "M_net",
+          "EN_avg",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_Bprime",
+          "Shannon_B",
+          "d_BO",
+          "d_electrons_Bprime",
+          "HS_moment_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "EN_avg",
+          "d_electrons_Bprime",
+          "Total_d_electrons",
+          "E_GNN",
+          "M_abs",
+          "EN_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_avg",
+          "d_electrons_B"
+        ]
+      }
+    }
+  },
+  "Total Magnetization (uB)": {
+    "3": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.909,
+        "cls_f1": 0.9120772946859903,
+        "reg_sub_r2": 0.8340350251999745,
+        "pipe_r2": 0.8299595484221065,
+        "pipe_mse": 16.111975933669093,
+        "pipe_mae": 0.30029985607109,
+        "top_cls_features": [
+          "M_net"
+        ],
+        "top_reg_features": [
+          "M_net"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.949,
+        "cls_f1": 0.9526462395543176,
+        "reg_sub_r2": 0.8296980971770745,
+        "pipe_r2": 0.8253000413773339,
+        "pipe_mse": 16.55348184988778,
+        "pipe_mae": 0.5769479380145497,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.899,
+        "cls_f1": 0.9103019538188277,
+        "reg_sub_r2": 0.7669887372062829,
+        "pipe_r2": 0.748937773288632,
+        "pipe_mse": 23.78909557749509,
+        "pipe_mae": 1.62011327279932,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.841,
+        "cls_f1": 0.8625756266205704,
+        "reg_sub_r2": 0.6940764063549588,
+        "pipe_r2": 0.6398428007386632,
+        "pipe_mse": 34.126256858228274,
+        "pipe_mae": 2.352210406976031,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "d_electrons_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.8515,
+        "cls_f1": 0.8709256844850065,
+        "reg_sub_r2": 0.6218700514945303,
+        "pipe_r2": 0.6280081404882678,
+        "pipe_mse": 35.247635679374085,
+        "pipe_mae": 2.5599356390571764,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "d_electrons_Bprime",
+          "M_abs"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.8425,
+        "cls_f1": 0.8642826367944851,
+        "reg_sub_r2": 0.5663898579385377,
+        "pipe_r2": 0.5691012858792485,
+        "pipe_mse": 40.82928295789764,
+        "pipe_mae": 2.9253856723026392,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_avg"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Octahedral_Mismatch"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.824,
+        "cls_f1": 0.8503401360544217,
+        "reg_sub_r2": 0.5160347877816557,
+        "pipe_r2": 0.5149186691446646,
+        "pipe_mse": 45.963290829259506,
+        "pipe_mae": 3.266377717469847,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_avg",
+          "Total_d_electrons"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Octahedral_Mismatch",
+          "d_avg"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.788,
+        "cls_f1": 0.8219983207388749,
+        "reg_sub_r2": 0.47417638263904116,
+        "pipe_r2": 0.4668104491641948,
+        "pipe_mse": 50.52172663288306,
+        "pipe_mae": 3.6142049976804462,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_avg",
+          "Total_d_electrons",
+          "Spin_Proxy_Distance"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Octahedral_Mismatch",
+          "d_avg",
+          "Shannon_B"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.7855,
+        "cls_f1": 0.8202764976958525,
+        "reg_sub_r2": 0.4385083723165373,
+        "pipe_r2": 0.4330559369566972,
+        "pipe_mse": 53.72009433476374,
+        "pipe_mae": 3.780875371283883,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_avg",
+          "Total_d_electrons",
+          "Spin_Proxy_Distance",
+          "d_electrons_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Octahedral_Mismatch",
+          "d_avg",
+          "Shannon_B",
+          "d_BO"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.7735,
+        "cls_f1": 0.8116424116424117,
+        "reg_sub_r2": 0.40814446931291615,
+        "pipe_r2": 0.3996443842582498,
+        "pipe_mse": 56.8859653259808,
+        "pipe_mae": 3.9809782821540045,
+        "top_cls_features": [
+          "M_net",
+          "Val_Bprime",
+          "Group_Bprime",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_avg",
+          "Total_d_electrons",
+          "Spin_Proxy_Distance",
+          "d_electrons_B",
+          "HS_moment_B"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Octahedral_Mismatch",
+          "d_avg",
+          "Shannon_B",
+          "d_BO",
+          "Density_g_cm3"
+        ]
+      }
+    },
+    "5": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.982,
+        "cls_f1": 0.983754512635379,
+        "reg_sub_r2": 0.8352800951650124,
+        "pipe_r2": 0.8637225230819324,
+        "pipe_mse": 12.912806382422628,
+        "pipe_mae": 0.26950964574693836,
+        "top_cls_features": [
+          "M_net"
+        ],
+        "top_reg_features": [
+          "M_net"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.9755,
+        "cls_f1": 0.9777576032682705,
+        "reg_sub_r2": 0.8325314254433827,
+        "pipe_r2": 0.8587378039115321,
+        "pipe_mse": 13.385127377599465,
+        "pipe_mae": 0.5107614341119214,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.9465,
+        "cls_f1": 0.9511192325262677,
+        "reg_sub_r2": 0.7712839431910385,
+        "pipe_r2": 0.8056911420342077,
+        "pipe_mse": 18.411499229696155,
+        "pipe_mae": 1.355186395804432,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.8855,
+        "cls_f1": 0.9009943795936014,
+        "reg_sub_r2": 0.7064225506124233,
+        "pipe_r2": 0.7278510121571511,
+        "pipe_mse": 25.78714595148985,
+        "pipe_mae": 2.081252553690986,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.862,
+        "cls_f1": 0.8825531914893617,
+        "reg_sub_r2": 0.6396347413317731,
+        "pipe_r2": 0.6619917656494555,
+        "pipe_mse": 32.02755865855376,
+        "pipe_mae": 2.494994312783804,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.8545,
+        "cls_f1": 0.8767471410419314,
+        "reg_sub_r2": 0.5896249397741217,
+        "pipe_r2": 0.6007626650412301,
+        "pipe_mse": 37.82924752896949,
+        "pipe_mae": 2.859773331907555,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Total_d_electrons"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Octahedral_Mismatch"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.827,
+        "cls_f1": 0.8521367521367521,
+        "reg_sub_r2": 0.5398788336256061,
+        "pipe_r2": 0.5516267682001321,
+        "pipe_mse": 42.48505960213586,
+        "pipe_mae": 3.1670826773410634,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Total_d_electrons",
+          "Val_avg"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Octahedral_Mismatch",
+          "d_avg"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.8195,
+        "cls_f1": 0.8486373165618448,
+        "reg_sub_r2": 0.4982108408112086,
+        "pipe_r2": 0.5100332021560594,
+        "pipe_mse": 46.426207304808166,
+        "pipe_mae": 3.438648273431793,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Total_d_electrons",
+          "Val_avg",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Octahedral_Mismatch",
+          "d_avg",
+          "Shannon_B"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.798,
+        "cls_f1": 0.830820770519263,
+        "reg_sub_r2": 0.4622645740513691,
+        "pipe_r2": 0.46382899557684176,
+        "pipe_mse": 50.80423063708337,
+        "pipe_mae": 3.7069651376329884,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Total_d_electrons",
+          "Val_avg",
+          "EN_Bprime",
+          "Spin_Proxy_Distance"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Octahedral_Mismatch",
+          "d_avg",
+          "Shannon_B",
+          "d_BO"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.7895,
+        "cls_f1": 0.8237756383424026,
+        "reg_sub_r2": 0.4313896789091779,
+        "pipe_r2": 0.42789520248628254,
+        "pipe_mse": 54.20909344536236,
+        "pipe_mae": 3.8573289127241916,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Total_d_electrons",
+          "Val_avg",
+          "EN_Bprime",
+          "Spin_Proxy_Distance",
+          "Total_HS_FM"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Octahedral_Mismatch",
+          "d_avg",
+          "Shannon_B",
+          "d_BO",
+          "Group_Bprime"
+        ]
+      }
+    },
+    "10": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.9845,
+        "cls_f1": 0.9860423232778028,
+        "reg_sub_r2": 0.8381737513705283,
+        "pipe_r2": 0.8636313565371123,
+        "pipe_mse": 12.921444757364988,
+        "pipe_mae": 0.2769270837851236,
+        "top_cls_features": [
+          "M_net"
+        ],
+        "top_reg_features": [
+          "M_net"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.987,
+        "cls_f1": 0.9883303411131059,
+        "reg_sub_r2": 0.8406940841065781,
+        "pipe_r2": 0.8583058871624301,
+        "pipe_mse": 13.426053123222367,
+        "pipe_mae": 0.5426687994114536,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.973,
+        "cls_f1": 0.975914362176628,
+        "reg_sub_r2": 0.7866297343958502,
+        "pipe_r2": 0.8041958954726568,
+        "pipe_mse": 18.55317949689758,
+        "pipe_mae": 1.3790127775031888,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.9455,
+        "cls_f1": 0.9524225229157574,
+        "reg_sub_r2": 0.7361166416167445,
+        "pipe_r2": 0.7455576878027341,
+        "pipe_mse": 24.109371461834186,
+        "pipe_mae": 1.8758707052971362,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Total_d_electrons"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.889,
+        "cls_f1": 0.9061707523245984,
+        "reg_sub_r2": 0.6793445834083469,
+        "pipe_r2": 0.6776549830767629,
+        "pipe_mse": 30.54340956408375,
+        "pipe_mae": 2.415868900497926,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Total_d_electrons",
+          "Val_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.847,
+        "cls_f1": 0.8708860759493671,
+        "reg_sub_r2": 0.6374389930290209,
+        "pipe_r2": 0.6264848060861667,
+        "pipe_mse": 35.39197737570474,
+        "pipe_mae": 2.755590628655189,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_B"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.8305,
+        "cls_f1": 0.8577423415862359,
+        "reg_sub_r2": 0.5958417403104275,
+        "pipe_r2": 0.5747077511047907,
+        "pipe_mse": 40.29804917235626,
+        "pipe_mae": 3.0739720105791717,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Val_avg"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_B",
+          "d_BO"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.8125,
+        "cls_f1": 0.8413034278459586,
+        "reg_sub_r2": 0.5529298193866212,
+        "pipe_r2": 0.5175680856274534,
+        "pipe_mse": 45.7122485965858,
+        "pipe_mae": 3.3521159936501577,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Val_avg",
+          "Spin_Proxy_Distance"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_B",
+          "d_BO",
+          "d_avg"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.817,
+        "cls_f1": 0.8450465707027942,
+        "reg_sub_r2": 0.5178844489526157,
+        "pipe_r2": 0.4956472974084346,
+        "pipe_mse": 47.7893261916785,
+        "pipe_mae": 3.488400697215215,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Val_avg",
+          "Spin_Proxy_Distance",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_B",
+          "d_BO",
+          "d_avg",
+          "Octahedral_Mismatch"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.797,
+        "cls_f1": 0.8294117647058824,
+        "reg_sub_r2": 0.48676525011031924,
+        "pipe_r2": 0.43714941262161733,
+        "pipe_mse": 53.33222203269543,
+        "pipe_mae": 3.7898264294571047,
+        "top_cls_features": [
+          "M_net",
+          "d_electrons_Bprime",
+          "M_abs",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Val_avg",
+          "Spin_Proxy_Distance",
+          "EN_Bprime",
+          "Total_HS_FM"
+        ],
+        "top_reg_features": [
+          "M_net",
+          "M_abs",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_B",
+          "d_BO",
+          "d_avg",
+          "Octahedral_Mismatch",
+          "EN_avg"
+        ]
+      }
+    },
+    "50": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.996,
+        "cls_f1": 0.9964349376114082,
+        "reg_sub_r2": 0.8637837996683236,
+        "pipe_r2": 0.8456795423530381,
+        "pipe_mse": 14.622447050734023,
+        "pipe_mae": 0.7382726416520063,
+        "top_cls_features": [
+          "M_net"
+        ],
+        "top_reg_features": [
+          "M_abs"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.9955,
+        "cls_f1": 0.9959875167186804,
+        "reg_sub_r2": 0.8686840831792555,
+        "pipe_r2": 0.8598861516116378,
+        "pipe_mse": 13.276317089600946,
+        "pipe_mae": 0.42557334755174564,
+        "top_cls_features": [
+          "M_net",
+          "M_abs"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.9835,
+        "cls_f1": 0.9854689564068693,
+        "reg_sub_r2": 0.8359390086958045,
+        "pipe_r2": 0.8007717332156671,
+        "pipe_mse": 18.877631822009906,
+        "pipe_mae": 1.3324215957126657,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.953,
+        "cls_f1": 0.9593073593073593,
+        "reg_sub_r2": 0.7993381563073075,
+        "pipe_r2": 0.7574267402895228,
+        "pipe_mse": 22.98473384620781,
+        "pipe_mae": 1.7788758336718091,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.9105,
+        "cls_f1": 0.9237973605789698,
+        "reg_sub_r2": 0.7505092446584667,
+        "pipe_r2": 0.7009090245155278,
+        "pipe_mse": 28.340001183635565,
+        "pipe_mae": 2.233016501211129,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.8895,
+        "cls_f1": 0.9063955950868277,
+        "reg_sub_r2": 0.7079888590505745,
+        "pipe_r2": 0.6275755488661503,
+        "pipe_mse": 35.2886253717678,
+        "pipe_mae": 2.6704942775042433,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons",
+          "Val_Bprime"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.8575,
+        "cls_f1": 0.8807032231059021,
+        "reg_sub_r2": 0.6716545033732992,
+        "pipe_r2": 0.5547311007952134,
+        "pipe_mse": 42.19091234718611,
+        "pipe_mae": 3.0658654424700953,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "Shannon_B"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.8435,
+        "cls_f1": 0.8684321143337537,
+        "reg_sub_r2": 0.6359359903114725,
+        "pipe_r2": 0.5192532793137754,
+        "pipe_mse": 45.55257012087231,
+        "pipe_mae": 3.2682030540375875,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Val_avg"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "Shannon_B",
+          "d_BO"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.8425,
+        "cls_f1": 0.8679245283018868,
+        "reg_sub_r2": 0.6017004028640739,
+        "pipe_r2": 0.4832779383373219,
+        "pipe_mse": 48.96136974848701,
+        "pipe_mae": 3.446402504339096,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Val_avg",
+          "EN_avg"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "Shannon_B",
+          "d_BO",
+          "EN_B"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.8345,
+        "cls_f1": 0.8609827803443931,
+        "reg_sub_r2": 0.5706662686668701,
+        "pipe_r2": 0.46191218458356953,
+        "pipe_mse": 50.98585572868016,
+        "pipe_mae": 3.579877214904345,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime",
+          "Val_avg",
+          "EN_avg",
+          "Spin_Proxy_Distance"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "Shannon_B",
+          "d_BO",
+          "EN_B",
+          "d_avg"
+        ]
+      }
+    },
+    "100": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.999,
+        "cls_f1": 0.9991111111111111,
+        "reg_sub_r2": 0.8696724246205366,
+        "pipe_r2": 0.8240774985750867,
+        "pipe_mse": 16.66932240444349,
+        "pipe_mae": 0.7119260499527477,
+        "top_cls_features": [
+          "M_net"
+        ],
+        "top_reg_features": [
+          "M_abs"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.9985,
+        "cls_f1": 0.9986672589960017,
+        "reg_sub_r2": 0.8766872408631144,
+        "pipe_r2": 0.8450849597821988,
+        "pipe_mse": 14.678785998220024,
+        "pipe_mae": 0.4423442030088139,
+        "top_cls_features": [
+          "M_net",
+          "M_abs"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.9785,
+        "cls_f1": 0.9810822701275846,
+        "reg_sub_r2": 0.850714283821281,
+        "pipe_r2": 0.7865833328412426,
+        "pipe_mse": 20.22203642249562,
+        "pipe_mae": 1.3757329788778931,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.9535,
+        "cls_f1": 0.9597228237332178,
+        "reg_sub_r2": 0.8142183396188369,
+        "pipe_r2": 0.7209174629369486,
+        "pipe_mse": 26.444125964975864,
+        "pipe_mae": 1.8563614337692043,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.916,
+        "cls_f1": 0.9286321155480034,
+        "reg_sub_r2": 0.7642367802521478,
+        "pipe_r2": 0.6838385180247835,
+        "pipe_mse": 29.957496239677695,
+        "pipe_mae": 2.3176265287680433,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.895,
+        "cls_f1": 0.9114671163575042,
+        "reg_sub_r2": 0.7323094395606666,
+        "pipe_r2": 0.621938766882548,
+        "pipe_mse": 35.822731784802905,
+        "pipe_mae": 2.690918618664146,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons",
+          "Val_Bprime"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.857,
+        "cls_f1": 0.8801341156747695,
+        "reg_sub_r2": 0.6893221017881432,
+        "pipe_r2": 0.5568608714992476,
+        "pipe_mse": 41.98910851751377,
+        "pipe_mae": 3.037364913343587,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "Shannon_A"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.869,
+        "cls_f1": 0.8904682274247492,
+        "reg_sub_r2": 0.6508151899581631,
+        "pipe_r2": 0.5422741982368283,
+        "pipe_mse": 43.371250980530775,
+        "pipe_mae": 3.1136232059370603,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_avg"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.8465,
+        "cls_f1": 0.8723492723492724,
+        "reg_sub_r2": 0.6171519423863244,
+        "pipe_r2": 0.5023640376755603,
+        "pipe_mse": 47.15288964653641,
+        "pipe_mae": 3.346603308898346,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_avg",
+          "Val_avg"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.8435,
+        "cls_f1": 0.8687631027253668,
+        "reg_sub_r2": 0.5986901363632974,
+        "pipe_r2": 0.4880302856111213,
+        "pipe_mse": 48.51106686941697,
+        "pipe_mae": 3.375167243484094,
+        "top_cls_features": [
+          "M_net",
+          "M_abs",
+          "d_electrons_Bprime",
+          "EN_Bprime",
+          "Total_d_electrons",
+          "Val_Bprime",
+          "Group_Bprime",
+          "EN_avg",
+          "Val_avg",
+          "Spin_Proxy_Distance"
+        ],
+        "top_reg_features": [
+          "M_abs",
+          "M_net",
+          "Volume_A3",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "Density_g_cm3"
+        ]
+      }
+    }
+  },
+  "Energy Above Hull (eV)": {
+    "3": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.74,
+        "cls_f1": 0.8265510340226818,
+        "reg_sub_r2": 0.4543130336382948,
+        "pipe_r2": 0.21031649435551836,
+        "pipe_mse": 0.058039360404718604,
+        "pipe_mae": 0.09893872701605998,
+        "top_cls_features": [
+          "EN_A"
+        ],
+        "top_reg_features": [
+          "E_GNN"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.74,
+        "cls_f1": 0.8265510340226818,
+        "reg_sub_r2": 0.3544022821913895,
+        "pipe_r2": 0.17334407605708813,
+        "pipe_mse": 0.06075672184802913,
+        "pipe_mae": 0.09897727814208766,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.721,
+        "cls_f1": 0.8318264014466547,
+        "reg_sub_r2": 0.2752956348447051,
+        "pipe_r2": 0.23655775597249473,
+        "pipe_mse": 0.05611070667246264,
+        "pipe_mae": 0.10669251433169538,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.728,
+        "cls_f1": 0.8349514563106796,
+        "reg_sub_r2": 0.2235510600907683,
+        "pipe_r2": 0.19291082786792968,
+        "pipe_mse": 0.05931862449360575,
+        "pipe_mae": 0.1061724523971445,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_Bprime",
+          "Shannon_A"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.7275,
+        "cls_f1": 0.834597875569044,
+        "reg_sub_r2": 0.18745128957125856,
+        "pipe_r2": 0.15956923140837898,
+        "pipe_mse": 0.06176913146197055,
+        "pipe_mae": 0.10716768814453712,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_Bprime",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "d_electrons_Bprime"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.727,
+        "cls_f1": 0.8342440801457195,
+        "reg_sub_r2": 0.16178074984040658,
+        "pipe_r2": 0.1363740196759301,
+        "pipe_mse": 0.06347390969753046,
+        "pipe_mae": 0.107714882772413,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_Bprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.7065,
+        "cls_f1": 0.8249328959141068,
+        "reg_sub_r2": 0.14248321803470643,
+        "pipe_r2": 0.11777401084782235,
+        "pipe_mse": 0.06484095435300222,
+        "pipe_mae": 0.11113672136609841,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_Bprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "Tolerance_Factor"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_B"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.705,
+        "cls_f1": 0.8247177658942365,
+        "reg_sub_r2": 0.127717809486936,
+        "pipe_r2": 0.10303782575414966,
+        "pipe_mse": 0.06592401959563293,
+        "pipe_mae": 0.11223295874814142,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_Bprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "Tolerance_Factor",
+          "d_avg"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_B",
+          "EN_avg"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.704,
+        "cls_f1": 0.8242280285035629,
+        "reg_sub_r2": 0.1159418183205776,
+        "pipe_r2": 0.09204083858111622,
+        "pipe_mse": 0.06673226504756352,
+        "pipe_mae": 0.11238843126209198,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_Bprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "Tolerance_Factor",
+          "d_avg",
+          "E_GNN"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_B",
+          "EN_avg",
+          "Density_g_cm3"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.7045,
+        "cls_f1": 0.8246811035301097,
+        "reg_sub_r2": 0.10620836305297321,
+        "pipe_r2": 0.0828268787534916,
+        "pipe_mse": 0.06740946335722514,
+        "pipe_mae": 0.11269066920968628,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_Bprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "Tolerance_Factor",
+          "d_avg",
+          "E_GNN",
+          "Octahedral_Mismatch"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "d_electrons_Bprime",
+          "Spin_Proxy_Distance",
+          "Val_B",
+          "EN_avg",
+          "Density_g_cm3",
+          "HS_moment_B"
+        ]
+      }
+    },
+    "5": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.747,
+        "cls_f1": 0.8302013422818791,
+        "reg_sub_r2": 0.533718041493423,
+        "pipe_r2": 0.29019031249778116,
+        "pipe_mse": 0.052168875223093436,
+        "pipe_mae": 0.09971267102290358,
+        "top_cls_features": [
+          "EN_A"
+        ],
+        "top_reg_features": [
+          "E_GNN"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.747,
+        "cls_f1": 0.8302013422818791,
+        "reg_sub_r2": 0.41822514313242953,
+        "pipe_r2": 0.23179912762867727,
+        "pipe_mse": 0.05646045153037699,
+        "pipe_mae": 0.09741718695383066,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.747,
+        "cls_f1": 0.8299731182795699,
+        "reg_sub_r2": 0.321481263658593,
+        "pipe_r2": 0.1798552313187458,
+        "pipe_mse": 0.06027817153745374,
+        "pipe_mae": 0.09645275187891621,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Group_B"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.7475,
+        "cls_f1": 0.8303661404098085,
+        "reg_sub_r2": 0.26419176568588465,
+        "pipe_r2": 0.15844756860401554,
+        "pipe_mse": 0.06185157030144192,
+        "pipe_mae": 0.09422646522201279,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Group_B",
+          "Volume_A3"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.7475,
+        "cls_f1": 0.8303661404098085,
+        "reg_sub_r2": 0.2223698651780417,
+        "pipe_r2": 0.13221942007547227,
+        "pipe_mse": 0.06377926026117364,
+        "pipe_mae": 0.09505630066943446,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Group_B",
+          "Volume_A3",
+          "HS_moment_Bprime"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.749,
+        "cls_f1": 0.8322192513368984,
+        "reg_sub_r2": 0.1929902962072666,
+        "pipe_r2": 0.11208324341726805,
+        "pipe_mse": 0.06525920862768385,
+        "pipe_mae": 0.09574196318035506,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Group_B",
+          "Volume_A3",
+          "HS_moment_Bprime",
+          "Spin_Proxy_Distance"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.7465,
+        "cls_f1": 0.8417108960349672,
+        "reg_sub_r2": 0.17075956083803523,
+        "pipe_r2": 0.08183381707313708,
+        "pipe_mse": 0.06748245040122218,
+        "pipe_mae": 0.1038525272176196,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "Tolerance_Factor"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Group_B",
+          "Volume_A3",
+          "HS_moment_Bprime",
+          "Spin_Proxy_Distance",
+          "d_electrons_Bprime"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.738,
+        "cls_f1": 0.8405356055995131,
+        "reg_sub_r2": 0.15404710895815943,
+        "pipe_r2": 0.13958863442802405,
+        "pipe_mse": 0.0632376451905153,
+        "pipe_mae": 0.10567904762749009,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "Tolerance_Factor",
+          "E_GNN"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Group_B",
+          "Volume_A3",
+          "HS_moment_Bprime",
+          "Spin_Proxy_Distance",
+          "d_electrons_Bprime",
+          "Density_g_cm3"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.709,
+        "cls_f1": 0.8267857142857142,
+        "reg_sub_r2": 0.1404619523902756,
+        "pipe_r2": 0.1163905264878713,
+        "pipe_mse": 0.0649426362886227,
+        "pipe_mae": 0.1110696425997422,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "Tolerance_Factor",
+          "E_GNN",
+          "d_avg"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Group_B",
+          "Volume_A3",
+          "HS_moment_Bprime",
+          "Spin_Proxy_Distance",
+          "d_electrons_Bprime",
+          "Density_g_cm3",
+          "HS_moment_B"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.706,
+        "cls_f1": 0.8254156769596199,
+        "reg_sub_r2": 0.12940116264172585,
+        "pipe_r2": 0.10469281235398564,
+        "pipe_mse": 0.0658023830627102,
+        "pipe_mae": 0.11194090555748054,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "Tolerance_Factor",
+          "E_GNN",
+          "d_avg",
+          "Volume_A3"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Group_B",
+          "Volume_A3",
+          "HS_moment_Bprime",
+          "Spin_Proxy_Distance",
+          "d_electrons_Bprime",
+          "Density_g_cm3",
+          "HS_moment_B",
+          "EN_avg"
+        ]
+      }
+    },
+    "10": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.7585,
+        "cls_f1": 0.8338493292053664,
+        "reg_sub_r2": 0.6248660455160275,
+        "pipe_r2": 0.3866552067258986,
+        "pipe_mse": 0.04507899589486881,
+        "pipe_mae": 0.0854047811423855,
+        "top_cls_features": [
+          "EN_A"
+        ],
+        "top_reg_features": [
+          "E_GNN"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.7585,
+        "cls_f1": 0.8338493292053664,
+        "reg_sub_r2": 0.4912459953120798,
+        "pipe_r2": 0.3070669835883284,
+        "pipe_mse": 0.05092849070340316,
+        "pipe_mae": 0.0903092931516714,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.7475,
+        "cls_f1": 0.8303661404098085,
+        "reg_sub_r2": 0.38202721043443266,
+        "pipe_r2": 0.23302920457335197,
+        "pipe_mse": 0.05637004457796224,
+        "pipe_mae": 0.09211096098929251,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.7475,
+        "cls_f1": 0.8303661404098085,
+        "reg_sub_r2": 0.3108467970354216,
+        "pipe_r2": 0.19245307955996327,
+        "pipe_mse": 0.059352267616237554,
+        "pipe_mae": 0.09334452377144581,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.7475,
+        "cls_f1": 0.8303661404098085,
+        "reg_sub_r2": 0.2655472546165212,
+        "pipe_r2": 0.16901265149096623,
+        "pipe_mse": 0.06107506851433544,
+        "pipe_mae": 0.09213246947604299,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "EN_A"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.7575,
+        "cls_f1": 0.8383872042652449,
+        "reg_sub_r2": 0.23219176974658973,
+        "pipe_r2": 0.1496316403507124,
+        "pipe_mse": 0.06249951448862362,
+        "pipe_mae": 0.09198344965203442,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.755,
+        "cls_f1": 0.8470661672908864,
+        "reg_sub_r2": 0.20784988291798723,
+        "pipe_r2": 0.1980797698226494,
+        "pipe_mse": 0.05893872282049658,
+        "pipe_mae": 0.09869101621142885,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "Volume_A3"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "EN_A",
+          "EN_Aprime",
+          "Density_g_cm3"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.753,
+        "cls_f1": 0.8482800982800983,
+        "reg_sub_r2": 0.18899404930425934,
+        "pipe_r2": 0.17761447097779093,
+        "pipe_mse": 0.06044286067693772,
+        "pipe_mae": 0.10113892272103796,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "Volume_A3",
+          "E_GNN"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "EN_A",
+          "EN_Aprime",
+          "Density_g_cm3",
+          "d_electrons_Bprime"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.7415,
+        "cls_f1": 0.8426179604261796,
+        "reg_sub_r2": 0.17329506280709095,
+        "pipe_r2": 0.15867940284396287,
+        "pipe_mse": 0.06183453118271869,
+        "pipe_mae": 0.10378521335694667,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "Volume_A3",
+          "E_GNN",
+          "Tolerance_Factor"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "EN_A",
+          "EN_Aprime",
+          "Density_g_cm3",
+          "d_electrons_Bprime",
+          "d_electrons_B"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.7215,
+        "cls_f1": 0.8330836080311658,
+        "reg_sub_r2": 0.16020148034720683,
+        "pipe_r2": 0.1397708495427613,
+        "pipe_mse": 0.06322425292812177,
+        "pipe_mae": 0.10768784573953011,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "Volume_A3",
+          "E_GNN",
+          "Tolerance_Factor",
+          "d_avg"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Volume_A3",
+          "Group_B",
+          "EN_A",
+          "EN_Aprime",
+          "Density_g_cm3",
+          "d_electrons_Bprime",
+          "d_electrons_B",
+          "HS_moment_Bprime"
+        ]
+      }
+    },
+    "50": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.764,
+        "cls_f1": 0.8370165745856354,
+        "reg_sub_r2": 0.7351748260807388,
+        "pipe_r2": 0.48537730833095216,
+        "pipe_mse": 0.03782321861952767,
+        "pipe_mae": 0.0798506338705927,
+        "top_cls_features": [
+          "EN_A"
+        ],
+        "top_reg_features": [
+          "E_GNN"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.764,
+        "cls_f1": 0.8370165745856354,
+        "reg_sub_r2": 0.5772491359719398,
+        "pipe_r2": 0.3860667124341204,
+        "pipe_mse": 0.045122248453713584,
+        "pipe_mae": 0.08499221387073437,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.762,
+        "cls_f1": 0.837431693989071,
+        "reg_sub_r2": 0.4578817378153024,
+        "pipe_r2": 0.31059320224542974,
+        "pipe_mse": 0.05066932424742113,
+        "pipe_mae": 0.08806939427339089,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Density_g_cm3"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.762,
+        "cls_f1": 0.837431693989071,
+        "reg_sub_r2": 0.3848303062115126,
+        "pipe_r2": 0.26342408059327227,
+        "pipe_mse": 0.05413611269111453,
+        "pipe_mae": 0.08859767061784775,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Density_g_cm3",
+          "EN_avg"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.752,
+        "cls_f1": 0.8331090174966352,
+        "reg_sub_r2": 0.33616396333209075,
+        "pipe_r2": 0.19936611081100364,
+        "pipe_mse": 0.05884418063024845,
+        "pipe_mae": 0.09083719121242904,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Density_g_cm3",
+          "EN_avg",
+          "Volume_A3"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.7555,
+        "cls_f1": 0.8349645629429632,
+        "reg_sub_r2": 0.2968837353610513,
+        "pipe_r2": 0.1796007320393096,
+        "pipe_mse": 0.060296876468348665,
+        "pipe_mae": 0.0914883485905608,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Density_g_cm3",
+          "EN_avg",
+          "Volume_A3",
+          "d_BO"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.782,
+        "cls_f1": 0.8569553805774278,
+        "reg_sub_r2": 0.2666179012618841,
+        "pipe_r2": 0.2245756861349275,
+        "pipe_mse": 0.056991352734747446,
+        "pipe_mae": 0.09162418525151546,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "EN_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Density_g_cm3",
+          "EN_avg",
+          "Volume_A3",
+          "d_BO",
+          "Shannon_B"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.7815,
+        "cls_f1": 0.8593498551657548,
+        "reg_sub_r2": 0.2440712182747582,
+        "pipe_r2": 0.23442154149314232,
+        "pipe_mse": 0.056267712005843296,
+        "pipe_mae": 0.09212524074102194,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "EN_B",
+          "Volume_A3"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Density_g_cm3",
+          "EN_avg",
+          "Volume_A3",
+          "d_BO",
+          "Shannon_B",
+          "EN_A"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.773,
+        "cls_f1": 0.8575015693659761,
+        "reg_sub_r2": 0.22523883071862094,
+        "pipe_r2": 0.1983540245645793,
+        "pipe_mse": 0.05891856592258014,
+        "pipe_mae": 0.09554658353157432,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "EN_B",
+          "Volume_A3",
+          "Shannon_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Density_g_cm3",
+          "EN_avg",
+          "Volume_A3",
+          "d_BO",
+          "Shannon_B",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.762,
+        "cls_f1": 0.8528138528138528,
+        "reg_sub_r2": 0.21006654940279568,
+        "pipe_r2": 0.1811982580896595,
+        "pipe_mse": 0.06017946311283415,
+        "pipe_mae": 0.09867196947996533,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "EN_B",
+          "Volume_A3",
+          "Shannon_B",
+          "d_BO"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_B",
+          "Density_g_cm3",
+          "EN_avg",
+          "Volume_A3",
+          "d_BO",
+          "Shannon_B",
+          "EN_A",
+          "EN_Aprime",
+          "d_electrons_Bprime"
+        ]
+      }
+    },
+    "100": {
+      "1": {
+        "K": 1,
+        "cls_acc": 0.764,
+        "cls_f1": 0.8370165745856354,
+        "reg_sub_r2": 0.7445492828265918,
+        "pipe_r2": 0.4925975842947,
+        "pipe_mse": 0.037292550072082854,
+        "pipe_mae": 0.0785818800330575,
+        "top_cls_features": [
+          "EN_A"
+        ],
+        "top_reg_features": [
+          "E_GNN"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 0.764,
+        "cls_f1": 0.8370165745856354,
+        "reg_sub_r2": 0.6058705265745927,
+        "pipe_r2": 0.09518754085834558,
+        "pipe_mse": 0.06650099190300744,
+        "pipe_mae": 0.09129067371842438,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "Density_g_cm3"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 0.7645,
+        "cls_f1": 0.8374180186399723,
+        "reg_sub_r2": 0.49272975826442933,
+        "pipe_r2": 0.13118978941297577,
+        "pipe_mse": 0.06385493501527101,
+        "pipe_mae": 0.09002015321211158,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "Density_g_cm3",
+          "EN_avg"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 0.762,
+        "cls_f1": 0.837431693989071,
+        "reg_sub_r2": 0.4189599171744688,
+        "pipe_r2": 0.015607815462305719,
+        "pipe_mse": 0.07234986215312088,
+        "pipe_mae": 0.09458936478328528,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "Density_g_cm3",
+          "EN_avg",
+          "M_net"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 0.762,
+        "cls_f1": 0.837431693989071,
+        "reg_sub_r2": 0.36890060067020813,
+        "pipe_r2": -0.015503416359442523,
+        "pipe_mse": 0.07463644403488823,
+        "pipe_mae": 0.09434479952322607,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "Density_g_cm3",
+          "EN_avg",
+          "M_net",
+          "Volume_A3"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 0.7605,
+        "cls_f1": 0.837461825585341,
+        "reg_sub_r2": 0.3327213887624546,
+        "pipe_r2": 0.03807482608977952,
+        "pipe_mse": 0.07069860450660288,
+        "pipe_mae": 0.09417942091409645,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "Density_g_cm3",
+          "EN_avg",
+          "M_net",
+          "Volume_A3",
+          "EN_B"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 0.791,
+        "cls_f1": 0.8622280817402769,
+        "reg_sub_r2": 0.3010323942337315,
+        "pipe_r2": 0.13372171184513781,
+        "pipe_mse": 0.06366884633859653,
+        "pipe_mae": 0.09305622383118207,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "EN_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "Density_g_cm3",
+          "EN_avg",
+          "M_net",
+          "Volume_A3",
+          "EN_B",
+          "Shannon_B"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 0.7775,
+        "cls_f1": 0.858235106721886,
+        "reg_sub_r2": 0.27542468728423064,
+        "pipe_r2": 0.13129457267142963,
+        "pipe_mse": 0.06384723376121376,
+        "pipe_mae": 0.09779719792139019,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "EN_B",
+          "Shannon_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "Density_g_cm3",
+          "EN_avg",
+          "M_net",
+          "Volume_A3",
+          "EN_B",
+          "Shannon_B",
+          "d_BO"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 0.762,
+        "cls_f1": 0.8521739130434782,
+        "reg_sub_r2": 0.2544809574168282,
+        "pipe_r2": 0.12890881055481684,
+        "pipe_mse": 0.06402258009469582,
+        "pipe_mae": 0.1012689954306256,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "EN_B",
+          "Shannon_B",
+          "d_BO"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "Density_g_cm3",
+          "EN_avg",
+          "M_net",
+          "Volume_A3",
+          "EN_B",
+          "Shannon_B",
+          "d_BO",
+          "EN_A"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 0.76,
+        "cls_f1": 0.8517603458925262,
+        "reg_sub_r2": 0.2366624162620764,
+        "pipe_r2": 0.129063453215448,
+        "pipe_mse": 0.06401121432467508,
+        "pipe_mae": 0.1015470487880641,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "d_AO",
+          "EN_Bprime",
+          "EN_B",
+          "Shannon_B",
+          "d_BO",
+          "Density_g_cm3"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "Density_g_cm3",
+          "EN_avg",
+          "M_net",
+          "Volume_A3",
+          "EN_B",
+          "Shannon_B",
+          "d_BO",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      }
+    }
+  },
+  "Formation Energy (eV/atom)": {
+    "3": {
+      "1": {
+        "K": 1,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.8805547849485944,
+        "pipe_r2": 0.8805547849485944,
+        "pipe_mse": 0.04167139774215849,
+        "pipe_mae": 0.04801936123360419,
+        "top_cls_features": [
+          "EN_A"
+        ],
+        "top_reg_features": [
+          "E_GNN"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.7577189081482305,
+        "pipe_r2": 0.7577189081482305,
+        "pipe_mse": 0.08452571113555638,
+        "pipe_mae": 0.1718406048951855,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6652844663767122,
+        "pipe_r2": 0.6652844663767122,
+        "pipe_mse": 0.11677373703159247,
+        "pipe_mae": 0.21783239976859517,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6483288535614179,
+        "pipe_r2": 0.6483288535614179,
+        "pipe_mse": 0.12268911911938968,
+        "pipe_mae": 0.22300088062861673,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6137490569644368,
+        "pipe_r2": 0.6137490569644368,
+        "pipe_mse": 0.13475313070173375,
+        "pipe_mae": 0.23740600329294476,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.575529552787607,
+        "pipe_r2": 0.575529552787607,
+        "pipe_mse": 0.14808694369185924,
+        "pipe_mae": 0.253222679741533,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime",
+          "Group_B"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.5409623957472875,
+        "pipe_r2": 0.5409623957472875,
+        "pipe_mse": 0.1601465456543395,
+        "pipe_mae": 0.26616873320628137,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime",
+          "Group_B",
+          "Val_B"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.5235630152952704,
+        "pipe_r2": 0.5235630152952704,
+        "pipe_mse": 0.16621674698447317,
+        "pipe_mae": 0.27298799759113496,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime",
+          "Group_B",
+          "Val_B",
+          "EN_Bprime"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.5019551560490163,
+        "pipe_r2": 0.5019551560490163,
+        "pipe_mse": 0.17375517953381983,
+        "pipe_mae": 0.28036767325406525,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B",
+          "Shannon_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime",
+          "Group_B",
+          "Val_B",
+          "EN_Bprime",
+          "Shannon_A"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.48181376822981314,
+        "pipe_r2": 0.48181376822981314,
+        "pipe_mse": 0.18078199749828883,
+        "pipe_mae": 0.2877511474102147,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B",
+          "Shannon_Bprime",
+          "Tolerance_Factor"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime",
+          "Group_B",
+          "Val_B",
+          "EN_Bprime",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ]
+      }
+    },
+    "5": {
+      "1": {
+        "K": 1,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.9097602701546155,
+        "pipe_r2": 0.9097602701546155,
+        "pipe_mse": 0.031482346721997866,
+        "pipe_mae": 0.060238305089631544,
+        "top_cls_features": [
+          "EN_A"
+        ],
+        "top_reg_features": [
+          "E_GNN"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.7810775867801932,
+        "pipe_r2": 0.7810775867801932,
+        "pipe_mse": 0.07637646223023305,
+        "pipe_mae": 0.16588767324540715,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6848981661417985,
+        "pipe_r2": 0.6848981661417985,
+        "pipe_mse": 0.10993101600878351,
+        "pipe_mae": 0.21459329857981016,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6719127726705296,
+        "pipe_r2": 0.6719127726705296,
+        "pipe_mse": 0.11446128954001532,
+        "pipe_mae": 0.21539902999346294,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6402837501061835,
+        "pipe_r2": 0.6402837501061835,
+        "pipe_mse": 0.1254958511079051,
+        "pipe_mae": 0.22777835485459333,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6026495932419824,
+        "pipe_r2": 0.6026495932419824,
+        "pipe_mse": 0.1386254513074943,
+        "pipe_mae": 0.24211305518967793,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime",
+          "Group_B"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.5813498695722765,
+        "pipe_r2": 0.5813498695722765,
+        "pipe_mse": 0.1460563831908384,
+        "pipe_mae": 0.25142701050615746,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime",
+          "Group_B",
+          "EN_Bprime"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.5508419772265722,
+        "pipe_r2": 0.5508419772265722,
+        "pipe_mse": 0.15669981093857752,
+        "pipe_mae": 0.262771988816127,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime",
+          "Group_B",
+          "EN_Bprime",
+          "Val_B"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.5275007531688065,
+        "pipe_r2": 0.5275007531688065,
+        "pipe_mse": 0.1648429703868768,
+        "pipe_mae": 0.27122225946721584,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B",
+          "Shannon_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime",
+          "Group_B",
+          "EN_Bprime",
+          "Val_B",
+          "Shannon_A"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.5058539402887887,
+        "pipe_r2": 0.5058539402887887,
+        "pipe_mse": 0.1723949928683557,
+        "pipe_mae": 0.2792377557646541,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B",
+          "Shannon_Bprime",
+          "Tolerance_Factor"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_B",
+          "EN_A",
+          "EN_Aprime",
+          "Group_B",
+          "EN_Bprime",
+          "Val_B",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ]
+      }
+    },
+    "10": {
+      "1": {
+        "K": 1,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.9467792364626139,
+        "pipe_r2": 0.9467792364626139,
+        "pipe_mse": 0.018567370861639936,
+        "pipe_mae": 0.027493699310781224,
+        "top_cls_features": [
+          "EN_A"
+        ],
+        "top_reg_features": [
+          "E_GNN"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.8083885422204096,
+        "pipe_r2": 0.8083885422204096,
+        "pipe_mse": 0.06684836446275175,
+        "pipe_mae": 0.16325251038990124,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_A"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6999732269403581,
+        "pipe_r2": 0.6999732269403581,
+        "pipe_mse": 0.10467171069250407,
+        "pipe_mae": 0.2156179255303676,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6994569938192505,
+        "pipe_r2": 0.6994569938192505,
+        "pipe_mse": 0.10485181129936463,
+        "pipe_mae": 0.20826735571100102,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6753482703832887,
+        "pipe_r2": 0.6753482703832887,
+        "pipe_mse": 0.11326273176129606,
+        "pipe_mae": 0.2159343643909139,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "EN_B"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6460850344804122,
+        "pipe_r2": 0.6460850344804122,
+        "pipe_mse": 0.12347193053084547,
+        "pipe_mae": 0.22931974070283687,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "EN_B",
+          "EN_Bprime"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6142422891448285,
+        "pipe_r2": 0.6142422891448285,
+        "pipe_mse": 0.13458105453811778,
+        "pipe_mae": 0.24150293406591464,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "EN_B",
+          "EN_Bprime",
+          "Group_B"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.5849294342136304,
+        "pipe_r2": 0.5849294342136304,
+        "pipe_mse": 0.14480756412471316,
+        "pipe_mae": 0.2534482005442121,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "EN_B",
+          "EN_Bprime",
+          "Group_B",
+          "d_electrons_B"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.5596179377416715,
+        "pipe_r2": 0.5596179377416715,
+        "pipe_mse": 0.1536381015093903,
+        "pipe_mae": 0.26243713330542895,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B",
+          "Shannon_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "EN_B",
+          "EN_Bprime",
+          "Group_B",
+          "d_electrons_B",
+          "d_BO"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.536479790259742,
+        "pipe_r2": 0.536479790259742,
+        "pipe_mse": 0.16171041270512343,
+        "pipe_mae": 0.2704104715138245,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B",
+          "Shannon_Bprime",
+          "Tolerance_Factor"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_A",
+          "EN_Aprime",
+          "EN_avg",
+          "EN_B",
+          "EN_Bprime",
+          "Group_B",
+          "d_electrons_B",
+          "d_BO",
+          "Shannon_B"
+        ]
+      }
+    },
+    "50": {
+      "1": {
+        "K": 1,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.9644949380899601,
+        "pipe_r2": 0.9644949380899601,
+        "pipe_mse": 0.012386813118269176,
+        "pipe_mae": 0.01895679625685522,
+        "top_cls_features": [
+          "EN_A"
+        ],
+        "top_reg_features": [
+          "E_GNN"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.8338827546978025,
+        "pipe_r2": 0.8338827546978025,
+        "pipe_mse": 0.057954082110701674,
+        "pipe_mae": 0.15475220875265705,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.7865546626633138,
+        "pipe_r2": 0.7865546626633138,
+        "pipe_mse": 0.07446564975029174,
+        "pipe_mae": 0.17067552236599703,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.7299806954705188,
+        "pipe_r2": 0.7299806954705188,
+        "pipe_mse": 0.09420286808698423,
+        "pipe_mae": 0.19661756327153881,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.7128400400437894,
+        "pipe_r2": 0.7128400400437894,
+        "pipe_mse": 0.10018280683581673,
+        "pipe_mae": 0.19955538480905738,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6816192727556797,
+        "pipe_r2": 0.6816192727556797,
+        "pipe_mse": 0.11107493852077602,
+        "pipe_mae": 0.2123655394691013,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "d_BO"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6523177118412389,
+        "pipe_r2": 0.6523177118412389,
+        "pipe_mse": 0.12129750791215975,
+        "pipe_mae": 0.22517274439470247,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "d_BO",
+          "Shannon_B"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6447580162653892,
+        "pipe_r2": 0.6447580162653892,
+        "pipe_mse": 0.12393489343668905,
+        "pipe_mae": 0.2268150562371178,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "d_BO",
+          "Shannon_B",
+          "EN_Bprime"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6177973447844235,
+        "pipe_r2": 0.6177973447844235,
+        "pipe_mse": 0.13334078603938124,
+        "pipe_mae": 0.2389184577471231,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B",
+          "Shannon_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "d_BO",
+          "Shannon_B",
+          "EN_Bprime",
+          "Group_B"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.5989198822432723,
+        "pipe_r2": 0.5989198822432723,
+        "pipe_mse": 0.13992665261910534,
+        "pipe_mae": 0.2454780345752395,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B",
+          "Shannon_Bprime",
+          "Tolerance_Factor"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "d_BO",
+          "Shannon_B",
+          "EN_Bprime",
+          "Group_B",
+          "Shannon_A"
+        ]
+      }
+    },
+    "100": {
+      "1": {
+        "K": 1,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.9645447901491154,
+        "pipe_r2": 0.9645447901491154,
+        "pipe_mse": 0.012369421002691883,
+        "pipe_mae": 0.018589284394528605,
+        "top_cls_features": [
+          "EN_A"
+        ],
+        "top_reg_features": [
+          "E_GNN"
+        ]
+      },
+      "2": {
+        "K": 2,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.844575153802914,
+        "pipe_r2": 0.844575153802914,
+        "pipe_mse": 0.05422377599726514,
+        "pipe_mae": 0.1480664837376955,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg"
+        ]
+      },
+      "3": {
+        "K": 3,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.7955530706604776,
+        "pipe_r2": 0.7955530706604776,
+        "pipe_mse": 0.07132633405200567,
+        "pipe_mae": 0.16474349326642151,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A"
+        ]
+      },
+      "4": {
+        "K": 4,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.7374308046911247,
+        "pipe_r2": 0.7374308046911247,
+        "pipe_mse": 0.09160371445474562,
+        "pipe_mae": 0.1922218787460921,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime"
+        ]
+      },
+      "5": {
+        "K": 5,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.719826951716321,
+        "pipe_r2": 0.719826951716321,
+        "pipe_mse": 0.09774525104783399,
+        "pipe_mae": 0.1963231016056303,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B"
+        ]
+      },
+      "6": {
+        "K": 6,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6918985314020982,
+        "pipe_r2": 0.6918985314020982,
+        "pipe_mse": 0.10748876660618671,
+        "pipe_mae": 0.20779897634832104,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "Shannon_B"
+        ]
+      },
+      "7": {
+        "K": 7,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6650201354894983,
+        "pipe_r2": 0.6650201354894983,
+        "pipe_mse": 0.11686595535554867,
+        "pipe_mae": 0.22002952139046067,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "Shannon_B",
+          "d_BO"
+        ]
+      },
+      "8": {
+        "K": 8,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6562713968777536,
+        "pipe_r2": 0.6562713968777536,
+        "pipe_mse": 0.11991816775497623,
+        "pipe_mae": 0.22198471349105403,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "Shannon_B",
+          "d_BO",
+          "EN_Bprime"
+        ]
+      },
+      "9": {
+        "K": 9,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.635783597346244,
+        "pipe_r2": 0.635783597346244,
+        "pipe_mse": 0.12706583995575643,
+        "pipe_mae": 0.22931032528768902,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B",
+          "Shannon_Bprime"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "Shannon_B",
+          "d_BO",
+          "EN_Bprime",
+          "Shannon_A"
+        ]
+      },
+      "10": {
+        "K": 10,
+        "cls_acc": 1.0,
+        "cls_f1": 1.0,
+        "reg_sub_r2": 0.6157865215635503,
+        "pipe_r2": 0.6157865215635503,
+        "pipe_mse": 0.13404231112090176,
+        "pipe_mae": 0.2369999283314204,
+        "top_cls_features": [
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "EN_Bprime",
+          "EN_avg",
+          "Shannon_A",
+          "Shannon_Aprime",
+          "Shannon_B",
+          "Shannon_Bprime",
+          "Tolerance_Factor"
+        ],
+        "top_reg_features": [
+          "E_GNN",
+          "EN_avg",
+          "EN_A",
+          "EN_Aprime",
+          "EN_B",
+          "Shannon_B",
+          "d_BO",
+          "EN_Bprime",
+          "Shannon_A",
+          "Shannon_Aprime"
+        ]
+      }
+    }
+  }
+}

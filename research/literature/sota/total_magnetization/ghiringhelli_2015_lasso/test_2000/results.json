@@ -1,0 +1,23 @@
+{
+  "target_key": "total_magnetization",
+  "target_display": "Total Magnetization (uB)",
+  "paper_folder": "ghiringhelli_2015_lasso",
+  "dataset_label": "2000",
+  "dataset_size": 2000,
+  "lit_limit_r2": 0.6,
+  "in_dist_r2": 0.017018203730290615,
+  "in_dist_limit_achieved_pct": 2.836367288381769,
+  "in_dist_cls_acc": 0.685,
+  "in_dist_mse": 93.14124314400132,
+  "in_dist_mae": 5.653493061658525,
+  "ood_train_r2_mean": 0.03706192586067993,
+  "ood_train_r2_std": 0.006851860087867066,
+  "ood_train_limit_achieved_pct": 6.1769876434466555,
+  "ood_test_r2_mean": 0.01892327251347332,
+  "ood_test_r2_std": 0.02176780239083036,
+  "ood_test_limit_achieved_pct": 3.1538787522455536,
+  "ood_test_cls_acc_mean": 0.6757500000000001,
+  "ood_test_cls_acc_std": 0.01214753061325635,
+  "ood_test_mse": 100.14338050496818,
+  "ood_test_mae": 5.628661327122549
+}

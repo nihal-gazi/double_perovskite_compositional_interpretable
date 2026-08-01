@@ -1,0 +1,462 @@
+{
+  "Band Gap (eV)": {
+    "3": {
+      "depth": 3,
+      "zero_pct": 37.5,
+      "cls_acc": 0.6415,
+      "cls_f1": 0.7583417593528817,
+      "cls_prec": 0.6552125800815376,
+      "cls_rec": 0.9,
+      "symbolic_formula": "sub(abs(abs(sub(div(neg(Val_Aprime), log(Volume_A3)), mul(mul(EN_Bprime, Total_HS_FM), pow(EN_A, EN_Bprime))))), abs(neg(mul(sub(mul(Shannon_Bprime, Total_HS_FiM), neg(Tolerance_Factor)), sub(div(HS_moment_B, Shannon_Aprime), mul(Total_HS_FiM, HS_moment_Bprime))))))",
+      "best_k": 6,
+      "reg_sub_r2": 0.21271348836668003,
+      "reg_sub_mse": 0.934844301222435,
+      "reg_sub_mae": 0.8034544971877349,
+      "top_reg_features": [
+        "Spin_Proxy_Distance",
+        "Val_avg",
+        "Total_d_electrons",
+        "d_electrons_Bprime",
+        "Group_Bprime",
+        "Val_Bprime"
+      ],
+      "pipe_r2": -0.07704687691838541,
+      "pipe_mse": 1.6782381272796911,
+      "pipe_mae": 1.0706521529033162
+    },
+    "5": {
+      "depth": 5,
+      "zero_pct": 37.5,
+      "cls_acc": 0.6415,
+      "cls_f1": 0.7583417593528817,
+      "cls_prec": 0.6552125800815376,
+      "cls_rec": 0.9,
+      "symbolic_formula": "sub(abs(abs(sub(div(neg(Val_Aprime), log(Volume_A3)), mul(mul(EN_Bprime, Total_HS_FM), pow(EN_A, EN_Bprime))))), abs(neg(mul(sub(mul(Shannon_Bprime, Total_HS_FiM), neg(Tolerance_Factor)), sub(div(HS_moment_B, Shannon_Aprime), mul(Total_HS_FiM, HS_moment_Bprime))))))",
+      "best_k": 8,
+      "reg_sub_r2": 0.24586201038026512,
+      "reg_sub_mse": 0.8954828915698592,
+      "reg_sub_mae": 0.7857638722663409,
+      "top_reg_features": [
+        "Spin_Proxy_Distance",
+        "Total_d_electrons",
+        "d_electrons_Bprime",
+        "Val_avg",
+        "Group_Bprime",
+        "Val_Bprime",
+        "EN_Bprime",
+        "EN_avg"
+      ],
+      "pipe_r2": -0.03979214096638195,
+      "pipe_mse": 1.620188362096511,
+      "pipe_mae": 1.0507365789795768
+    },
+    "10": {
+      "depth": 10,
+      "zero_pct": 37.5,
+      "cls_acc": 0.6415,
+      "cls_f1": 0.7583417593528817,
+      "cls_prec": 0.6552125800815376,
+      "cls_rec": 0.9,
+      "symbolic_formula": "sub(abs(abs(sub(div(neg(Val_Aprime), log(Volume_A3)), mul(mul(EN_Bprime, Total_HS_FM), pow(EN_A, EN_Bprime))))), abs(neg(mul(sub(mul(Shannon_Bprime, Total_HS_FiM), neg(Tolerance_Factor)), sub(div(HS_moment_B, Shannon_Aprime), mul(Total_HS_FiM, HS_moment_Bprime))))))",
+      "best_k": 6,
+      "reg_sub_r2": 0.28551993682655286,
+      "reg_sub_mse": 0.8483920472726589,
+      "reg_sub_mae": 0.7630215703712657,
+      "top_reg_features": [
+        "Total_d_electrons",
+        "d_electrons_Bprime",
+        "Spin_Proxy_Distance",
+        "Val_avg",
+        "Group_Bprime",
+        "EN_Bprime"
+      ],
+      "pipe_r2": -0.012155809182502919,
+      "pipe_mse": 1.5771258485775457,
+      "pipe_mae": 1.0315160351075092
+    },
+    "50": {
+      "depth": 50,
+      "zero_pct": 37.5,
+      "cls_acc": 0.6415,
+      "cls_f1": 0.7583417593528817,
+      "cls_prec": 0.6552125800815376,
+      "cls_rec": 0.9,
+      "symbolic_formula": "sub(abs(abs(sub(div(neg(Val_Aprime), log(Volume_A3)), mul(mul(EN_Bprime, Total_HS_FM), pow(EN_A, EN_Bprime))))), abs(neg(mul(sub(mul(Shannon_Bprime, Total_HS_FiM), neg(Tolerance_Factor)), sub(div(HS_moment_B, Shannon_Aprime), mul(Total_HS_FiM, HS_moment_Bprime))))))",
+      "best_k": 10,
+      "reg_sub_r2": 0.3116719622002646,
+      "reg_sub_mse": 0.8173384581093968,
+      "reg_sub_mae": 0.7459803699539017,
+      "top_reg_features": [
+        "d_electrons_Bprime",
+        "Total_d_electrons",
+        "EN_Bprime",
+        "Spin_Proxy_Distance",
+        "EN_avg",
+        "Val_avg",
+        "d_electrons_B",
+        "EN_B",
+        "d_BO",
+        "Shannon_B"
+      ],
+      "pipe_r2": 0.015093193401105154,
+      "pipe_mse": 1.534666865550738,
+      "pipe_mae": 1.0124521739272927
+    },
+    "100": {
+      "depth": 100,
+      "zero_pct": 37.5,
+      "cls_acc": 0.6415,
+      "cls_f1": 0.7583417593528817,
+      "cls_prec": 0.6552125800815376,
+      "cls_rec": 0.9,
+      "symbolic_formula": "sub(abs(abs(sub(div(neg(Val_Aprime), log(Volume_A3)), mul(mul(EN_Bprime, Total_HS_FM), pow(EN_A, EN_Bprime))))), abs(neg(mul(sub(mul(Shannon_Bprime, Total_HS_FiM), neg(Tolerance_Factor)), sub(div(HS_moment_B, Shannon_Aprime), mul(Total_HS_FiM, HS_moment_Bprime))))))",
+      "best_k": 9,
+      "reg_sub_r2": 0.3329592196472363,
+      "reg_sub_mse": 0.7920614198026298,
+      "reg_sub_mae": 0.7354690333106105,
+      "top_reg_features": [
+        "EN_avg",
+        "d_electrons_Bprime",
+        "Total_d_electrons",
+        "EN_Bprime",
+        "Spin_Proxy_Distance",
+        "Val_avg",
+        "d_electrons_B",
+        "Shannon_B",
+        "d_BO"
+      ],
+      "pipe_r2": 0.021626646541445194,
+      "pipe_mse": 1.5244865378436603,
+      "pipe_mae": 1.0075784212302032
+    }
+  },
+  "Total Magnetization (uB)": {
+    "3": {
+      "depth": 3,
+      "zero_pct": 43.7,
+      "cls_acc": 0.639,
+      "cls_f1": 0.7254752851711027,
+      "cls_prec": 0.6343085106382979,
+      "cls_rec": 0.8472468916518651,
+      "symbolic_formula": "log(pow(add(HS_moment_B, Total_HS_FiM), mul(Val_A, Group_Bprime)))",
+      "best_k": 2,
+      "reg_sub_r2": 0.27706950806319675,
+      "reg_sub_mse": 98.29813366100679,
+      "reg_sub_mae": 6.116110494337304,
+      "top_reg_features": [
+        "Volume_A3",
+        "EN_A"
+      ],
+      "pipe_r2": 0.0837696615133775,
+      "pipe_mse": 86.81629004396945,
+      "pipe_mae": 5.8185795398837525
+    },
+    "5": {
+      "depth": 5,
+      "zero_pct": 43.7,
+      "cls_acc": 0.639,
+      "cls_f1": 0.7254752851711027,
+      "cls_prec": 0.6343085106382979,
+      "cls_rec": 0.8472468916518651,
+      "symbolic_formula": "log(pow(add(HS_moment_B, Total_HS_FiM), mul(Val_A, Group_Bprime)))",
+      "best_k": 2,
+      "reg_sub_r2": 0.31515650380031524,
+      "reg_sub_mse": 93.11937769557056,
+      "reg_sub_mae": 5.8319877836526945,
+      "top_reg_features": [
+        "Volume_A3",
+        "EN_A"
+      ],
+      "pipe_r2": 0.12410436715586759,
+      "pipe_mse": 82.99442412575452,
+      "pipe_mae": 5.586303446856373
+    },
+    "10": {
+      "depth": 10,
+      "zero_pct": 43.7,
+      "cls_acc": 0.639,
+      "cls_f1": 0.7254752851711027,
+      "cls_prec": 0.6343085106382979,
+      "cls_rec": 0.8472468916518651,
+      "symbolic_formula": "log(pow(add(HS_moment_B, Total_HS_FiM), mul(Val_A, Group_Bprime)))",
+      "best_k": 2,
+      "reg_sub_r2": 0.39433077449608533,
+      "reg_sub_mse": 82.35391250884845,
+      "reg_sub_mae": 5.49829388555434,
+      "top_reg_features": [
+        "Volume_A3",
+        "EN_A"
+      ],
+      "pipe_r2": 0.16502911765642259,
+      "pipe_mse": 79.11664922550203,
+      "pipe_mae": 5.369190993422037
+    },
+    "50": {
+      "depth": 50,
+      "zero_pct": 43.7,
+      "cls_acc": 0.639,
+      "cls_f1": 0.7254752851711027,
+      "cls_prec": 0.6343085106382979,
+      "cls_rec": 0.8472468916518651,
+      "symbolic_formula": "log(pow(add(HS_moment_B, Total_HS_FiM), mul(Val_A, Group_Bprime)))",
+      "best_k": 3,
+      "reg_sub_r2": 0.5141063281567475,
+      "reg_sub_mse": 66.06781928913392,
+      "reg_sub_mae": 4.749818373342716,
+      "top_reg_features": [
+        "Volume_A3",
+        "EN_A",
+        "EN_Aprime"
+      ],
+      "pipe_r2": 0.2383619877184604,
+      "pipe_mse": 72.16808241906075,
+      "pipe_mae": 4.759808252844476
+    },
+    "100": {
+      "depth": 100,
+      "zero_pct": 43.7,
+      "cls_acc": 0.639,
+      "cls_f1": 0.7254752851711027,
+      "cls_prec": 0.6343085106382979,
+      "cls_rec": 0.8472468916518651,
+      "symbolic_formula": "log(pow(add(HS_moment_B, Total_HS_FiM), mul(Val_A, Group_Bprime)))",
+      "best_k": 3,
+      "reg_sub_r2": 0.5362625312879762,
+      "reg_sub_mse": 63.055201283523054,
+      "reg_sub_mae": 4.658427244018838,
+      "top_reg_features": [
+        "Volume_A3",
+        "EN_A",
+        "EN_Aprime"
+      ],
+      "pipe_r2": 0.25578541876556427,
+      "pipe_mse": 70.51714642643147,
+      "pipe_mae": 4.679076764847471
+    }
+  },
+  "Energy Above Hull (eV)": {
+    "3": {
+      "depth": 3,
+      "zero_pct": 30.200000000000003,
+      "cls_acc": 0.7145,
+      "cls_f1": 0.81669341894061,
+      "cls_prec": 0.7399650959860384,
+      "cls_rec": 0.9111747851002865,
+      "symbolic_formula": "log(add(pow(sub(add(d_BprimeO, Shannon_Bprime), abs(Total_HS_FM)), log(log(Total_d_electrons))), add(neg(abs(Shannon_Aprime)), log(mul(EN_Aprime, Val_B)))))",
+      "best_k": 3,
+      "reg_sub_r2": 0.03377312536493393,
+      "reg_sub_mse": 0.09634750289666905,
+      "reg_sub_mae": 0.10666132678624661,
+      "top_reg_features": [
+        "EN_B",
+        "Volume_A3",
+        "Group_B"
+      ],
+      "pipe_r2": 0.024478594422696176,
+      "pipe_mse": 0.07169788660409063,
+      "pipe_mae": 0.10386550127044958
+    },
+    "5": {
+      "depth": 5,
+      "zero_pct": 30.200000000000003,
+      "cls_acc": 0.7145,
+      "cls_f1": 0.81669341894061,
+      "cls_prec": 0.7399650959860384,
+      "cls_rec": 0.9111747851002865,
+      "symbolic_formula": "log(add(pow(sub(add(d_BprimeO, Shannon_Bprime), abs(Total_HS_FM)), log(log(Total_d_electrons))), add(neg(abs(Shannon_Aprime)), log(mul(EN_Aprime, Val_B)))))",
+      "best_k": 3,
+      "reg_sub_r2": 0.04225935598318664,
+      "reg_sub_mse": 0.09550129674101568,
+      "reg_sub_mae": 0.10683435396072961,
+      "top_reg_features": [
+        "EN_B",
+        "Group_B",
+        "Volume_A3"
+      ],
+      "pipe_r2": 0.03434817358964981,
+      "pipe_mse": 0.07097250224666223,
+      "pipe_mae": 0.10342274054672206
+    },
+    "10": {
+      "depth": 10,
+      "zero_pct": 30.200000000000003,
+      "cls_acc": 0.7145,
+      "cls_f1": 0.81669341894061,
+      "cls_prec": 0.7399650959860384,
+      "cls_rec": 0.9111747851002865,
+      "symbolic_formula": "log(add(pow(sub(add(d_BprimeO, Shannon_Bprime), abs(Total_HS_FM)), log(log(Total_d_electrons))), add(neg(abs(Shannon_Aprime)), log(mul(EN_Aprime, Val_B)))))",
+      "best_k": 6,
+      "reg_sub_r2": 0.05251594829606787,
+      "reg_sub_mse": 0.09447855862068705,
+      "reg_sub_mae": 0.10496160489643631,
+      "top_reg_features": [
+        "EN_B",
+        "Volume_A3",
+        "Group_B",
+        "EN_A",
+        "EN_Aprime",
+        "Density_g_cm3"
+      ],
+      "pipe_r2": 0.040704676518751204,
+      "pipe_mse": 0.07050531841696496,
+      "pipe_mae": 0.10207769393643795
+    },
+    "50": {
+      "depth": 50,
+      "zero_pct": 30.200000000000003,
+      "cls_acc": 0.7145,
+      "cls_f1": 0.81669341894061,
+      "cls_prec": 0.7399650959860384,
+      "cls_rec": 0.9111747851002865,
+      "symbolic_formula": "log(add(pow(sub(add(d_BprimeO, Shannon_Bprime), abs(Total_HS_FM)), log(log(Total_d_electrons))), add(neg(abs(Shannon_Aprime)), log(mul(EN_Aprime, Val_B)))))",
+      "best_k": 2,
+      "reg_sub_r2": 0.09451258360564152,
+      "reg_sub_mse": 0.09029085586850709,
+      "reg_sub_mae": 0.1077006229797486,
+      "top_reg_features": [
+        "EN_B",
+        "Density_g_cm3"
+      ],
+      "pipe_r2": 0.0765796853449513,
+      "pipe_mse": 0.06786861326622613,
+      "pipe_mae": 0.10433594344381245
+    },
+    "100": {
+      "depth": 100,
+      "zero_pct": 30.200000000000003,
+      "cls_acc": 0.7145,
+      "cls_f1": 0.81669341894061,
+      "cls_prec": 0.7399650959860384,
+      "cls_rec": 0.9111747851002865,
+      "symbolic_formula": "log(add(pow(sub(add(d_BprimeO, Shannon_Bprime), abs(Total_HS_FM)), log(log(Total_d_electrons))), add(neg(abs(Shannon_Aprime)), log(mul(EN_Aprime, Val_B)))))",
+      "best_k": 10,
+      "reg_sub_r2": 0.0991142007866922,
+      "reg_sub_mse": 0.08983200470599095,
+      "reg_sub_mae": 0.1017596070989778,
+      "top_reg_features": [
+        "Density_g_cm3",
+        "EN_avg",
+        "Volume_A3",
+        "EN_B",
+        "Shannon_B",
+        "d_BO",
+        "EN_A",
+        "EN_Aprime",
+        "d_electrons_Bprime",
+        "d_electrons_B"
+      ],
+      "pipe_r2": 0.024367036594527103,
+      "pipe_mse": 0.0717060857686278,
+      "pipe_mae": 0.10411534883429771
+    }
+  },
+  "Formation Energy (eV/atom)": {
+    "3": {
+      "depth": 3,
+      "zero_pct": 0.0,
+      "cls_acc": 1.0,
+      "cls_f1": 1.0,
+      "cls_prec": 1.0,
+      "cls_rec": 1.0,
+      "symbolic_formula": "N/A (Continuous Baseline)",
+      "best_k": 3,
+      "reg_sub_r2": 0.46000585431992314,
+      "reg_sub_mse": 0.1883902240318898,
+      "reg_sub_mae": 0.2940349560912071,
+      "top_reg_features": [
+        "EN_avg",
+        "EN_B",
+        "EN_A"
+      ],
+      "pipe_r2": 0.46000585431992314,
+      "pipe_mse": 0.1883902240318898,
+      "pipe_mae": 0.2940349560912071
+    },
+    "5": {
+      "depth": 5,
+      "zero_pct": 0.0,
+      "cls_acc": 1.0,
+      "cls_f1": 1.0,
+      "cls_prec": 1.0,
+      "cls_rec": 1.0,
+      "symbolic_formula": "N/A (Continuous Baseline)",
+      "best_k": 4,
+      "reg_sub_r2": 0.4832113815800789,
+      "reg_sub_mse": 0.1802944057451691,
+      "reg_sub_mae": 0.2817034399419353,
+      "top_reg_features": [
+        "EN_avg",
+        "EN_B",
+        "EN_A",
+        "EN_Aprime"
+      ],
+      "pipe_r2": 0.4832113815800789,
+      "pipe_mse": 0.1802944057451691,
+      "pipe_mae": 0.2817034399419353
+    },
+    "10": {
+      "depth": 10,
+      "zero_pct": 0.0,
+      "cls_acc": 1.0,
+      "cls_f1": 1.0,
+      "cls_prec": 1.0,
+      "cls_rec": 1.0,
+      "symbolic_formula": "N/A (Continuous Baseline)",
+      "best_k": 4,
+      "reg_sub_r2": 0.520264997191068,
+      "reg_sub_mse": 0.16736734162421585,
+      "reg_sub_mae": 0.2684201657973142,
+      "top_reg_features": [
+        "EN_A",
+        "EN_Aprime",
+        "EN_avg",
+        "EN_B"
+      ],
+      "pipe_r2": 0.520264997191068,
+      "pipe_mse": 0.16736734162421585,
+      "pipe_mae": 0.2684201657973142
+    },
+    "50": {
+      "depth": 50,
+      "zero_pct": 0.0,
+      "cls_acc": 1.0,
+      "cls_f1": 1.0,
+      "cls_prec": 1.0,
+      "cls_rec": 1.0,
+      "symbolic_formula": "N/A (Continuous Baseline)",
+      "best_k": 4,
+      "reg_sub_r2": 0.5693660129073264,
+      "reg_sub_mse": 0.1502372460019207,
+      "reg_sub_mae": 0.24837953500496968,
+      "top_reg_features": [
+        "EN_avg",
+        "EN_A",
+        "EN_Aprime",
+        "EN_B"
+      ],
+      "pipe_r2": 0.5693660129073264,
+      "pipe_mse": 0.1502372460019207,
+      "pipe_mae": 0.24837953500496968
+    },
+    "100": {
+      "depth": 100,
+      "zero_pct": 0.0,
+      "cls_acc": 1.0,
+      "cls_f1": 1.0,
+      "cls_prec": 1.0,
+      "cls_rec": 1.0,
+      "symbolic_formula": "N/A (Continuous Baseline)",
+      "best_k": 2,
+      "reg_sub_r2": 0.5802599256556014,
+      "reg_sub_mse": 0.14643663690337827,
+      "reg_sub_mae": 0.24495641545480695,
+      "top_reg_features": [
+        "EN_avg",
+        "EN_A"
+      ],
+      "pipe_r2": 0.5802599256556014,
+      "pipe_mse": 0.14643663690337827,
+      "pipe_mae": 0.24495641545480695
+    }
+  }
+}

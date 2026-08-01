@@ -1,0 +1,51 @@
+======================================================================
+EXPERIMENT 17: Tight-Binding Proxies & Mendeleev Feature Engine
+Clean Physical Descriptors (No Leakage: E_GNN, M_net, M_abs removed)
+Introduces HOMO-LUMO Energy Proxies (IE, EA, Delta E_gap), Mendeleev Number (M), VEC
+Expanded Features N = 90 (Tight-Binding, Mendeleev, VEC, Roots, Logs, Triplets)
+======================================================================
+Dataset Size       : 2000 materials
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom)
+================================================================================
+--> EXPERIMENT 17 RESULTS (DIRECT_MULTI_OPERATOR):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000, Tau* = 0.5000)
+    - Stage 2 Sub R2            : 71.24% (109.59% of Lit Ceiling)
+    - Final Pipeline R2         : 71.24% (0.712355)
+    - Pipeline MSE               : 0.100352
+    - Pipeline MAE               : 0.186543
+    - Relative Theoretical Limit : 109.59% of Lit Ceiling (65.0%)
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB)
+================================================================================
+--> EXPERIMENT 17 RESULTS (COST_SENSITIVE_HURDLE):
+    - Stage 1 Classification Acc : 86.90% (F1 = 0.8809, Tau* = 0.5200)
+    - Stage 2 Sub R2            : 61.38% (102.30% of Lit Ceiling)
+    - Final Pipeline R2         : 56.82% (0.568216)
+    - Pipeline MSE               : 40.913123
+    - Pipeline MAE               : 3.203748
+    - Relative Theoretical Limit : 94.70% of Lit Ceiling (60.0%)
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV)
+================================================================================
+--> EXPERIMENT 17 RESULTS (DIRECT_MULTI_OPERATOR):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000, Tau* = 0.5000)
+    - Stage 2 Sub R2            : 31.23% (62.46% of Lit Ceiling)
+    - Final Pipeline R2         : 31.23% (0.312312)
+    - Pipeline MSE               : 1.071546
+    - Pipeline MAE               : 0.860035
+    - Relative Theoretical Limit : 62.46% of Lit Ceiling (50.0%)
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV)
+================================================================================
+--> EXPERIMENT 17 RESULTS (COST_SENSITIVE_HURDLE):
+    - Stage 1 Classification Acc : 87.15% (F1 = 0.9126, Tau* = 0.3600)
+    - Stage 2 Sub R2            : 11.98% (47.93% of Lit Ceiling)
+    - Final Pipeline R2         : 14.98% (0.149789)
+    - Pipeline MSE               : 0.062488
+    - Pipeline MAE               : 0.083825
+    - Relative Theoretical Limit : 59.92% of Lit Ceiling (25.0%)

@@ -1,0 +1,23 @@
+{
+  "target_key": "formation_energy",
+  "target_display": "Formation Energy (eV/atom)",
+  "paper_folder": "ouyang_2018_sisso",
+  "dataset_label": "2000",
+  "dataset_size": 2000,
+  "lit_limit_r2": 0.65,
+  "in_dist_r2": 0.4830537211334285,
+  "in_dist_limit_achieved_pct": 74.31595709745054,
+  "in_dist_cls_acc": 1.0,
+  "in_dist_mse": 0.1803494094652818,
+  "in_dist_mae": 0.2850335700505251,
+  "ood_train_r2_mean": 0.4832624712162847,
+  "ood_train_r2_std": 0.01484729241354005,
+  "ood_train_limit_achieved_pct": 74.34807249481302,
+  "ood_test_r2_mean": 0.4825546598730666,
+  "ood_test_r2_std": 0.06671088213548639,
+  "ood_test_limit_achieved_pct": 74.23917844201024,
+  "ood_test_cls_acc_mean": 1.0,
+  "ood_test_cls_acc_std": 0.0,
+  "ood_test_mse": 0.18180195413837286,
+  "ood_test_mae": 0.28592079300942136
+}

@@ -1,0 +1,51 @@
+======================================================================
+EXPERIMENT 18: Quantum Power Laws & Birch-Murnaghan Strain Engine
+Clean Physical Descriptors (No Leakage: E_GNN, M_net, M_abs removed)
+Introduces Harrison Quantum Gap (E_gap_QM), Birch-Murnaghan Strain, Fractional Powers
+Expanded Features N = 89 (Harrison QM, Strain Engine, Fractional Powers, Triplets)
+======================================================================
+Dataset Size       : 2000 materials
+
+================================================================================
+TARGET PROPERTY: Formation Energy (eV/atom)
+================================================================================
+--> EXPERIMENT 18 RESULTS (DIRECT_MULTI_OPERATOR):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000, Tau* = 0.5000)
+    - Stage 2 Sub R2            : 71.09% (109.37% of Lit Ceiling)
+    - Final Pipeline R2         : 71.09% (0.710884)
+    - Pipeline MSE               : 0.100865
+    - Pipeline MAE               : 0.187991
+    - Relative Theoretical Limit : 109.37% of Lit Ceiling (65.0%)
+
+================================================================================
+TARGET PROPERTY: Total Magnetization (uB)
+================================================================================
+--> EXPERIMENT 18 RESULTS (HARD_MARGIN_HURDLE):
+    - Stage 1 Classification Acc : 89.75% (F1 = 0.9116, Tau* = 0.3300)
+    - Stage 2 Sub R2            : 61.19% (101.99% of Lit Ceiling)
+    - Final Pipeline R2         : 59.69% (0.596939)
+    - Pipeline MSE               : 38.191558
+    - Pipeline MAE               : 3.199523
+    - Relative Theoretical Limit : 99.49% of Lit Ceiling (60.0%)
+
+================================================================================
+TARGET PROPERTY: Band Gap (eV)
+================================================================================
+--> EXPERIMENT 18 RESULTS (DIRECT_MULTI_OPERATOR):
+    - Stage 1 Classification Acc : 100.00% (F1 = 1.0000, Tau* = 0.5000)
+    - Stage 2 Sub R2            : 30.98% (61.96% of Lit Ceiling)
+    - Final Pipeline R2         : 30.98% (0.309779)
+    - Pipeline MSE               : 1.075492
+    - Pipeline MAE               : 0.859598
+    - Relative Theoretical Limit : 61.96% of Lit Ceiling (50.0%)
+
+================================================================================
+TARGET PROPERTY: Energy Above Hull (eV)
+================================================================================
+--> EXPERIMENT 18 RESULTS (HARD_MARGIN_HURDLE):
+    - Stage 1 Classification Acc : 91.40% (F1 = 0.9396, Tau* = 0.4000)
+    - Stage 2 Sub R2            : 11.97% (47.88% of Lit Ceiling)
+    - Final Pipeline R2         : 15.92% (0.159231)
+    - Pipeline MSE               : 0.061794
+    - Pipeline MAE               : 0.079178
+    - Relative Theoretical Limit : 63.69% of Lit Ceiling (25.0%)

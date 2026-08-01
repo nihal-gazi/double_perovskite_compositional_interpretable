@@ -1,0 +1,23 @@
+{
+  "target_key": "band_gap",
+  "target_display": "Band Gap (eV)",
+  "paper_folder": "borlido_2019_sisso",
+  "dataset_label": "5000",
+  "dataset_size": 5000,
+  "lit_limit_r2": 0.5,
+  "in_dist_r2": 0.00894000309870746,
+  "in_dist_limit_achieved_pct": 1.7880006197414922,
+  "in_dist_cls_acc": 0.7822,
+  "in_dist_mse": 1.5918177761840204,
+  "in_dist_mae": 1.0576769816716918,
+  "ood_train_r2_mean": 0.007720293125632249,
+  "ood_train_r2_std": 0.0024153913481308248,
+  "ood_train_limit_achieved_pct": 1.5440586251264499,
+  "ood_test_r2_mean": 0.003980050251827805,
+  "ood_test_r2_std": 0.011926682267314354,
+  "ood_test_limit_achieved_pct": 0.7960100503655609,
+  "ood_test_cls_acc_mean": 0.7847000000000001,
+  "ood_test_cls_acc_std": 0.007550496672405074,
+  "ood_test_mse": 1.612912745510425,
+  "ood_test_mae": 1.0646664225440816
+}
