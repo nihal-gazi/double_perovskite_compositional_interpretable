@@ -276,13 +276,13 @@ Figure~\ref{fig:architecture_flowchart} illustrates the overall algorithmic flow
 
 \draw[arrow] (router.west) -- (ef_engine.east);
 \draw[arrow] (router.east) -- (ehull_engine.west);
-\draw[arrow] (router.south) -- ++(0,-0.4cm) -| (m_engine.north);
-\draw[arrow] (router.south) -- ++(0,-0.4cm) -| (eg_engine.north);
+\draw[arrow] (router.south) -- ++(0,-0.16) -| (m_engine.north);
+\draw[arrow] (router.south) -- ++(0,-0.16) -| (eg_engine.north);
 
-\draw[arrow] (ef_engine.south) |- (outputs.west);
+\draw[arrow] (ef_engine.south west) |- (outputs.west);
 \draw[arrow] (m_engine.south) -- (m_engine.south |- outputs.north);
 \draw[arrow] (eg_engine.south) -- (eg_engine.south |- outputs.north);
-\draw[arrow] (ehull_engine.south) |- (outputs.east);
+\draw[arrow] (ehull_engine.south east) |- (outputs.east);
 
 \end{tikzpicture}%
 }
