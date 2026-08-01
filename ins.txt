@@ -1,0 +1,70 @@
+Now we are going to write the paper in 
+
+exp_v2/paper/
+
+follow this structure
+```
+Title Page (Title, Authors, Affiliations)
+Abstract
+Graphical Abstract & Highlights
+Keywords
+Nomenclature (Complete legend of variables, mathematical operators, and physical constants used in the manuscript)
+1. Introduction
+1.1. The Need for Interpretability in Materials Informatics: (Defining interpretability and why analytical equations matter more than black-box AI in materials science).
+1.2. Foundational Literature and Theoretical Limits: (Reviewing prior symbolic regression models and the established $R^2$ limits for the target properties).
+1.3. Methodological Discrepancies in Current Literature: (Highlighting how prior studies relied on smaller dataset sizes, full-dataset fitting, and differing train/test expectations).
+1.4. Target Properties and the Double Perovskite Challenge: (Introducing $\Delta E_f$, $E_g$, $M$, $E_{\text{hull}}$, and the complexity of the double perovskite chemical space).
+1.5. Objectives and Rigor of the Present Study: (A brief gist of your two-stage architecture and the strict benchmarking approach).
+2. Computational Methods (Methodology)
+2.1. Dataset Curation: (Detailing the sourcing and composition of the 2,000 double perovskite baseline dataset).
+2.2. Primary Data Analysis: (Statistical distributions of the target properties, explicitly highlighting the challenge of zero-inflation in $E_g$ and $M$).
+2.3. The Physics-Gated Routing Architecture:
+
+2.3.1. Feature Engineering: (Pre-computing physical descriptors and additional variables).
+2.3.2. Property-Specific Routing Mechanisms: (Detailed breakdown of the High-C Hurdle classifier, Soft-Sigmoidal Gated Regressor, and Single-Perovskite Tie-Line equations).
+2.4. Methodological Novelty vs. Literature Overlap: (Explicitly stating which components are novel contributions and which build upon existing frameworks).
+2.5. Evaluation Criteria and Rigorous Protocols: (Defining the metrics and empirical validation protocols, including the 25-seed split).
+3. Results
+3.1. Comparative Benchmark vs. SOTA Literature: (Comparing your results against foundational baselines and mathematically explaining the performance gap).
+3.2. Architectural Ablation Study: (Deconstructing your algorithm to show exactly why each novel routing method provides an empirical accuracy improvement).
+3.3. Model Strengths: Scaling and Generalizability:
+
+3.3.1. In-Sample Supremacy: (Demonstrating record-breaking train success on the 2,000 dataset).
+3.3.2. Out-of-Distribution Resilience: (Showing strong test success and generalizability over multiple seeds).
+3.3.3. Topological Scaling: (Validating success and model stability on the massive 5,000 perovskite dataset).
+3.4. Model Weaknesses and The Limits of Interpretability:
+
+3.4.1. Decrements in Model Accuracy: (Honest reporting of train/test accuracy drops on both the 2,000 and 5,000 datasets for complex properties).
+3.4.2. Physical Boundaries: (Exploring the physical reasons for these limits—e.g., why 3D structural dependencies cannot be fully captured by 0D compositional data).
+3.5. Compendium of Discovered Analytical Equations: (A full chart detailing the equations discovered from the 2,000 dataset and their respective accuracies).
+4. Discussion
+4.1. Establishing a New Frontier for Double Perovskites: (Contextualizing how your algorithm creates a new standard specific to this complex chemical space).
+4.2. Trajectories for Future Improvement: (Discussing how future research can build upon your physics-gated architecture).
+5. Conclusion
+5.1. Summary of Contributions: (Reiterating the establishment of the double perovskite benchmark).
+5.2. Clarification of Claims: (Ensuring no bold claims are misinterpreted and the limits of the generalizability are firmly understood).
+5.3. Future Work: (Final thoughts on the next evolution of interpretable materials discovery).
+Back Matter
+Acknowledgements
+References
+Appendices (If needed for extended data, SOTA Sourcing, or oversized equation tables).
+```
+
+Write in latex. Use TikZ for flowcharts and diagrams - for charts you can use images.
+
+
+Use the exact folder structure from `C:\Users\user\Desktop\IEM\IEM projects\Prof SOP sir\paper_v2`
+You do not have to follow the exact writing or images used in that paper - just the folder structure sort of.
+
+And - the paper font and formatting and margins should also match that of paper_v2/ which is in proper elsevier format.
+
+
+write the contents on your own - make sure it follows accurate Elsevier format.
+Put TikZ diagrams and charts in proper places.
+
+put rigorous citations and make sure they are accurate as well - and rigorous.
+
+Put proper citations. Make sure every single detail is correct - and, recheck it once you are done writing to ensure that it is flawless.
+
+author data to be copied from paper_v2 folder.
+write the final paper then report.
