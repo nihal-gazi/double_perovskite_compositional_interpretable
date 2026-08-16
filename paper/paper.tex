@@ -333,43 +333,43 @@ Figure~\ref{fig:routing_diagrams} illustrates the three property routers.
 ]
 
 % ------------------ PANEL A ------------------
-\node[panel, minimum width=16.6cm, minimum height=4.4cm] (panelA) at (8.3, 0) {};
-\node[title] (titleA) at (panelA.north west) [xshift=10pt, yshift=-8pt] {Panel A: High-$C$ ($C=200.0$) Hard-Margin Hurdle for Magnetization ($M$)};
+\node[panel, minimum width=17.0cm, minimum height=5.4cm] (panelA) at (8.5, 0) {};
+\node[title] (titleA) at (panelA.north west) [xshift=12pt, yshift=-10pt] {Panel A: High-$C$ ($C=200.0$) Hard-Margin Hurdle for Magnetization ($M$)};
 
 % Left: Input x
-\node[font=\bfseries\large] (xA) at (0.5, -0.45) {$\mathbf{x}$};
+\node[font=\bfseries\large] (xA) at (0.8, -0.3) {$\mathbf{x}$};
 
-% Center-Left: Stage 1 SVC (Shifted right to 5.4 for a wide, clear input arrow)
-\node[procbox] (svc) at (5.4, -0.45) {\textbf{Stage 1: Linear SVC}\\Hard-Margin Gate ($C=200.0$)};
+% Center-Left: Stage 1 SVC
+\node[procbox] (svc) at (5.6, -0.3) {\textbf{Stage 1: Linear SVC}\\Hard-Margin Gate ($C=200.0$)};
 
 % Right: Output Branch Boxes
-\node[zerobox, anchor=west] (mzero) at (11.6, 0.55) {\textbf{Non-Magnetic Ground State}\\$M_{\text{pred}} = 0.0\ \mu_B$};
-\node[regbox, anchor=west] (mreg) at (11.6, -1.45) {\textbf{Stage 2: Multi-Operator Regressor}\\$M_{\text{pred}} = c_0 + \sum_j c_j \phi_j(\mathbf{x})$};
+\node[zerobox, anchor=west] (mzero) at (11.8, 0.90) {\textbf{Non-Magnetic Ground State}\\$M_{\text{pred}} = 0.0\ \mu_B$};
+\node[regbox, anchor=west] (mreg) at (11.8, -1.45) {\textbf{Stage 2: Multi-Operator Regressor}\\$M_{\text{pred}} = c_0 + \sum_j c_j \phi_j(\mathbf{x})$};
 
 % Input Arrow with descriptor label centered above with wide margins
-\draw[arrow] (xA) -- node[midway, above=4pt, font=\scriptsize] {$\text{HS}_B,\, N_d,\, \chi$} (svc);
+\draw[arrow] (xA) -- node[midway, above=4pt, font=\scriptsize] {$\mathrm{HS}_B,\, N_d,\, \chi$} (svc);
 
 % Branching Connections with explicit straight segments
-\draw[thick, draw=black!75] (svc.east) -- (8.0, -0.45);
-\draw[thick, draw=black!75] (8.0, 0.55) -- (8.0, -1.45);
+\draw[thick, draw=black!75] (svc.east) -- (8.6, -0.3);
+\draw[thick, draw=black!75] (8.6, 0.90) -- (8.6, -1.45);
 
 % Top branch: straight horizontal arrow with centered label above
-\draw[arrow] (8.0, 0.55) -- (mzero.west) node[midway, above=3pt, font=\scriptsize] {If False ($P < 0.5$)};
+\draw[arrow] (8.6, 0.90) -- (mzero.west) node[midway, above=4pt, font=\scriptsize] {If False ($P < 0.5$)};
 
 % Bottom branch: straight horizontal arrow with centered label above
-\draw[arrow] (8.0, -1.45) -- (mreg.west) node[midway, above=3pt, font=\scriptsize] {If True ($P \ge 0.5$)};
+\draw[arrow] (8.6, -1.45) -- (mreg.west) node[midway, above=4pt, font=\scriptsize] {If True ($P \ge 0.5$)};
 
 % ------------------ PANEL B ------------------
-\node[panel, minimum width=16.6cm, minimum height=3.2cm, below=0.6cm of panelA] (panelB) {};
-\node[title] (titleB) at (panelB.north west) [xshift=10pt, yshift=-8pt] {Panel B: Soft-Sigmoidal Gated Regressor for Band Gap ($E_g$)};
+\node[panel, minimum width=17.0cm, minimum height=3.6cm, below=0.7cm of panelA] (panelB) {};
+\node[title] (titleB) at (panelB.north west) [xshift=12pt, yshift=-10pt] {Panel B: Soft-Sigmoidal Gated Regressor for Band Gap ($E_g$)};
 
 \node[align=center] at ([yshift=-0.45cm]panelB.center) {
     $\displaystyle E_{g, \text{pred}} = \underbrace{\sigma\left(\mathbf{w}^T \mathbf{x} + b\right)}_{\substack{\text{\textbf{Soft Insulating Gate}} \\[2pt] P(\text{insulating}) \in [0, 1]}} \;\times\; \underbrace{\max\left(0,\, c_0 + \sum_k c_k \phi_k(\mathbf{x})\right)}_{\substack{\text{\textbf{Continuous Band Gap Magnitude}} \\[2pt] (\text{eV})}}$
 };
 
 % ------------------ PANEL C ------------------
-\node[panel, minimum width=16.6cm, minimum height=3.0cm, below=0.6cm of panelB] (panelC) {};
-\node[title] (titleC) at (panelC.north west) [xshift=10pt, yshift=-8pt] {Panel C: Single-Perovskite Competing Phase Tie-Line Engine for $E_{\text{hull}}$};
+\node[panel, minimum width=17.0cm, minimum height=3.4cm, below=0.7cm of panelB] (panelC) {};
+\node[title] (titleC) at (panelC.north west) [xshift=12pt, yshift=-10pt] {Panel C: Single-Perovskite Competing Phase Tie-Line Engine for $E_{\text{hull}}$};
 
 \node[align=center] at ([yshift=-0.4cm]panelC.center) {
     $\displaystyle D_{\text{hull\_proxy}} = \left|t_{ABO_3} - t_{A'B'O_3}\right| \cdot \left|\Delta H_{\text{ox}, B} + \Delta H_{\text{ox}, A'} - \Delta H_{\text{ox}, B'} - \Delta H_{\text{ox}, A}\right|$ \\[8pt]
