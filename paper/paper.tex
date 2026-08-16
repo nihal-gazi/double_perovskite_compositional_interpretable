@@ -241,19 +241,19 @@ Figure~\ref{fig:architecture_flowchart} outlines the workflow of our Physics-Gat
 
 \begin{figure}[H]
 \centering
-\resizebox{0.96\textwidth}{!}{%
+\resizebox{0.92\textwidth}{!}{%
 \begin{tikzpicture}[
-    node distance=1.0cm and 1.2cm,
+    node distance=1.4cm and 1.6cm,
     font=\sffamily\small,
-    box/.style={rectangle, draw=blue!80!black, fill=blue!5, thick, rounded corners, align=center, inner sep=6pt, minimum width=3.2cm, drop shadow},
-    physbox/.style={rectangle, draw=teal!80!black, fill=teal!5, thick, rounded corners, align=center, inner sep=6pt, minimum width=3.4cm, drop shadow},
-    routerbox/.style={diamond, draw=orange!90!black, fill=orange!10, thick, align=center, inner sep=4pt, aspect=1.8, drop shadow},
-    enginebox/.style={rectangle, draw=purple!80!black, fill=purple!5, thick, rounded corners, align=center, inner sep=6pt, minimum width=3.2cm, drop shadow},
-    outbox/.style={rectangle, draw=green!60!black, fill=green!5, thick, rounded corners, align=center, inner sep=8pt, minimum width=13.5cm, drop shadow},
+    box/.style={rectangle, draw=blue!80!black, fill=blue!5, thick, rounded corners=4pt, align=center, inner sep=6pt},
+    physbox/.style={rectangle, draw=teal!80!black, fill=teal!6, thick, rounded corners=4pt, align=center, inner sep=6pt},
+    routerbox/.style={diamond, aspect=2.2, draw=orange!90!black, fill=orange!12, thick, align=center, inner sep=2pt, font=\sffamily\bfseries\small},
+    enginebox/.style={rectangle, draw=purple!80!black, fill=purple!6, thick, rounded corners=4pt, align=center, inner sep=5pt, font=\sffamily\footnotesize},
+    outbox/.style={rectangle, draw=green!60!black, fill=green!6, thick, rounded corners=4pt, align=center, inner sep=7pt, font=\sffamily\small},
     arrow/.style={-Latex, thick, draw=gray!80!black}
 ]
 
-% Section 1: Inputs & Physical Lookup
+% Section 1: Inputs
 \node[box] (input) {\textbf{1. 0D Chemical Input}\\Formula: $A_2BB'O_6$\\Identities: $A, A', B, B'$};
 \node[physbox, right=1.2cm of input] (lookup) {\textbf{2. 0D Physical Lookup}\\$\chi_X, r_X, \text{Val}_X, N_d, HS_B$\\$\Delta H_{\text{ox}}, IE_X, EA_X, \mathcal{M}_X$};
 
@@ -261,13 +261,13 @@ Figure~\ref{fig:architecture_flowchart} outlines the workflow of our Physics-Gat
 \node[physbox, below=0.9cm of lookup] (physics) {\textbf{3. Quantum Physics Engines}\\Harrison Gap: $E_{\text{gap, QM}}$\\Birch-Murnaghan Strain\\Tie-Line Proxy: $D_{\text{hull\_proxy}}$\\Closed-Shell $d^0/d^{10}$ Engine};
 
 % Section 3: Target Router
-\node[routerbox, below=0.9cm of physics] (router) {\textbf{Target Router}\\\textit{Property?}};
+\node[routerbox, below=0.9cm of physics] (router) {Target Router\\\textit{Property?}};
 
 % Section 4: Property Engines
-\node[enginebox, left=1.8cm of router] (ef_engine) {\textbf{Direct Multi-Operator}\\\text{Analytical Regressor}\\$(\Delta E_f)$};
-\node[enginebox, below left=1.2cm and 0.3cm of router] (m_engine) {\textbf{High-$C$ Hard-Margin}\\\text{Hurdle Classifier + Reg.}\\$(M)$};
-\node[enginebox, below right=1.2cm and 0.3cm of router] (eg_engine) {\textbf{Soft-Sigmoidal Gated}\\\text{Continuous Regressor}\\$(E_g)$};
-\node[enginebox, right=1.8cm of router] (ehull_engine) {\textbf{Single-Perovskite}\\\text{Tie-Line Convex Model}\\$(E_{\text{hull}})$};
+\node[enginebox, left=1.8cm of router] (ef_engine) {\textbf{Direct Multi-Operator}\\Analytical Regressor\\$(\Delta E_f)$};
+\node[enginebox, below left=1.2cm and 0.3cm of router] (m_engine) {\textbf{High-$C$ Hard-Margin}\\Hurdle Classifier + Reg.\\$(M)$};
+\node[enginebox, below right=1.2cm and 0.3cm of router] (eg_engine) {\textbf{Soft-Sigmoidal Gated}\\Continuous Regressor\\$(E_g)$};
+\node[enginebox, right=1.8cm of router] (ehull_engine) {\textbf{Single-Perovskite}\\Tie-Line Convex Model\\$(E_{\text{hull}})$};
 
 % Section 5: Output Box
 \node[outbox, below=3.6cm of router] (outputs) {\textbf{Discovered Analytical Equations \& Benchmarks}\\$\Delta E_f$: $R^2 = 71.26\%$ ($109.62\%$ Limit) \quad $M$: $R^2 = 62.23\%$ ($103.72\%$ Limit)\\$E_g$: $R^2 = 50.71\%$ ($101.42\%$ Limit) \quad $E_{\text{hull}}$: $R^2 = 16.67\%$ ($66.66\%$ Limit)};
@@ -294,24 +294,24 @@ Figure~\ref{fig:architecture_flowchart} outlines the workflow of our Physics-Gat
 \end{figure}
 
 \subsubsection{Feature Engineering \& Physics Engines}
-Our pipeline builds four specialized physics-informed modules, using only basic 0D atomic constraints:
+From fundamental 0D atomic constants, our feature engine constructs four specialized solid-state physics modules:
 \begin{enumerate}
-\item \textbf{Harrison Tight-Binding Quantum Gap ($E_{\text{gap, QM}}$)}: Based on Harrison's solid-state table \cite{harrison1999elementary}:
+\item \textbf{Harrison's Solid-State Tight-Binding Quantum Gap ($E_{\text{gap, QM}}$)}: Derived from Harrison's tight-binding theory \cite{harrison1999elementary}:
    \begin{equation}
    E_{\text{gap, QM}} = \sqrt{\left(\min(IE_B, IE_{B'}) - EA_{\text{Oxygen}}\right)^2 + d_{\text{ideal}}^{-4}}
    \end{equation}
    where $d_{\text{ideal}} = r_B + r_O$ is the ideal octahedral bond length.
 
-\item \textbf{Birch-Murnaghan Lattice Elastic Strain}: Captures lattice strain caused by tolerance factor mismatch:
+\item \textbf{Birch-Murnaghan Lattice Elastic Strain}: Quantifies steric lattice strain energy induced by tolerance factor deviation:
    \begin{equation}
    E_{\text{tolerance\_strain}} = (t - 1.0)^2
    \end{equation}
 
-\item \textbf{Octahedral $d^0/d^{10}$ Closed-Shell Engine}: Detects crystal field stabilization through binary flags: \texttt{Is\_d0\_B}, \texttt{Is\_d10\_B}, and \texttt{Is\_Closed\_Shell\_both}.
+\item \textbf{Octahedral $d^0/d^{10}$ Closed-Shell Engine}: Identifies crystal field energy stabilization via binary indicators: \texttt{Is\_d0\_B}, \texttt{Is\_d10\_B}, and \texttt{Is\_Closed\_Shell\_both}.
 
-\item \textbf{Single-Perovskite Tie-Line Engine ($D_{\text{hull\_proxy}}$)}: Models decomposition energy into competing single perovskites ($A_2BB'O_6 \rightarrow ABO_3 + A'B'O_3$):
+\item \textbf{Single-Perovskite Competing Phase Tie-Line Engine ($D_{\text{hull\_proxy}}$)}: Models the thermodynamic decomposition energy into competing single-perovskite phase tie-lines ($A_2BB'O_6 \rightarrow ABO_3 + A'B'O_3$):
    \begin{equation}
-   D_{\text{hull\_proxy}} = |t_{ABO3} - t_{A'B'O3}| \cdot |\Delta H_{\text{ox, B}} + \Delta H_{\text{ox, A'}} - \Delta H_{\text{ox, B'}} - \Delta H_{\text{ox, A}}|
+   D_{\text{hull\_proxy}} = |t_{ABO_3} - t_{A'B'O_3}| \cdot \left|\Delta H_{\text{ox}, B} + \Delta H_{\text{ox}, A'} - \Delta H_{\text{ox}, B'} - \Delta H_{\text{ox}, A}\right|
    \end{equation}
 \end{enumerate}
 
@@ -321,38 +321,52 @@ Figure~\ref{fig:routing_diagrams} illustrates the three property routers.
 
 \begin{figure}[H]
 \centering
+\resizebox{0.98\textwidth}{!}{%
 \begin{tikzpicture}[
     font=\sffamily\small,
-    stagebox/.style={rectangle, draw=blue!80!black, fill=blue!5, thick, rounded corners, align=center, inner sep=6pt, width=3.8cm},
-    gatebox/.style={rectangle, draw=orange!90!black, fill=orange!10, thick, rounded corners, align=center, inner sep=6pt},
-    arrow/.style={-Latex, thick, draw=gray!80!black}
+    panel/.style={rectangle, draw=gray!40, fill=gray!4, thick, rounded corners=6pt, inner sep=8pt},
+    title/.style={font=\sffamily\bfseries\normalsize, text=black!90, anchor=north west},
+    procbox/.style={rectangle, draw=blue!80!black, fill=blue!8, thick, rounded corners=4pt, align=center, inner sep=6pt, font=\sffamily\small},
+    regbox/.style={rectangle, draw=purple!80!black, fill=purple!8, thick, rounded corners=4pt, align=center, inner sep=6pt, font=\sffamily\small},
+    zerobox/.style={rectangle, draw=teal!80!black, fill=teal!8, thick, rounded corners=4pt, align=center, inner sep=6pt, font=\sffamily\small},
+    arrow/.style={-Latex, thick, draw=black!75}
 ]
 
-% Panel A: High-C Hurdle
-\node[draw=black!40, fill=gray!5, rectangle, rounded corners, inner sep=10pt, width=14cm] (panelA) {
-    \begin{minipage}{0.92\textwidth}
-    \textbf{Panel A: High-$C$ ($C=200.0$) Hard-Margin Hurdle Model for Magnetization ($M$)}\\[4pt]
-    $\mathbf{x} \xrightarrow{\text{HS}_B, N_d, \chi} \boxed{\text{Stage 1: Linear SVC } (C=200.0)} \xrightarrow{P(M>0.05) \ge 0.5} \begin{cases} \text{Non-Magnetic } (M=0.0\ \mu_B) & \text{if False} \\ \boxed{\text{Stage 2: Multi-Operator Regressor}} & \text{if True} \end{cases}$
-    \end{minipage}
+% ------------------ PANEL A ------------------
+\node[panel, minimum width=16.2cm, minimum height=4.2cm] (panelA) at (8.1, 0) {};
+\node[title] (titleA) at (panelA.north west) [xshift=10pt, yshift=-8pt] {Panel A: High-$C$ ($C=200.0$) Hard-Margin Hurdle for Magnetization ($M$)};
+
+\node[font=\bfseries\large] (xA) at (0.6, -0.4) {$\mathbf{x}$};
+\node[procbox] (svc) at (4.8, -0.4) {\textbf{Stage 1: Linear SVC}\\Hard-Margin Gate ($C=200.0$)};
+
+\node[zerobox] (mzero) at (12.8, 0.45) {\textbf{Non-Magnetic Ground State}\\$M_{\text{pred}} = 0.0\ \mu_B$};
+\node[regbox] (mreg) at (12.8, -1.25) {\textbf{Stage 2: Multi-Operator Regressor}\\$M_{\text{pred}} = c_0 + \sum_j c_j \phi_j(\mathbf{x})$};
+
+\draw[arrow] (xA) -- node[midway, above=3pt, font=\footnotesize] {$\text{HS}_B, N_d, \chi$} (svc);
+
+\draw[thick, draw=black!75] (svc.east) -- ++(0.7,0) coordinate (fork);
+\draw[arrow] (fork) |- (mzero.west) node[pos=0.55, above, font=\scriptsize] {If False ($P < 0.5$)};
+\draw[arrow] (fork) |- (mreg.west) node[pos=0.55, below, font=\scriptsize] {If True ($P \ge 0.5$)};
+
+% ------------------ PANEL B ------------------
+\node[panel, minimum width=16.2cm, minimum height=3.2cm, below=0.6cm of panelA] (panelB) {};
+\node[title] (titleB) at (panelB.north west) [xshift=10pt, yshift=-8pt] {Panel B: Soft-Sigmoidal Gated Regressor for Band Gap ($E_g$)};
+
+\node[align=center] at ([yshift=-0.45cm]panelB.center) {
+    $\displaystyle E_{g, \text{pred}} = \underbrace{\sigma\left(\mathbf{w}^T \mathbf{x} + b\right)}_{\substack{\text{\textbf{Soft Insulating Gate}} \\[2pt] P(\text{insulating}) \in [0, 1]}} \;\times\; \underbrace{\max\left(0,\, c_0 + \sum_k c_k \phi_k(\mathbf{x})\right)}_{\substack{\text{\textbf{Continuous Band Gap Magnitude}} \\[2pt] (\text{eV})}}$
 };
 
-% Panel B: Soft-Sigmoidal Gating
-\node[draw=black!40, fill=gray!5, rectangle, rounded corners, inner sep=10pt, width=14cm, below=0.6cm of panelA] (panelB) {
-    \begin{minipage}{0.92\textwidth}
-    \textbf{Panel B: Soft-Sigmoidal Gated Regressor for Band Gap ($E_g$)}\\[4pt]
-    $E_{g, \text{pred}} = \underbrace{\sigma(\mathbf{w}^T \mathbf{x} + b)}_{\text{Soft Insulating Gate } P \in [0,1]} \times \underbrace{\max\left(0, c_0 + \sum_k c_k \phi_k(\mathbf{x})\right)}_{\text{Continuous Band Gap Magnitude}}$
-    \end{minipage}
+% ------------------ PANEL C ------------------
+\node[panel, minimum width=16.2cm, minimum height=3.0cm, below=0.6cm of panelB] (panelC) {};
+\node[title] (titleC) at (panelC.north west) [xshift=10pt, yshift=-8pt] {Panel C: Single-Perovskite Competing Phase Tie-Line Engine for $E_{\text{hull}}$};
+
+\node[align=center] at ([yshift=-0.4cm]panelC.center) {
+    $\displaystyle D_{\text{hull\_proxy}} = \left|t_{ABO_3} - t_{A'B'O_3}\right| \cdot \left|\Delta H_{\text{ox}, B} + \Delta H_{\text{ox}, A'} - \Delta H_{\text{ox}, B'} - \Delta H_{\text{ox}, A}\right|$ \\[8pt]
+    $\displaystyle \xrightarrow{\quad\text{\textbf{Analytical Convex Hull Regression}}\quad} \quad E_{\text{hull, pred}} = \beta_1 D_{\text{hull\_proxy}} + \beta_2 (t - 1.0)^2 + \beta_3 \tau + \beta_0$
 };
 
-% Panel C: Tie-Line Convex Hull
-\node[draw=black!40, fill=gray!5, rectangle, rounded corners, inner sep=10pt, width=14cm, below=0.6cm of panelB] (panelC) {
-    \begin{minipage}{0.92\textwidth}
-    \textbf{Panel C: Single-Perovskite Competing Phase Tie-Line Engine for $E_{\text{hull}}$}\\[4pt]
-    $D_{\text{hull\_proxy}} = |t_{ABO3} - t_{A'B'O3}| \cdot |\Delta H_{\text{ox, B}} + \Delta H_{\text{ox, A'}} - \Delta H_{\text{ox, B'}} - \Delta H_{\text{ox, A}}| \xrightarrow{\text{Regression}} E_{\text{hull, pred}}$
-    \end{minipage}
-};
-
-\end{tikzpicture}
+\end{tikzpicture}%
+}
 \caption{Detailed architectural schematics of the three specialized property-routing mechanisms: (A) High-$C$ Hard-Margin Hurdle Model for magnetization, (B) Soft-Sigmoidal Gated Regressor for band gap, and (C) Single-Perovskite Tie-Line Convex Hull Engine for energy above hull.}
 \label{fig:routing_diagrams}
 \end{figure}
