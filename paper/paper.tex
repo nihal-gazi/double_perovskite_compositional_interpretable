@@ -333,23 +333,34 @@ Figure~\ref{fig:routing_diagrams} illustrates the three property routers.
 ]
 
 % ------------------ PANEL A ------------------
-\node[panel, minimum width=16.2cm, minimum height=4.2cm] (panelA) at (8.1, 0) {};
+\node[panel, minimum width=16.6cm, minimum height=4.4cm] (panelA) at (8.3, 0) {};
 \node[title] (titleA) at (panelA.north west) [xshift=10pt, yshift=-8pt] {Panel A: High-$C$ ($C=200.0$) Hard-Margin Hurdle for Magnetization ($M$)};
 
-\node[font=\bfseries\large] (xA) at (0.6, -0.4) {$\mathbf{x}$};
-\node[procbox] (svc) at (5.3, -0.4) {\textbf{Stage 1: Linear SVC}\\Hard-Margin Gate ($C=200.0$)};
+% Left: Input x
+\node[font=\bfseries\large] (xA) at (0.5, -0.45) {$\mathbf{x}$};
 
-\node[zerobox] (mzero) at (13.0, 0.45) {\textbf{Non-Magnetic Ground State}\\$M_{\text{pred}} = 0.0\ \mu_B$};
-\node[regbox] (mreg) at (13.0, -1.25) {\textbf{Stage 2: Multi-Operator Regressor}\\$M_{\text{pred}} = c_0 + \sum_j c_j \phi_j(\mathbf{x})$};
+% Center-Left: Stage 1 SVC (Shifted right to 5.4 for a wide, clear input arrow)
+\node[procbox] (svc) at (5.4, -0.45) {\textbf{Stage 1: Linear SVC}\\Hard-Margin Gate ($C=200.0$)};
 
-\draw[arrow] (xA) -- node[midway, above=2pt, font=\scriptsize] {$\text{HS}_B,\, N_d,\, \chi$} (svc);
+% Right: Output Branch Boxes
+\node[zerobox, anchor=west] (mzero) at (11.6, 0.55) {\textbf{Non-Magnetic Ground State}\\$M_{\text{pred}} = 0.0\ \mu_B$};
+\node[regbox, anchor=west] (mreg) at (11.6, -1.45) {\textbf{Stage 2: Multi-Operator Regressor}\\$M_{\text{pred}} = c_0 + \sum_j c_j \phi_j(\mathbf{x})$};
 
-\draw[thick, draw=black!75] (svc.east) -- ++(0.7,0) coordinate (fork);
-\draw[arrow] (fork) |- (mzero.west) node[pos=0.55, above, font=\scriptsize] {If False ($P < 0.5$)};
-\draw[arrow] (fork) |- (mreg.west) node[pos=0.55, below, font=\scriptsize] {If True ($P \ge 0.5$)};
+% Input Arrow with descriptor label centered above with wide margins
+\draw[arrow] (xA) -- node[midway, above=4pt, font=\scriptsize] {$\text{HS}_B,\, N_d,\, \chi$} (svc);
+
+% Branching Connections with explicit straight segments
+\draw[thick, draw=black!75] (svc.east) -- (8.0, -0.45);
+\draw[thick, draw=black!75] (8.0, 0.55) -- (8.0, -1.45);
+
+% Top branch: straight horizontal arrow with centered label above
+\draw[arrow] (8.0, 0.55) -- (mzero.west) node[midway, above=3pt, font=\scriptsize] {If False ($P < 0.5$)};
+
+% Bottom branch: straight horizontal arrow with centered label above
+\draw[arrow] (8.0, -1.45) -- (mreg.west) node[midway, above=3pt, font=\scriptsize] {If True ($P \ge 0.5$)};
 
 % ------------------ PANEL B ------------------
-\node[panel, minimum width=16.2cm, minimum height=3.2cm, below=0.6cm of panelA] (panelB) {};
+\node[panel, minimum width=16.6cm, minimum height=3.2cm, below=0.6cm of panelA] (panelB) {};
 \node[title] (titleB) at (panelB.north west) [xshift=10pt, yshift=-8pt] {Panel B: Soft-Sigmoidal Gated Regressor for Band Gap ($E_g$)};
 
 \node[align=center] at ([yshift=-0.45cm]panelB.center) {
@@ -357,7 +368,7 @@ Figure~\ref{fig:routing_diagrams} illustrates the three property routers.
 };
 
 % ------------------ PANEL C ------------------
-\node[panel, minimum width=16.2cm, minimum height=3.0cm, below=0.6cm of panelB] (panelC) {};
+\node[panel, minimum width=16.6cm, minimum height=3.0cm, below=0.6cm of panelB] (panelC) {};
 \node[title] (titleC) at (panelC.north west) [xshift=10pt, yshift=-8pt] {Panel C: Single-Perovskite Competing Phase Tie-Line Engine for $E_{\text{hull}}$};
 
 \node[align=center] at ([yshift=-0.4cm]panelC.center) {
