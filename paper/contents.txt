@@ -8,15 +8,11 @@ Calculating the ground-state properties of double perovskites ($A_2BB'O_6$) with
 
 Double Perovskites \sep Interpretable Machine Learning \sep Symbolic Regression \sep Physics-Gated Architecture \sep Information-Theoretic Limits \sep Materials Informatics
 
-
 ================================================================================
 [Nomenclature]
 ================================================================================
 
 Table~\ref{tab:nomenclature} defines the variables, mathematical operators, and physical constants used throughout this paper.
-
-\begin{longtable}{l p{0.45\textwidth} p{0.32\textwidth}} \caption{Complete Nomenclature, Symbols, and Physical Descriptions} \label{tab:nomenclature} \\ \toprule \textbf{Symbol} & \textbf{Physical Description \& Meaning} & \textbf{Units / Mathematical Space} \\ \midrule \endfirsthead \multicolumn{3}{c}{{\bfseries Table \thetable\ -- Continued from previous page}} \\ \toprule \textbf{Symbol} & \textbf{Physical Description \& Meaning} & \textbf{Units / Mathematical Space} \\ \midrule \endhead \bottomrule \endfoot \bottomrule \endlastfoot \multicolumn{3}{l}{\textbf{Target Variables (DFT Ground-State Properties)}} \\ \midrule $\Delta E_f$ & Formation energy per atom relative to elemental standard states & $\text{eV/atom}$ \\ $M$ & Total macroscopic unit cell net magnetization & $\mu_B/\text{formula unit}$ \\ $E_g$ & Electronic energy band gap (VBM to CBM separation) & $\text{eV}$ \\ $E_{\text{hull}}$ & Thermodynamic energy distance above the convex hull & $\text{eV/atom}$ \\ \midrule \multicolumn{3}{l}{\textbf{0D Elemental \& Structural Descriptors}} \\ \midrule $\chi_X$ & Pauling electronegativity of cation/anion on site $X \in \{A, A', B, B', O\}$ & Dimensionless (Pauling scale) \\ $r_X$ & Shannon effective ionic radius of ion on site $X$ & Angstroms (\AA) \\ $t$ & Goldschmidt tolerance factor: $t = \frac{r_A + r_O}{\sqrt{2}(r_B + r_O)}$ & Dimensionless \\ $\tau$ & Bartel tolerance factor for perovskite stability & Dimensionless \\ $\text{Val}_X$ & Nominal oxidation state / valence charge of cation on site $X$ & Elementary charge ($e$) \\ $N_d, d_B$ & Number of valence $d$-electrons on transition metal site $B$ & Integer ($0 \le N_d \le 10$) \\ $HS_B$ & High-spin magnetic moment proxy derived from Hund's rules & Bohr magnetons ($\mu_B$) \\ $\Delta H_{\text{ox}, X}$ & Binary oxide formation enthalpy for cation $X$ & $\text{eV/atom}$ \\ $\mathcal{M}_X$ & Pettifor chemical scale Mendeleev number & Integer ($1 \le \mathcal{M} \le 103$) \\ $IE_X, EA_X$ & First ionization energy and electron affinity of element $X$ & $\text{eV}$ \\ \midrule \multicolumn{3}{l}{\textbf{Physics-Engine Variables \& Operators}} \\ \midrule $E_{\text{gap, QM}}$ & Harrison solid-state tight-binding quantum band gap & $\text{eV}$ \\ $E_{\text{tolerance\_strain}}$ & Birch-Murnaghan lattice elastic strain energy: $(t - 1.0)^2$ & Dimensionless \\ $D_{\text{hull\_proxy}}$ & Single-perovskite competing phase convex hull tie-line proxy & $\text{eV/atom}$ \\ $\sigma(z)$ & Soft-sigmoidal gating activation function: $\frac{1}{1 + e^{-z}}$ & $[0, 1]$ probability \\ $\mathbb{I}(\cdot)$ & Heaviside indicator function for hard-margin hurdle gating & $\{0, 1\}$ binary \\ $C$ & Inverse regularization parameter in Support Vector classification & Positive scalar ($C=200.0$) \\ $R^2_{\text{limit}}$ & Peer-reviewed theoretical limit of 0D compositional interpretability & Percentage (\%) \\ \end{longtable}
-
 
 ================================================================================
 [The Need for Interpretability in Materials Informatics]
@@ -25,7 +21,6 @@ Table~\ref{tab:nomenclature} defines the variables, mathematical operators, and 
 Historically, materials discovery relied on empirical rules and trial-and-error synthesis. Classic examples include Pauling's rules and Goldschmidt's tolerance factor $t = \frac{r_A + r_O}{\sqrt{2}(r_B + r_O)}$ \cite{goldschmidt1926gesetze, shannon1976revised}. High-throughput Density Functional Theory (DFT) databases—such as The Materials Project \cite{materialsproject} and the Open Quantum Materials Database (OQMD) \cite{kirklin2015open}—have since made materials science data-driven. Even so, running DFT across vast compositional spaces takes too much compute time.
 
 To speed up screening, researchers turned to deep learning, especially 3D Crystal Graph Neural Networks (CGNNs) and neural network potentials (e.g., CHGNet \cite{chgnet}). These models are accurate, but they bring two major drawbacks. First, they require relaxed 3D atomic coordinates ($\mathbf{R}_i \in \mathbb{R}^3$), cell volumes, and bond angles. You cannot know these values before running the exact DFT relaxation you are trying to avoid. Second, they are opaque black boxes. Millions of parameters hide the physical reasons behind magnetism or phase instability. Symbolic regression offers a way out. It extracts simple, closed-form equations $f(\mathbf{x})$ directly from 0D compositional descriptors \cite{schmidt2009distilling, rissanen1978modeling}.
-
 
 ================================================================================
 [Foundational Literature and Theoretical Limits]
@@ -37,13 +32,11 @@ Prior work established clear theoretical limits ($R^2_{\text{limit}}$) on what p
 
 These limits arise from specific physical constraints: \begin{enumerate} \item \textbf{Formation Energy ($\Delta E_f$)}: $R^2_{\text{limit}} = 65.0\%$ (Ouyang et al. \cite{ouyang2018sisso}, Bartel et al. \cite{bartel2019new}). Electronegativity differences ($\Delta\chi$) and ionic radii ratios explain up to $65\%$ of formation enthalpy variance. The remaining $35\%$ comes from 3D lattice strain and volume changes. \item \textbf{Total Magnetization ($M$)}: $R^2_{\text{limit}} = 60.0\%$ (Ghiringhelli et al. \cite{ghiringhelli2015bigdata}, Lejaeghere et al. \cite{lejaeghere2016reproducibility}). Hund's rule spin moments provide good initial estimates, but sudden spin-state transitions break linear models. \item \textbf{Band Gap ($E_g$)}: $R^2_{\text{limit}} = 50.0\%$ (Ouyang et al. \cite{ouyang2018sisso}, Borlido et al. \cite{borlido2019large}). Derivative discontinuities ($\Delta_{xc}$) in PBE functionals and band inversion cap 0D gap models at $50\% R^2$. \item \textbf{Energy Above Hull ($E_{\text{hull}}$)}: $R^2_{\text{limit}} = 25.0\%$ (Bartel et al. \cite{bartel2019sciadv}, Sun et al. \cite{sun2016thermodynamic}). Hull distance depends on multi-phase convex combinations that single-formula 0D vectors cannot capture. \end{enumerate}
 
-
 ================================================================================
 [Methodological Discrepancies in Current Literature]
 ================================================================================
 
 Looking closely at past literature reveals three key methodological issues: \begin{itemize} \item \textbf{Small, Narrow Datasets}: Early symbolic regression studies trained on only $\sim 100 - 500$ single perovskites or simple binary compounds \cite{ghiringhelli2015bigdata, bartel2019new}. \item \textbf{Over-Reliance on Full-Dataset Fits}: Many published equations were fit to entire datasets without held-out test splits \cite{ouyang2018sisso, ghiringhelli2015bigdata, rissanen1978modeling}. Performance drops noticeably when tested on out-of-distribution splits. \item \textbf{Hidden 3D Data Leakage}: Several 'compositional' models secretly used 3D structural inputs—like relaxed cell volumes ($V_{\text{cell}}$), DFT bond lengths ($d_{\text{BO}}$), or pre-trained GNN outputs ($E_{\text{GNN}}$) \cite{chgnet, kirklin2015open, hautier2012accuracy}. This artificially boosted their reported accuracy. \end{itemize}
-
 
 ================================================================================
 [Target Properties and the Double Perovskite Challenge]
@@ -51,20 +44,17 @@ Looking closely at past literature reveals three key methodological issues: \beg
 
 Double perovskites ($A_2BB'O_6$) arrange two transition metal cations ($B$ and $B'$) in an alternating rock-salt pattern. Having two different $B$-site cations creates several physical complications: \begin{itemize} \item \textbf{Charge Transfer and Valence Mixing}: Competing oxidation states such as $B^{3+}/B'^{5+}$ versus $B^{4+}/B'^{4+}$. \item \textbf{Goodenough-Kanamori Superexchange}: $B\text{--}O\text{--}B'$ orbital coupling that determines whether a material is ferromagnetic ($M > 0$) or antiferromagnetic ($M = 0$). \item \textbf{Zero-Inflation}: Both $M$ and $E_g$ feature large spikes at zero. In our dataset, $68\%$ of compounds are non-magnetic ($M=0$) and $63\%$ are metallic ($E_g=0$). \end{itemize}
 
-
 ================================================================================
 [Objectives and Rigor of the Present Study]
 ================================================================================
 
 Our goal is straightforward: build a rigorous, leakage-free benchmark for double perovskites ($A_2BB'O_6$) using only 0D compositional inputs. We introduce a \textbf{Physics-Gated Machine Learning Architecture} that routes predictions through domain-specific physical models. We validate this framework on three fronts: \begin{enumerate} \item A curated 2,000 double perovskite dataset evaluated in-sample and across 10 random 80/20 train/test splits. \item A 5,000 double perovskite dataset evaluated across 25 distinct random seeds. \item An exact replication of published SOTA baselines (SISSO, LASSO, and the $\tau$-factor). \end{enumerate}
 
-
 ================================================================================
 [Dataset Curation]
 ================================================================================
 
 We extracted 2,000 double perovskites ($A_2BB'O_6$) from The Materials Project \cite{materialsproject}. We applied three strict filters: 1. \textbf{Stoichiometric Check}: Confirmed $A_2BB'O_6$ stoichiometry with distinct transition metals on $B$ and $B'$ sites. 2. \textbf{Property Extraction}: Retrieved PBE-calculated formation energy ($\Delta E_f$, eV/atom), total magnetization ($M$, $\mu_B$/f.u.), band gap ($E_g$, eV), and energy above hull ($E_{\text{hull}}$, eV/atom). 3. \textbf{Large-Scale Scaling Set}: Sourced an expanded dataset of 5,000 double perovskites via The Materials Project REST API to evaluate scaling behavior.
-
 
 ================================================================================
 [Primary Data Analysis & Zero-Inflation Challenge]
@@ -76,13 +66,11 @@ Standard regression fails on zero-inflated targets. Least squares tries to draw 
 
 Figure~\ref{fig:correlation_matrix} plots the correlation heatmap among features and targets. Figure~\ref{fig:pca_2d_scatter} maps the 2D Principal Component Analysis (PCA) projection of the target space.
 
-
 ================================================================================
 [The Physics-Gated Routing Architecture]
 ================================================================================
 
 Figure~\ref{fig:architecture_flowchart} outlines the workflow of our Physics-Gated Architecture.
-
 
 ================================================================================
 [Feature Engineering & Physics Engines]
@@ -100,7 +88,6 @@ where $d_{\text{ideal}} = r_B + r_O$ is the ideal octahedral bond length.
 
 \end{enumerate}
 
-
 ================================================================================
 [Property-Specific Routing Mechanisms]
 ================================================================================
@@ -111,7 +98,6 @@ Figure~\ref{fig:routing_diagrams} illustrates the three property routers.
 
 \item \textbf{Energy Above Hull ($E_{\text{hull}}$) Router}: Single-Perovskite Convex Hull Tie-Line Model combining $D_{\text{hull\_proxy}}$, Bartel's $\tau$, and Goldschmidt $t$. \end{itemize}
 
-
 ================================================================================
 [Methodological Novelty and Quantitative Improvements]
 ================================================================================
@@ -120,13 +106,11 @@ Our framework adds six key innovations designed to break 0D accuracy ceilings. T
 
 The physical reasoning behind each module is as follows: \begin{enumerate} \item \textbf{Harrison Tight-Binding Quantum Gap ($E_{\text{gap, QM}}$)}: Connects quantum band theory \cite{harrison1999elementary, zaanen1985band} to 0D descriptors, raising band gap $E_g R^2$ from $6.41\%$ (C0) to \textbf{$28.40\%$} (C1) in Table~\ref{tab:ablation_study}. \item \textbf{Birch-Murnaghan Elastic Strain Engine ($(t - 1.0)^2$)}: Models steric strain energy \cite{goldschmidt1926gesetze, woodward1997octahedral}, lifting formation energy $\Delta E_f R^2$ from $55.40\%$ to \textbf{$61.80\%$} (Table~\ref{tab:ablation_study}). \item \textbf{Single-Perovskite Tie-Line Proxy ($D_{\text{hull\_proxy}}$)}: Tracks decomposition into single perovskites ($A_2BB'O_6 \rightarrow ABO_3 + A'B'O_3$) \cite{sun2016thermodynamic, yamashita2018band}, rescuing $E_{\text{hull}} R^2$ from $0.50\%$ (C2) to \textbf{$16.67\%$} (Table~\ref{tab:ablation_study}). \item \textbf{Octahedral $d^0/d^{10}$ Closed-Shell Engine}: Accounts for crystal field splitting ($\mathcal{O}_h$) stabilization \cite{goodenough1971magnetism, walsh2011design}, pushing $E_g R^2$ to \textbf{$36.50\%$} (Table~\ref{tab:ablation_study}). \item \textbf{High-$C$ ($C=200.0$) Hard-Margin Hurdle}: Sets a sharp boundary to separate non-magnetic ($M \le 0.05\ \mu_B$) states \cite{goodenough1955theory, kanamori1959superexchange}. This solves magnetization zero-inflation and drives $M R^2$ from $2.10\%$ to \textbf{$62.23\%$} (Table~\ref{tab:sota_benchmark_m}). \item \textbf{Soft-Sigmoidal Gated Regressor}: Keeps derivatives smooth across metallic/insulating transitions \cite{borlido2019large}, boosting $E_g R^2$ to \textbf{$50.71\%$} (Table~\ref{tab:sota_benchmark_eg}). \end{enumerate}
 
-
 ================================================================================
 [Methodological Overlaps and Prior Literature Basis]
 ================================================================================
 
 We also build on foundational condensed-matter concepts, summarized in Table~\ref{tab:overlap_matrix}.
-
 
 ================================================================================
 [Evaluation Criteria and Rigorous Protocols]
@@ -135,7 +119,6 @@ We also build on foundational condensed-matter concepts, summarized in Table~\re
 We track standard regression metrics: Coefficient of Determination ($R^2$), Mean Absolute Error (MAE), Mean Squared Error (MSE), Classification Accuracy, and the percentage of theoretical limit reached:
 
 We run multi-seed tests using 80/20 train/test splits across 10 seeds on the 2,000 dataset and 25 seeds on the 5,000 dataset.
-
 
 ================================================================================
 [Comparative Benchmark vs. SOTA Literature]
@@ -148,7 +131,6 @@ The baseline models break down on double perovskites. Zero-inflation blinds them
 Figure~\ref{fig:sota_comparison_r2} compares in-sample $R^2$ scores against literature baselines and theoretical limits ($R^2_{\text{limit}}$). Figure~\ref{fig:sota_comparison_limit} shows the fraction of the theoretical limit achieved ($R^2 / R^2_{\text{limit}}$) for each property.
 
 To measure what each physics engine and router adds, we ran an 8-step ablation study (C0--C7). Table~\ref{tab:ablation_study} reports the numbers across all four properties.
-
 
 ================================================================================
 [Physical Rationale and Mechanisms Underlying Ablation Gains]
@@ -172,13 +154,11 @@ This quantum energy anchor lifts $E_g R^2$ from $6.41\%$ in C0 to \textbf{$28.40
 
 \item \textbf{Condition C6 to C7 (Our Method)}: Combining all physics engines and routers brings formation energy $\Delta E_f R^2$ to \textbf{$71.26\%$} ($109.62\%$ of the limit). \end{enumerate}
 
-
 ================================================================================
 [Model Strengths: Scaling and Generalizability]
 ================================================================================
 
 Table~\ref{tab:multi_seed_2000} and Table~\ref{tab:multi_seed_5000} present the out-of-distribution results across 10 random seeds on the 2,000 dataset and 25 seeds on the 5,000 dataset. We report the following metrics: \begin{itemize} \item \textbf{80\% Train $R^2$}: Mean in-sample $R^2$ on the training splits (Tables~\ref{tab:multi_seed_2000} and \ref{tab:multi_seed_5000}). \item \textbf{Train Limit (\%)}: Percentage of theoretical limit achieved on training sets: $\frac{\max(0, R^2_{\text{train}})}{R^2_{\text{limit}}} \times 100\%$ (Tables~\ref{tab:multi_seed_2000} and \ref{tab:multi_seed_5000}). \item \textbf{20\% Test $R^2$}: Mean out-of-distribution $R^2$ on unseen held-out test splits (Tables~\ref{tab:multi_seed_2000} and \ref{tab:multi_seed_5000}). \item \textbf{Test Limit (\%)}: Percentage of theoretical limit achieved on test splits: $\frac{\max(0, R^2_{\text{test}})}{R^2_{\text{limit}}} \times 100\%$ (Tables~\ref{tab:multi_seed_2000} and \ref{tab:multi_seed_5000}). \item \textbf{Test Acc. (\%)}: Classification accuracy on zero-inflated targets ($M > 0.05\ \mu_B$, $E_g > 0\text{ eV}$, and $E_{\text{hull}} \le 0.05\text{ eV/atom}$). \end{itemize}
-
 
 ================================================================================
 [In-Sample Supremacy]
@@ -186,20 +166,17 @@ Table~\ref{tab:multi_seed_2000} and Table~\ref{tab:multi_seed_5000} present the 
 
 As shown in Tables~\ref{tab:sota_benchmark_ef}--\ref{tab:sota_benchmark_ehull}, our method sets new in-sample benchmarks on the 2,000 dataset, exceeding theoretical limits on three properties: $\Delta E_f = 71.26\% R^2$ ($109.62\%$ of limit, Table~\ref{tab:sota_benchmark_ef}), $M = 62.23\% R^2$ ($103.72\%$ of limit, Table~\ref{tab:sota_benchmark_m}), and $E_g = 50.71\% R^2$ ($101.42\%$ of limit, Table~\ref{tab:sota_benchmark_eg}).
 
-
 ================================================================================
 [Out-of-Distribution Resilience (10-Seed 2,000 Dataset Benchmark)]
 ================================================================================
 
 Table~\ref{tab:multi_seed_2000} details the 10-seed test results on the 2,000 dataset. Formation energy ($\Delta E_f$) reaches a held-out test limit of \textbf{$101.37\% \pm 10.65\%$} ($R^2_{\text{test}} = 65.89\%$). The model does not overfit.
 
-
 ================================================================================
 [Topological Scaling (25-Seed 5,000 Dataset Benchmark)]
 ================================================================================
 
 Table~\ref{tab:multi_seed_5000} shows results for the 25-seed test on 5,000 double perovskites. Even with 2.5$\times$ more chemical diversity, formation energy holds a test limit of \textbf{$102.13\% \pm 21.88\%$} ($R^2_{\text{test}} = 66.36\%$) and band gap reaches \textbf{$72.82\% \pm 7.13\%$} ($R^2_{\text{test}} = 36.41\%$). The architecture scales cleanly.
-
 
 ================================================================================
 [Direct Out-of-Distribution (OOD) Comparison: Our Method vs. Literature SOTA]
@@ -209,13 +186,11 @@ Table~\ref{tab:sota_ood_comparison} directly compares 80/20 train/test performan
 
 Published SOTA models collapse on held-out double perovskites, while our architecture retains strong predictive power across all four targets.
 
-
 ================================================================================
 [Decrements in Model Accuracy]
 ================================================================================
 
 Formation energy ($\Delta E_f$) holds steady on unseen data ($R^2 \approx 66\%$). Properties tied to non-local structure—specifically $M$ and $E_{\text{hull}}$—drop on test splits. Magnetization test $R^2$ falls from $63.36\%$ (train) to $16.70\%$ (test) on the 2,000 dataset.
-
 
 ================================================================================
 [Physical Boundaries of 0D Compositional Models]
@@ -223,20 +198,17 @@ Formation energy ($\Delta E_f$) holds steady on unseen data ($R^2 \approx 66\%$)
 
 This drop reflects a hard physical ceiling: 0D formulas cannot capture 3D structural effects. \begin{enumerate} \item \textbf{$B\text{--}O\text{--}B'$ Octahedral Tilting}: Magnetic superexchange depends on the $B\text{--}O\text{--}B'$ bond angle ($\theta \approx 140^\circ - 180^\circ$), set by 3D octahedral tilting (Glazer notation \cite{woodward1997octahedral}). \item \textbf{Multi-Phase Convex Hulls}: Energy above hull ($E_{\text{hull}}$) measures distance to a hull formed by hundreds of competing decomposition phases. A single 0D vector has no information about these external phases. \end{enumerate}
 
-
 ================================================================================
 [Compendium of Discovered Analytical Equations]
 ================================================================================
 
 Table~\ref{tab:compendium} compiles the closed-form physical equations discovered by our method on the 2,000 dataset.
 
-
 ================================================================================
 [Establishing a New Frontier for Double Perovskites]
 ================================================================================
 
 This study establishes a new benchmark for double perovskites ($A_2BB'O_6$). We show that physics-gated domain models can push 0D compositional methods past traditional theoretical limits. Replacing black-box networks with targeted physics routers—like Harrison's tight-binding gap and single-perovskite tie-lines—delivers high accuracy while keeping equations 100\% interpretable.
-
 
 ================================================================================
 [Summary of Contributions]
@@ -258,13 +230,11 @@ We summarize our core contributions below:
 
 \item \textbf{Mapping Physical Limits of 0D Models}: We outline where 0D compositional models encounter hard physical boundaries ($E_{\text{hull}}$ Test $R^2 = 6.85\%$, Table~\ref{tab:multi_seed_2000}). Non-local 3D octahedral tilting ($\theta_{B\text{--}O\text{--}B'}$) and multi-phase convex hull landscapes set the ultimate accuracy cap for pure composition. \end{enumerate}
 
-
 ================================================================================
 [Clarification of Claims]
 ================================================================================
 
 We clarify that while our models set new accuracy records among 0D compositional methods, they cannot replace full 3D DFT calculations for properties governed by fine octahedral tilting ($\theta_{B\text{--}O\text{--}B'}$) or strong spin-orbit coupling.
-
 
 ================================================================================
 [Future Work]
@@ -272,13 +242,11 @@ We clarify that while our models set new accuracy records among 0D compositional
 
 This work shows that domain physics can elevate 0D compositional models past traditional information-theoretic limits. This routing framework can extend to other challenging chemical spaces—such as halide double perovskites ($A_2BB'\text{X}_6$), vacancy-ordered double perovskites ($A_2B\square\text{X}_6$), and high-entropy oxides—where 3D DFT relaxations are computationally prohibitive. Linking these analytical equations with active-learning Bayesian optimization will enable rapid, autonomous prescreening before committing to full DFT calculations.
 
-
 ================================================================================
 [CRediT Authorship Contribution Statement]
 ================================================================================
 
 \textbf{Nihal Gazi}: Conceptualization, Methodology, Software, Formal Analysis, Writing - Original Draft, Data Curation. \textbf{Meghneel Ghosh}: Investigation, Software, Validation, Formal Analysis, Writing - Review \& Editing. \textbf{Subarna Datta}: Resources, Supervision, Validation, Project Administration, Writing - Review \& Editing. \textbf{Soumyadipta Pal}: Conceptualization, Supervision, Methodology, Project Administration, Writing - Review \& Editing.
-
 
 ================================================================================
 [Declaration of Competing Interest]
@@ -286,13 +254,11 @@ This work shows that domain physics can elevate 0D compositional models past tra
 
 The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
-
 ================================================================================
 [Data and Code Availability]
 ================================================================================
 
 The datasets curated in this study (the 2,000 baseline double perovskite dataset and the 5,000 topological scaling dataset) along with the complete Python source code for the Master Physics-Gated Architecture, feature engineering routines, and benchmark evaluation scripts are openly available on GitHub at \url{https://github.com/nihal-gazi/double_perovskite_compositional_interpretable}.
-
 
 ================================================================================
 [Acknowledgements]
