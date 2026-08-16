@@ -337,12 +337,12 @@ Figure~\ref{fig:routing_diagrams} illustrates the three property routers.
 \node[title] (titleA) at (panelA.north west) [xshift=10pt, yshift=-8pt] {Panel A: High-$C$ ($C=200.0$) Hard-Margin Hurdle for Magnetization ($M$)};
 
 \node[font=\bfseries\large] (xA) at (0.6, -0.4) {$\mathbf{x}$};
-\node[procbox] (svc) at (4.8, -0.4) {\textbf{Stage 1: Linear SVC}\\Hard-Margin Gate ($C=200.0$)};
+\node[procbox] (svc) at (5.3, -0.4) {\textbf{Stage 1: Linear SVC}\\Hard-Margin Gate ($C=200.0$)};
 
-\node[zerobox] (mzero) at (12.8, 0.45) {\textbf{Non-Magnetic Ground State}\\$M_{\text{pred}} = 0.0\ \mu_B$};
-\node[regbox] (mreg) at (12.8, -1.25) {\textbf{Stage 2: Multi-Operator Regressor}\\$M_{\text{pred}} = c_0 + \sum_j c_j \phi_j(\mathbf{x})$};
+\node[zerobox] (mzero) at (13.0, 0.45) {\textbf{Non-Magnetic Ground State}\\$M_{\text{pred}} = 0.0\ \mu_B$};
+\node[regbox] (mreg) at (13.0, -1.25) {\textbf{Stage 2: Multi-Operator Regressor}\\$M_{\text{pred}} = c_0 + \sum_j c_j \phi_j(\mathbf{x})$};
 
-\draw[arrow] (xA) -- node[midway, above=3pt, font=\footnotesize] {$\text{HS}_B, N_d, \chi$} (svc);
+\draw[arrow] (xA) -- node[midway, above=2pt, font=\scriptsize] {$\text{HS}_B,\, N_d,\, \chi$} (svc);
 
 \draw[thick, draw=black!75] (svc.east) -- ++(0.7,0) coordinate (fork);
 \draw[arrow] (fork) |- (mzero.west) node[pos=0.55, above, font=\scriptsize] {If False ($P < 0.5$)};
