@@ -1,4 +1,4 @@
-Date: August 23, 2026
+Date: August 24, 2026
 
 Prof. Kenneth M. Merz, Jr.
 Editor-in-Chief
@@ -16,10 +16,10 @@ Predicting the ground-state properties of complex multinary materials like doubl
 
 In this study, we introduce a novel Physics-Gated Interpretable Machine Learning Architecture that breaks these theoretical literature ceilings using 100% 0D descriptors. Our key contributions include:
 1. Physics-Gated Domain Routers: We resolve zero-inflation and derivative discontinuities at metallic/insulating and magnetic phase boundaries via high-margin hurdle models (C=200.0) and soft-sigmoidal gating functions.
-2. Novel Quantum & Thermodynamic Engines: By deriving closed-form Harrison tight-binding inter-atomic matrix elements and single-perovskite competing phase tie-line proxies (D_hull_proxy), our framework shatters established 0D accuracy records without leaking 3D coordinate data.
-3. Surpassing SOTA Literature Limits: Our models achieve 109.62% of the theoretical limit for formation energy (Delta E_f R^2 = 71.26%), 103.72% for total magnetization (M R^2 = 62.23%), and 101.42% for band gap (E_g R^2 = 50.71%).
-4. Extensive Multi-Seed Out-of-Distribution Validation: Rigorously benchmarked across 25 independent random seeds and out-of-distribution splits on 2,000 and 5,000 double perovskite compositions.
-5. Discovered Closed-Form Analytical Equations: We extract a compendium of transparent, human-interpretable symbolic equations directly applicable for prospective materials screening.
+2. Quantum & Thermodynamic Engines: Deriving closed-form Harrison tight-binding inter-atomic matrix elements and single-perovskite tie-line proxies (D_hull_proxy) to boost 0D accuracy without leaking 3D coordinate data.
+3. Surpassing SOTA Literature Limits: Achieving 109.62% of the theoretical limit for formation energy (Delta E_f R^2 = 71.26%), 103.72% for total magnetization (M R^2 = 62.23%), and 101.42% for band gap (E_g R^2 = 50.71%).
+4. Rigorous Multi-Seed Validation: Validated across 25 independent random seeds and out-of-distribution splits on 2,000 and 5,000 double perovskite compositions.
+5. Discovered Closed-Form Analytical Equations: Discovering human-interpretable symbolic equations directly applicable for prospective materials screening.
 
 Fit for the Journal of Chemical Information and Modeling:
 This work directly aligns with JCIM's core mission at the interface of chemical informatics, molecular and materials modeling, and interpretable machine learning. By delivering exact analytical physical equations with proven out-of-distribution generalizability, our findings will be of broad interest to JCIM's readership in computational chemistry, materials informatics, and data-driven crystal design.
@@ -31,10 +31,10 @@ Declarations:
 - The authors declare no competing financial interests.
 
 Suggested Independent Reviewers:
-1. Prof. Runhai Ouyang (Shanghai University / FHI Berlin) -- Expert in symbolic regression, SISSO framework, and compressed sensing in materials informatics. Email: rouyang@shu.edu.cn
-2. Prof. Shyue Ping Ong (University of California San Diego) -- Expert in machine learning for materials design, perovskite stability, and Materials Project data architectures. Email: ongsp@ucsd.edu
-3. Prof. Chris Wolverton (Northwestern University) -- Expert in computational thermodynamics, DFT high-throughput databases (OQMD), and perovskite stability modeling. Email: c-wolverton@northwestern.edu
-4. Prof. Aron Walsh (Imperial College London) -- Expert in perovskite electronic structure, tight-binding band gap theory, and data-driven crystallography. Email: a.walsh@imperial.ac.uk
+1. Prof. Aron Walsh (Imperial College London, UK) -- World-renowned expert in perovskite electronic structure, crystal chemistry, and tight-binding physical modeling. Email: a.walsh@imperial.ac.uk
+2. Dr. Ghanshyam Pilania (Los Alamos National Laboratory, USA) -- Pioneer in compositional (0D) feature engineering, band gap machine learning, and physics-informed materials informatics for perovskites. Email: gpilania@lanl.gov
+3. Prof. Bryce Meredig (Stanford University / Citrine Informatics, USA) -- Leading authority in domain-informed compositional descriptors and interpretable materials screening over black-box networks. Email: bryce@citrine.io
+4. Prof. Rampi Ramprasad (Georgia Institute of Technology, USA) -- Distinguished expert in machine learning for functional materials design, physical property mapping, and chemical informatics. Email: rampi.ramprasad@mse.gatech.edu
 
 Thank you very much for your time, consideration, and handling of our manuscript.
 
