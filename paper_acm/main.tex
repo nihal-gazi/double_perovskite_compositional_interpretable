@@ -1,11 +1,11 @@
 \PassOptionsToPackage{hyphens}{url}
 \documentclass[journal=jcisd8,manuscript=article]{achemso}
-
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{dcolumn}
+\usepackage{epsfig}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{bm}
@@ -19,9 +19,8 @@
 \usepackage{xurl}
 \usepackage{float}
 \usepackage{rotating}
-\usepackage{microtype}
+\usepackage{hyperref}
 
-% TikZ and PGFPlots for publication-grade flowcharts and diagrams
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
@@ -30,24 +29,26 @@
 \title{Physics-Gated Interpretable Machine Learning and Symbolic Regression for Double Perovskites: Overcoming Theoretical Limits Beyond 0D Compositional Models}
 
 \author{Nihal Gazi}
-\affiliation{Institute of Engineering \& Management, Management House, D-1, Sector-V, Saltlake Electronics Complex, Kolkata-700091, India}
+\affiliation{Department of Basic Science and Humanities, Institute of Engineering \& Management, Management House, D-1, Sector-V, Saltlake Electronics Complex, Kolkata-700091, India}
 
 \author{Meghneel Ghosh}
-\affiliation{Institute of Engineering \& Management, Management House, D-1, Sector-V, Saltlake Electronics Complex, Kolkata-700091, India}
+\affiliation{Department of Basic Science and Humanities, Institute of Engineering \& Management, Management House, D-1, Sector-V, Saltlake Electronics Complex, Kolkata-700091, India}
 
 \author{Subarna Datta}
 \email{subarna.iem87@gmail.com}
-\affiliation{Institute of Engineering \& Management, Management House, D-1, Sector-V, Saltlake Electronics Complex, Kolkata-700091, India}
+\phone{+91-33-2357-2059}
+\affiliation{Department of Basic Science and Humanities, Institute of Engineering \& Management, Management House, D-1, Sector-V, Saltlake Electronics Complex, Kolkata-700091, India}
 
 \author{Soumyadipta Pal}
 \email{soumyadipta.pal@gmail.com}
-\affiliation{University of Engineering and Management, New Town, University Area, Plot No. III, B/5, New Town Rd, Action Area III, Newtown, Kolkata-700160, India}
+\phone{+91-33-2357-2059}
+\affiliation{Department of Basic Science and Humanities, University of Engineering and Management, New Town, University Area, Plot No. III, B/5, New Town Rd, Action Area III, Newtown, Kolkata-700160, India}
 
 \begin{document}
 
 \begin{tocentry}
 \centering
-\includegraphics[width=3.25in,height=1.75in]{figures/sota_comparison_r2_bar.png}
+\includegraphics[width=3.25in,height=1.75in]{figures/toc_graphic.png}
 \end{tocentry}
 
 \begin{abstract}
@@ -60,16 +61,21 @@ In this paper, we present a Novel Physics-Gated Machine Learning Architecture, t
 We tested our physics-based routing engine, through a 25 random seed study on a dataset of 2,000 double perovskites as well as larger dataset of 5,000 double perovskites through an 80/20 train/test benchmark, where we found that our algorithm surpassed theoretical literature limits on all test sets.
 \end{abstract}
 
-
 \section{Introduction}
 
-Accelerating the discovery of functional multinary crystal materials, such as double perovskites ($A_2BB'O_6$), is a longstanding goal in energy storage, spintronics, and optoelectronic device design. Traditionally, candidate exploration relied on heuristic empirical rules---such as Pauling's electronegativity ratios and Goldschmidt's tolerance factor $t = \frac{r_A + r_O}{\sqrt{2}(r_B + r_O)}$ \cite{goldschmidt1926gesetze, shannon1976revised}---followed by high-throughput Density Functional Theory (DFT) calculations archived in open repositories like The Materials Project \cite{materialsproject} and OQMD \cite{kirklin2015open}. While DFT yields high electronic fidelity, rigorous relaxation of large supercells is computationally demanding, restricting brute-force screening over the combinatorial space of $A_2BB'O_6$ compositions.
+Previously, materials discovery has relied on empirical rules and trial-and-error methods, as in Pauling's rules and Goldschmidt's tolerance factor $t = \frac{r_A + r_O}{\sqrt{2}(r_B + r_O)}$ \cite{goldschmidt1926gesetze, shannon1976revised}. But recently, data-driven approaches have dominated computational material science, such as the Density Functional Theory (DFT) databases (The Materials Project \cite{materialsproject}, Open Quantum Materials Database (OQMD) \cite{kirklin2015open}). However, despite being extremely accurate, DFT is an extremely time-consuming computational process, which has been a major challenge.
 
-To bypass DFT relaxations, recent paradigms have deployed deep learning models, notably 3D Crystal Graph Neural Networks (CGNNs) \cite{chgnet}. Despite their predictive accuracy, 3D graph representations require pre-relaxed atomic coordinates ($\mathbf{R}_i \in \mathbb{R}^3$), equilibrium unit cell volumes ($V_{\text{cell}}$), and exact octahedral bond angles---structural properties inaccessible prior to performing the DFT relaxation. Furthermore, deep neural networks function as uninterpretable black boxes, concealing the physical mechanisms governing phase stability, superexchange coupling, or bandgap opening behind dense, multi-million parameter weight matrices. Consequently, materials informatics has sought transparent Symbolic Regression frameworks that extract human-readable, closed-form equations $f(\mathbf{x})$ purely from zero-dimensional (0D) compositional descriptors \cite{schmidt2009distilling, rissanen1978modeling}.
+More recent approaches, that aims to speed up DFT involve deep learning, such as, the 3D Crystal Graph Neural Networks (CGNNs) (e.g., CHGNet \cite{chgnet}). These models, while accurate, bring two major drawbacks. First, they require relaxed 3D atomic coordinates ($\mathbf{R}_i \in \mathbb{R}^3$), cell volumes, and bond angles. One cannot know their values before running the exact DFT relaxation. Secondly, they are black box estimators, which means, the physical reasons behind magnetism or phase instability are hidden behind their weight matrices containing millions of parameters. Hence, most modern interpretable approaches resort to Symbolic Regression, which extracts simple, closed-form equations $f(\mathbf{x})$ directly from 0D compositional descriptors \cite{schmidt2009distilling, rissanen1978modeling}.
 
-Pioneering efforts utilizing compressed sensing and LASSO ($L_1$-regularization) \cite{ghiringhelli2015bigdata} and Sure Independence Screening and Sparsifying Operator (SISSO) \cite{ouyang2018sisso} demonstrated the viability of 0D descriptor discovery. However, extensive benchmarking has established empirical and information-theoretic accuracy ceilings ($R^2_{\text{limit}}$) for un-gated 0D models ($R^2_{\text{limit}} \approx 65.0\%$ for formation energy $\Delta E_f$, $60.0\%$ for total magnetization $M$, $50.0\%$ for band gap $E_g$, and $25.0\%$ for energy above hull $E_{\text{hull}}$, Table~S2 in Supporting Information) \cite{ouyang2018sisso, bartel2019new, borlido2019large, bartel2019sciadv}. These limits arise because 0D representations omit 3D volumetric strain and struggle with discontinuous physical phenomena---most critically, the severe \textbf{zero-inflation} in double perovskites, where point-mass densities pile up at zero net moment ($68\%$ non-magnetic ground states) and zero band gap ($63\%$ metallic ground states). When fitted with standard continuous loss functions, legacy symbolic models experience severe degradation ($M$ test $R^2 \approx 1.89\%$, $E_g$ test $R^2 \approx -6.86\%$).
+The first to apply compressed sensing and symbolic regression to materials using LASSO ($L_1$-regularization) was Ghiringhelli et al. \cite{ghiringhelli2015bigdata}. This approach, was then later expanded using a method called SISSO (Sure Independence Screening and Sparsify Operator) by Ouyang et al. \cite{ouyang2018sisso}. However, further studies showed that 0D analytical models follow a strict Pareto frontier between complexity and accuracy \cite{rissanen1978modeling, ouyang2018sisso}.
 
-To overcome these fundamental barriers, this work introduces a novel \textbf{Physics-Gated Machine Learning Architecture} that breaks the established 0D accuracy ceilings while preserving 100\% mathematical interpretability. By integrating quantum mechanical engines (Harrison tight-binding inter-atomic matrix elements), thermodynamic single-perovskite tie-line engines ($D_{\text{hull\_proxy}}$), and domain-specific decision gates (high-$C$ linear Support Vector hurdle classifiers and soft-sigmoidal activation gates), our framework partitions discrete electronic phase transitions from continuous property regressions. We validate our architecture across 2,000 double perovskites (10-seed out-of-distribution splits) and 5,000 double perovskites (25-seed topological scaling), demonstrating that domain physics enables pure 0D compositional models to exceed 100\% of established literature limits across held-out test splits. Complete nomenclature and descriptor definitions are provided in Table~S1 of the Supporting Information.
+The standard theoretical limits ($R^2_{\text{limit}}$) on what these pure 0D symbolic models can achieve, was established by more recent research on Symbolic Regression on 0D descriptors. These limits are explained by standard physical constraints: Formation Energy ($\Delta E_f$, $R^2_{\text{limit}} = 65.0\%$, \cite{ouyang2018sisso, bartel2019new}), Total Magnetization ($M$, $R^2_{\text{limit}} = 60.0\%$, \cite{ghiringhelli2015bigdata, lejaeghere2016reproducibility}), Band Gap ($E_g$, $R^2_{\text{limit}} = 50.0\%$, \cite{ouyang2018sisso, borlido2019large}), and Energy Above Hull ($E_{\text{hull}}$, $R^2_{\text{limit}} = 25.0\%$, \cite{bartel2019sciadv, sun2016thermodynamic}) (see Table~S2 in Supporting Information).
+
+The past literature has had certain methodological discrepancies: small, narrow datasets ($\sim 100 - 500$ single perovskites or simple binary compounds) \cite{ghiringhelli2015bigdata, bartel2019new}, over-reliance on full-dataset fits without held-out test splits \cite{ouyang2018sisso, ghiringhelli2015bigdata, rissanen1978modeling}, and hidden 3D data leakage (using relaxed cell volumes $V_{\text{cell}}$, DFT bond lengths $d_{\text{BO}}$, or pre-trained GNN outputs $E_{\text{GNN}}$) \cite{chgnet, kirklin2015open, hautier2012accuracy}.
+
+Double perovskites ($A_2BB'O_6$) arrange their two transition metal cations ($B$ and $B'$) in an alternating rock-salt pattern. Additionally, these molecules having two different $B$-site cations, generates several physical complications such as charge transfer and valence mixing ($B^{3+}/B'^{5+}$ versus $B^{4+}/B'^{4+}$), Goodenough-Kanamori superexchange, and zero-inflation ($68\%$ non-magnetic $M=0$ and $63\%$ metallic $E_g=0$).
+
+In this paper, we aim at building a rigorous, leakage-free benchmark for double perovskites ($A_2BB'O_6$) using only 0D compositional inputs. We present a \textbf{Physics-Gated Machine Learning Architecture} that routes predictions through domain-specific physical models. We validate this framework on three cases: a curated 2,000 double perovskite dataset evaluated in-sample and across 10 random 80/20 train/test splits, a 5,000 double perovskite dataset evaluated across 25 distinct random seeds, and an exact replication of published SOTA baselines (SISSO, LASSO, and the $\tau$-factor). Complete nomenclature and descriptor definitions are provided in Table~S1 of the Supporting Information.
 
 \section{Computational Methods (Methodology)}
 
@@ -628,6 +634,12 @@ We clarify that while our models set new accuracy records among 0D compositional
 
 \subsection{Future Work}
 This work shows that domain physics can elevate 0D compositional models past traditional information-theoretic limits. This routing framework can extend to other challenging chemical spaces—such as halide double perovskites ($A_2BB'\text{X}_6$), vacancy-ordered double perovskites ($A_2B\square\text{X}_6$), and high-entropy oxides—where 3D DFT relaxations are computationally prohibitive. Linking these analytical equations with active-learning Bayesian optimization will enable rapid, autonomous prescreening before committing to full DFT calculations.
+
+---
+
+\section*{CRediT Authorship Contribution Statement}
+\textbf{Nihal Gazi}: Conceptualization, Methodology, Software, Formal Analysis, Writing - Original Draft, Data Curation. \textbf{Meghneel Ghosh}: Investigation, Software, Validation, Formal Analysis, Writing - Review \& Editing. \textbf{Subarna Datta}: Resources, Supervision, Validation, Project Administration, Writing - Review \& Editing. \textbf{Soumyadipta Pal}: Conceptualization, Supervision, Methodology, Project Administration, Writing - Review \& Editing.
+
 
 ---
 
