@@ -1,10 +1,11 @@
 # ACS JCIM Submission Tracking
 
-## Current Submission Information
+## Current Status: Associate Editor Assigned (Passed Technical Check!)
 - **Journal**: *Journal of Chemical Information and Modeling* (JCIM), American Chemical Society (ACS)
+- **Manuscript ID**: `ci-2026-02951g`
 - **Manuscript Title**: *Physics-Gated Interpretable Machine Learning and Symbolic Regression for Double Perovskites: Overcoming Theoretical Limits Beyond 0D Compositional Models*
-- **Portal Submission ID (Current)**: `BF4CC3FE-F1E4-444A-AA95-149D8FFD89BE`
-- **Submission Date**: August 31, 2026
+- **Assigned Associate Editor**: **Prof. John Kitchin** (Carnegie Mellon University)
+  - **Editorial Office Email**: `kitchin-office@jcim.acs.org`
 - **Authors**: Nihal Gazi, Meghneel Ghosh, Subarna Datta*, Soumyadipta Pal*
 - **Corresponding Authors**: 
   - Subarna Datta (`subarna.iem87@gmail.com`)
@@ -16,7 +17,7 @@
 1. **Initial Submission**:
    - Initial Manuscript ID: `ci-2026-02951g`
    - Editorial Action: Unsubmitted for administrative technical formatting adjustments (separate Supporting Information PDF required, Introduction narrative formatting).
-2. **Resubmission (Completed)**:
+2. **Resubmission (Completed & Accepted by Technical Office on Aug 31, 2026)**:
    - ChronosHub / ACS Publishing Center Identifier: `BF4CC3FE-F1E4-444A-AA95-149D8FFD89BE`
    - Uploaded Artifacts:
      - `Manuscript File*`: `submission_package.zip` / `main.pdf`
@@ -28,3 +29,5 @@
      2. Dr. Ghanshyam Pilania (`gpilania@lanl.gov`, Los Alamos National Laboratory)
      3. Prof. Bryce Meredig (`bryce@citrine.io`, Stanford University / Citrine Informatics)
      4. Prof. Rampi Ramprasad (`rampi.ramprasad@mse.gatech.edu`, Georgia Tech)
+3. **Editorial Assignment (Aug 31, 2026)**:
+   - Assigned to Associate Editor **Prof. John Kitchin** for peer review evaluation.
